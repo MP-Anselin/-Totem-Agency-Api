@@ -1214,3 +1214,204 @@ Completed 200 OK in 923ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 651
 
 DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
  (called from load at /home//.rvm/gems/ruby-2.6.5/bin/rake:23)
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:19:07 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 906ms (ActiveRecord: 2.6ms | Allocations: 8018)
+
+
+  
+NoMethodError (undefined method `get' for FirebaseManager:Class
+Did you mean?  gem):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:21:24 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 1181ms (ActiveRecord: 2.8ms | Allocations: 7331)
+
+
+  
+NoMethodError (private method `test' called for FirebaseManager:Class):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:22:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 998ms (ActiveRecord: 2.1ms | Allocations: 7348)
+
+
+  
+NoMethodError (undefined method `get' for FirebaseManager:Class
+Did you mean?  gem):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:24:35 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 859ms (ActiveRecord: 2.3ms | Allocations: 7360)
+
+
+  
+NoMethodError (undefined method `get' for FirebaseManager:Class
+Did you mean?  gem):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:25:20 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 1195ms (ActiveRecord: 1.9ms | Allocations: 7503)
+
+
+  
+NoMethodError (undefined method `toto' for FirebaseManager:Class):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:28:08 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 1090ms (ActiveRecord: 1.4ms | Allocations: 7549)
+
+
+  
+NoMethodError (undefined method `get' for FirebaseManager:Class
+Did you mean?  gem):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:32:31 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 1330ms (ActiveRecord: 1.3ms | Allocations: 7456)
+
+
+  
+NoMethodError (undefined method `Greeting' for FirebaseManager:Class):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:10:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:32:57 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 1111ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 6666)
+
+
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:42:29 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 814ms (ActiveRecord: 0.7ms | Allocations: 6957)
+
+
+  
+NoMethodError (undefined method `get' for FirebaseManager:Class
+Did you mean?  gem):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:46:44 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 807ms (ActiveRecord: 6.7ms | Allocations: 6998)
+
+
+  
+NoMethodError (undefined method `get' for nil:NilClass
+Did you mean?  gem):
+  
+app/commands/firebase_manager.rb:12:in `get'
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:48:57 +0100
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 1557ms (ActiveRecord: 2.1ms | Allocations: 7997)
+
+
+  
+NoMethodError (undefined method `toto' for FirebaseManager:Class):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:49:19 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 943ms (ActiveRecord: 2.8ms | Allocations: 7315)
+
+
+  
+NoMethodError (undefined method `toto' for FirebaseManager:Class):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2019-12-12 20:54:35 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 500 Internal Server Error in 1030ms (ActiveRecord: 2.5ms | Allocations: 8102)
+
+
+  
+NameError (uninitialized constant Api::V1::Authentication::AuthenticationController::FirebaseManager
+Did you mean?  Api::V1::Authentication::FirebaseManager):
+  
+app/controllers/api/v1/authentication/authentication_controller.rb:9:in `authenticate'
