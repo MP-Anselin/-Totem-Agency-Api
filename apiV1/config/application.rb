@@ -29,6 +29,13 @@ module ApiV1
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    # For authenticating the user and generating a token for him/her using encode.
+    #To check the user's token appended in each request is correct by using decode.
+    # To make sure everything will work, the contents of the lib directory have to be included
+    #  the Rails application loads.
+
+    config.autoload_paths << Rails.root.join('lib')
+
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.

@@ -13,3 +13,40 @@ Migrating to CreateUsers (20191212154256)
   [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["password_digest", "$2a$12$BFlbK0nWR8tKWzgGc3sJYeknf63LG17o6QCBqjkikVdk5XUDb8Eby"], ["created_at", "2019-12-12 15:56:18.553410"], ["updated_at", "2019-12-12 15:56:18.553410"]]
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBasicTests (20191212155801)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "basic_tests" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191212155801"]]
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/authenticate" for ::1 at 2019-12-12 16:58:56 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 574ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 7142)
+
+
+Started POST "/authenticate" for ::1 at 2019-12-12 17:11:48 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 689ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1255)
+
+

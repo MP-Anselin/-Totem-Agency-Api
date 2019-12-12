@@ -2,64 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e4def4-221a-4e34-bd7c-d156844337b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/.ruby-version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/Gemfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/Gemfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/Rakefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/channels/application_cable/channel.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/channels/application_cable/connection.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/controllers/application_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/controllers/concerns/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/jobs/application_job.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/mailers/application_mailer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/models/application_record.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/models/concerns/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/views/layouts/mailer.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/views/layouts/mailer.text.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/bundle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/rails" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/rake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/setup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/spring" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config.ru" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/application.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/boot.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/cable.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/credentials.yml.enc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/database.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/environment.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/environments/development.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/environments/production.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/environments/test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/application_controller_renderer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/backtrace_silencers.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/cors.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/filter_parameter_logging.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/inflections.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/mime_types.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/wrap_parameters.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/locales/en.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/puma.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/routes.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/spring.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/storage.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/db/seeds.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/lib/tasks/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/log/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/storage/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/channels/application_cable/connection_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/controllers/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/fixtures/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/fixtures/files/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/integration/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/mailers/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/models/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/test_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/tmp/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../apiV1-2/vendor/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/.ruby-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/Rakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/channels/application_cable/channel.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/channels/application_cable/connection.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/controllers/application_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/controllers/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/jobs/application_job.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/mailers/application_mailer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/models/application_record.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/models/concerns/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/views/layouts/mailer.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/app/views/layouts/mailer.text.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/bin/bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/bin/rails" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/bin/rake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/bin/setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/bin/spring" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config.ru" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/application.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/boot.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/cable.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/credentials.yml.enc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/database.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/environment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/environments/development.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/environments/production.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/environments/test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/initializers/application_controller_renderer.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/initializers/backtrace_silencers.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/initializers/cors.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/initializers/filter_parameter_logging.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/initializers/inflections.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/initializers/mime_types.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/initializers/wrap_parameters.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/locales/en.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/puma.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/routes.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/spring.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/config/storage.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/db/seeds.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/lib/tasks/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/log/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/storage/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/test/channels/application_cable/connection_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/test/controllers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/test/fixtures/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/test/fixtures/files/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/test/integration/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/test/mailers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/test/models/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/test/test_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/tmp/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apiV1-2/vendor/.keep" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +69,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Ruby File" />
         <option value="Ruby Class" />
       </list>
     </option>
@@ -235,7 +236,7 @@
       <updated>1576098104026</updated>
       <workItem from="1576098105779" duration="4922000" />
       <workItem from="1576103656405" duration="9432000" />
-      <workItem from="1576162885291" duration="639000" />
+      <workItem from="1576162885291" duration="2509000" />
     </task>
     <servers />
   </component>
