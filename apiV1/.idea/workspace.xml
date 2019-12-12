@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3e4def4-221a-4e34-bd7c-d156844337b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/.ruby-version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/Gemfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/Gemfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/Rakefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/channels/application_cable/channel.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/channels/application_cable/connection.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/controllers/application_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/controllers/concerns/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/jobs/application_job.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/mailers/application_mailer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/models/application_record.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/models/concerns/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/views/layouts/mailer.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/app/views/layouts/mailer.text.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/bundle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/rails" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/rake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/setup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/bin/spring" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config.ru" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/application.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/boot.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/cable.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/credentials.yml.enc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/database.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/environment.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/environments/development.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/environments/production.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/environments/test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/application_controller_renderer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/backtrace_silencers.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/cors.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/filter_parameter_logging.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/inflections.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/mime_types.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/initializers/wrap_parameters.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/locales/en.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/puma.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/routes.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/spring.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/config/storage.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/db/seeds.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/lib/tasks/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/log/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/storage/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/channels/application_cable/connection_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/controllers/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/fixtures/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/fixtures/files/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/integration/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/mailers/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/models/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/test/test_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/tmp/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../apiV1-2/vendor/.keep" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Ruby Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1UqxoivBmRZH20ThBYCFL0JnY2v" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/controllers/api/v1" />
+      <recent name="$PROJECT_DIR$/app/controllers/api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/controllers" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/app/commands" />
+      <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Rails.Development: apiV1">
+    <configuration name="Development: apiV1" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="apiV1" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Production: apiV1" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="apiV1" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spec: apiV1" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="apiV1" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test: apiV1" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="apiV1" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3e4def4-221a-4e34-bd7c-d156844337b4" name="Default Changelist" comment="" />
+      <created>1576098104026</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576098104026</updated>
+      <workItem from="1576098105779" duration="4922000" />
+      <workItem from="1576103656405" duration="9432000" />
+      <workItem from="1576162885291" duration="639000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="311" width="424" height="482" key="FileChooserDialogImpl" timestamp="1576160211381">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="311" width="424" height="482" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1576160211381" />
+    <state width="1874" height="255" key="GridCell.Tab.0.bottom" timestamp="1576165170326">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="255" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1576165170326" />
+    <state width="1874" height="255" key="GridCell.Tab.0.center" timestamp="1576165170323">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="255" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1576165170323" />
+    <state width="1874" height="255" key="GridCell.Tab.0.left" timestamp="1576165170322">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="255" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1576165170322" />
+    <state width="1874" height="255" key="GridCell.Tab.0.right" timestamp="1576165170325">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="255" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1576165170325" />
+    <state x="601" y="271" width="718" height="564" key="find.popup" timestamp="1576159894337">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="601" y="271" width="718" height="564" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1576159894337" />
+  </component>
+</project>
