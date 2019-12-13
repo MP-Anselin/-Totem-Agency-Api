@@ -7,12 +7,10 @@ class Api::V1::Authentication::AuthenticationController < ApplicationController
   # POST /authenticate
   def authenticate
     command = AuthenticateUser.call(params[:email], params[:password])
-    path = 'https://totem2-f3e2e.firebaseio.com/users_administrator/6FgDbWaK6ciQTTDcdGbz/email'
-    firebase_manager = Api::V1::Authentication::FirebaseManager.new
+    firestore_manager = Api::V1::FirebaseRequests::FirestoreManager.new
 
     if command.success?
-      render json: { auth_token: firebase_manager.get(path) }
-      #render json: {auth_token: path}
+      render json: {auth_token: command.result}
     else
       render json: {error: command.errors}, status: :unauthorized
     end

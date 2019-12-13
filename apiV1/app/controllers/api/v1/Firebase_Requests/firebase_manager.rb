@@ -1,5 +1,4 @@
-class Api::V1::Authentication::FirebaseManager
-
+class Api::V1::FirebaseRequests::FirebaseManager
   @@BASE_URI = 'https://totem2-f3e2e.firebaseio.com/'
   @@PRIVATE_KEY_JSON_STRING = File.open('app/controllers/api/v1/resources/totem2-f3e2e-firebase-adminsdk-lfqcp-3e7ed4ba43.json').read
 
@@ -12,7 +11,8 @@ class Api::V1::Authentication::FirebaseManager
   end
 
   def set(path, data)
-    @firebase.set(path, data)
+    @firebase.collection('password').get()
+      #@firebase.set(path, data)
   end
 
   def delete(path)

@@ -48,3 +48,7 @@ gem 'simple_command'
 
 #google firebase database module
 gem 'firebase'
+
+gem 'google-cloud-firestore'
+
+gem 'google-api-client'
