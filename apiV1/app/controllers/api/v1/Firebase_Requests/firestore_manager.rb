@@ -1,7 +1,6 @@
-require 'google/cloud/firestore'
-
-class Api::V1::FirebaseRequests::FirestoreManager
+class Api::V1::FirebaseRequests::FirestoreManager < ApplicationController
   def initialize
+    require 'google/cloud/firestore'
     project_id = 'totem2-f3e2e'
     key_file = 'app/controllers/api/v1/resources/totem2-f3e2e-firebase-adminsdk-lfqcp-3e7ed4ba43.json'
 
