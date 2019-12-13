@@ -43,5 +43,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Encoding and Decoding JWT Tokens
 gem 'jwt'
 
-#Instead of using private controller methods, simple_command can be used. 
+#Instead of using private controller methods, simple_command can be used.
 gem 'simple_command'
+
+#google firebase database module
+gem 'firebase'
