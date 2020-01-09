@@ -1,4 +1,5 @@
-class Api::V1::Requests::Tables::UsersController < Api::V1::FirebaseRequests::FirestoreManager
+require 'net/http'
+class Api::V1::Requests::Tables::UsersController < Api::V1::FirebaseRequests::FireDatabaseStore
   before_action only: [:show, :update, :destroy]
 
   def initialize
@@ -16,7 +17,7 @@ class Api::V1::Requests::Tables::UsersController < Api::V1::FirebaseRequests::Fi
       @information.push(id: user.document_id, user_information: user.data)
     end
 
-    render json: {data: @information}
+    render json: { data: @information }
   end
 
   # GET /user/1
@@ -50,35 +51,35 @@ class Api::V1::Requests::Tables::UsersController < Api::V1::FirebaseRequests::Fi
 
   # POST /users
   def create
+    path_url = FIREBASE_SING_UP_USER + FIREBASE_API_KEY
+    uri_dest = URI.parse(path_url)
+    http = Net::HTTP.new(uri_dest.host, uri_dest.port)
+    http.use_ssl = true
+    request = Net::HTTP::Post.new(uri_dest.request_uri)
+    request.set_form_data({"email" => "testuser5@example.com", "password" => "666666", "returnSecureToken" => true })
+    response = http.request(request)
+    render :json => response.body
 
-    fields = {first_name: params[:first_name], last_name: params[:last_name],
-              email: params[:email] }
-    isValid = 0
-
-    fields.each do |key, value|
-      if value.nil? || value.blank? || value.empty?
-        isValid = 1
-      end
-    end
-
-    if isValid == 1
-      @error_info[:status] = 400
-      @error_info[:error] = 'Bad request'
-      render json: @error_info
-    elsif hasDuplicate(fields) == 1
-      @error_info[:status] = 409
-      @error_info[:error] = 'Conflict'
-      render json: @error_info
-    else
-      new_user = @db_users.add(fields)
-      if new_user.document_id.nil?
-        @error_info[:status] = 503
-        @error_info[:error] = 'Service Unavailable'
-        render json: @error_info
-      end
-
-      render json: {status: "Created", code: 201}
-    end
+    #end
+#
+    #if isValid == 1
+    #  @error_info[:status] = 400
+    #  @error_info[:error] = 'Bad request'
+    #  render json: @error_info, status: :bad_request
+    #elsif hasDuplicate(fields) == 1
+    #  @error_info[:status] = 409
+    #  @error_info[:error] = 'Conflict'
+    #  render json: @error_info, status: :conflict
+    #else
+    #  new_user = @db_users.add(fields)
+    #  if new_user.document_id.nil?
+    #    @error_info[:status] = 503
+    #    @error_info[:error] = 'Service Unavailable'
+    #    render json: @error_info, status: :service_unavailable
+    #  end
+#
+    #  render json: {status: "Created", code: 201}, status: :created
+    #end
   end
 
   # PATCH/PUT /users/1
@@ -93,7 +94,7 @@ class Api::V1::Requests::Tables::UsersController < Api::V1::FirebaseRequests::Fi
     if isExisted.nil?
       @error_info[:status] = 204
       @error_info[:error] = 'No Content'
-      render json: @error_info
+      render json: @error_info, status: :no_content
     else
       @db_users.doc(id).delete
       check_delete = @db_users.doc(id).get.data
@@ -102,7 +103,7 @@ class Api::V1::Requests::Tables::UsersController < Api::V1::FirebaseRequests::Fi
       else
         @error_info[:status] = 406
         @error_info[:error] = 'Not Acceptable'
-        render json: @error_info
+        render json: @error_info, status: :not_acceptable
       end
     end
   end

@@ -7270,3 +7270,585 @@ Processing by Api::V1::Requests::Tables::UsersController#create as */*
 Completed 200 OK in 665ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 46697)
 
 
+Started POST "/api/v1/authentication/authenticate" for 127.0.0.1 at 2019-12-17 12:14:25 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"authentication"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 13ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 2013)
+
+
+Started POST "/api/v1/authentication/authenticate" for 127.0.0.1 at 2019-12-17 12:15:42 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 566ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 6677)
+
+
+Started GET "/api/v1/requests/tables/users" for 127.0.0.1 at 2019-12-17 12:16:03 +0100
+Processing by Api::V1::Requests::Tables::UsersController#index as */*
+  Parameters: {"user"=>{}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 406)
+
+
+Started GET "/api/v1/requests/tables/users" for 127.0.0.1 at 2019-12-17 12:16:15 +0100
+Processing by Api::V1::Requests::Tables::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 329ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 12323)
+
+
+Started GET "/api/v1/requests/tables/users/Emn0pMweoCXIfbkkKNT" for 127.0.0.1 at 2019-12-17 12:16:36 +0100
+Processing by Api::V1::Requests::Tables::UsersController#show as */*
+  Parameters: {"id"=>"Emn0pMweoCXIfbkkKNT", "user"=>{}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 224)
+
+
+Started GET "/api/v1/requests/tables/users/Emn0pMweoCXIfbkkKNT" for 127.0.0.1 at 2019-12-17 12:16:41 +0100
+Processing by Api::V1::Requests::Tables::UsersController#show as */*
+  Parameters: {"id"=>"Emn0pMweoCXIfbkkKNT", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 313ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 32096)
+
+
+Started GET "/api/v1/requests/tables/users/HhyRX1pBS0JwnvlMlLIf" for 127.0.0.1 at 2019-12-17 12:17:47 +0100
+Processing by Api::V1::Requests::Tables::UsersController#show as */*
+  Parameters: {"id"=>"HhyRX1pBS0JwnvlMlLIf", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 324ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 32402)
+
+
+Started POST "/api/v1/requests/tables/users" for 127.0.0.1 at 2019-12-17 12:19:04 +0100
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name", "last_name"=>"test last name", "email"=>"test.test@gmail.com", "user"=>{"email"=>"test.test@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 292ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 12011)
+
+
+Started POST "/api/v1/requests/tables/users" for 127.0.0.1 at 2019-12-17 12:19:20 +0100
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 483ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 42814)
+
+
+Started DELETE "/api/v1/requests/tables/users/j8s9lhXWAlCDPTpyOaGc" for 127.0.0.1 at 2019-12-17 12:20:07 +0100
+Processing by Api::V1::Requests::Tables::UsersController#destroy as */*
+  Parameters: {"id"=>"j8s9lhXWAlCDPTpyOaGc", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 602ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 93913)
+
+
+Started POST "/api/v1/authentication/authenticate" for 127.0.0.1 at 2019-12-24 13:26:23 +0100
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 1192ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 7583)
+
+
+Started GET "/api/v1/requests/tables/users/" for 127.0.0.1 at 2019-12-24 13:27:06 +0100
+Processing by Api::V1::Requests::Tables::UsersController#index as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 295ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 13736)
+
+
+Started POST "/api/v1/authentication/authenticate" for 127.0.0.1 at 2019-12-24 13:27:26 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"authentication"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 823)
+
+
+Started POST "/api/v1/requests/tables/users" for 127.0.0.1 at 2019-12-24 13:28:02 +0100
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 612ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 42760)
+
+
+Started POST "/api/v1/requests/tables/users" for 127.0.0.1 at 2019-12-24 13:28:12 +0100
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 164ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 11868)
+
+
+Started POST "/api/v1/requests/tables/users" for 127.0.0.1 at 2019-12-24 13:29:08 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 409 Conflict in 505ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 15874)
+
+
+Started POST "/api/v1/requests/tables/users" for 127.0.0.1 at 2019-12-24 13:29:25 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 409 Conflict in 245ms (Views: 0.5ms | ActiveRecord: 2.5ms | Allocations: 15868)
+
+
+Started POST "/api/v1/requests/tables/users" for 127.0.0.1 at 2019-12-24 13:30:19 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 409 Conflict in 193ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 15732)
+
+
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2020-01-08 18:00:37 +0100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 599ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 7334)
+
+
+Started GET "/api/v1/requests/tables/users" for ::1 at 2020-01-08 18:01:12 +0100
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 18:07:44 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 18:10:19 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 18:11:44 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 204 No Content in 11ms (ActiveRecord: 1.4ms | Allocations: 4567)
+
+
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 18:11:58 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 18:13:53 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:8:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 18:16:18 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 18:16:57 +0100
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:16:56 +0100
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:23:54 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- ../../../../../../app/controllers/api/v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:24:42 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- ../Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:27:26 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:29:49 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:32:47 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:9:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:34:13 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:8:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:37:32 +0100
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:8:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:43:03 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for #<Api::V1::Requests::Tables::UsersController:0x00000000027c82b8>):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:8:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:58:12 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:8:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:58:55 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `new' for #<Api::V1::Requests::Tables::UsersController:0x0000000004e42740>):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:8:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 19:59:31 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:8:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:04:27 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- ../../../v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:04:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- ../../../v1/Firebase_Requests/firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:05:02 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- ../../Firebase_Requests/firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:13:24 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- ../../Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:14:17 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:18:53 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:42:19 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/Firebase_Requests/firebase_manager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:45:03 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:9:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:45:06 +0100
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:9:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:51:47 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for #<Api::V1::Requests::Tables::UsersController:0x00007f76005e0bf0>):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:9:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:58:31 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for #<Api::V1::Requests::Tables::UsersController:0x00007f76140281b8>):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:9:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 20:58:50 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:9:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 21:02:17 +0100
+  
+NoMethodError (undefined method `FirebaseManager' for Api::V1::FirebaseRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:9:in `initialize'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 21:48:53 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::FirebaseRequests::FirestoreManager
+Did you mean?  Api::V1::FirebaseRequests::FirebaseManager):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:3:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 21:49:21 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- ../../Firebase_Requests/firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 21:50:16 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 21:50:23 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- /home/Documents/Firm/Totem/api/totem-agency-api/apiV1/firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 21:50:40 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- /home/Documents/Firm/Totem/api/firebase_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 22:11:01 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::FirebaseRequests::FireDatabaseStore):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:1:in `<main>'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 22:11:48 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.2ms | Allocations: 5755)
+
+
+  
+NoMethodError (undefined method `create_user_with_email_and_password' for nil:NilClass):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:55:in `create'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-08 22:13:48 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms | Allocations: 5072)
+
+
+  
+NoMethodError (undefined method `createUserWithEmailAndPassword' for nil:NilClass):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:55:in `create'
+Started POST "/api/v1/authentication/authenticate" for ::1 at 2020-01-09 10:50:35 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 688ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 6970)
+
+
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 10:51:53 +0100
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.8ms | Allocations: 1564)
+
+
+  
+NoMethodError (undefined method `create_user' for nil:NilClass):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:56:in `create'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 10:52:07 +0100
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 1215)
+
+
+  
+NoMethodError (undefined method `create_user' for nil:NilClass):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:56:in `create'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 10:52:52 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.3ms | Allocations: 5053)
+
+
+  
+NoMethodError (undefined method `create_user' for nil:NilClass):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:57:in `create'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 10:53:37 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.5ms | Allocations: 5067)
+
+
+  
+NoMethodError (undefined method `create_user' for nil:NilClass):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:57:in `create'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 10:54:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 4.0ms | Allocations: 5058)
+
+
+  
+NoMethodError (undefined method `create_user' for nil:NilClass):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:57:in `create'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 12:19:14 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.3ms | Allocations: 4785)
+
+
+  
+EOFError (end of file reached):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:66:in `create'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 12:20:45 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 1.2ms | Allocations: 4902)
+
+
+  
+EOFError (end of file reached):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:66:in `create'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 12:21:47 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 1.0ms | Allocations: 4901)
+
+
+  
+EOFError (end of file reached):
+  
+app/controllers/api/v1/requests/tables/users_controller.rb:59:in `create'
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 12:22:51 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 764ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 6218)
+
+
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 12:29:46 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 858ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 2139)
+
+
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 14:18:13 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 984ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 5983)
+
+
+Started POST "/api/v1/requests/tables/users" for ::1 at 2020-01-09 14:47:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#create as */*
+  Parameters: {"first_name"=>"test first name ttoto ", "last_name"=>"test last name toto ", "email"=>"test2.test@gmail.com", "user"=>{"email"=>"test2.test@gmail.com"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 1294ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 5706)
+
+
+Started GET "/api/v1/requests/tables/users/HhyRX1pBS0JwnvlMlLIf" for ::1 at 2020-01-09 14:51:19 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#show as */*
+  Parameters: {"id"=>"HhyRX1pBS0JwnvlMlLIf", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 436ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 37384)
+
+
