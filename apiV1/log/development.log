@@ -7852,3 +7852,2401 @@ Processing by Api::V1::Requests::Tables::UsersController#show as */*
 Completed 200 OK in 436ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 37384)
 
 
+Started GET "/api/v1/requests/tables/users/HhyRX1pBS0JwnvlMlLIf" for ::1 at 2020-01-09 15:06:46 +0100
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersController#show as */*
+  Parameters: {"id"=>"HhyRX1pBS0JwnvlMlLIf", "user"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 782ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 37685)
+
+
+Started GET "/api/v1/requests/tables/users/HhyRX1pBS0JwnvlMlLIf" for ::1 at 2020-01-09 15:47:39 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#show as */*
+  Parameters: {"id"=>"HhyRX1pBS0JwnvlMlLIf", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 321ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 5799)
+
+
+Started GET "/api/v1/requests/tables/users/HhyRX1pBS0JwnvlMlLIf" for ::1 at 2020-01-09 15:50:11 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersController#show as */*
+  Parameters: {"id"=>"HhyRX1pBS0JwnvlMlLIf", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 385ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 5868)
+
+
+Started GET "/api/v1/requests/tables/users/eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NTc5OTc5LCJ1c2VyX2lkIjoibEFsWEhXdEN3Rk82aTlodVgybklJSzl2S3J4MSIsInN1YiI6ImxBbFhIV3RDd0ZPNmk5aHVYMm5JSUs5dktyeDEiLCJpYXQiOjE1Nzg1Nzk5NzksImV4cCI6MTU3ODU4MzU3OSwiZW1haWwiOiJ0ZXN0dXNlcnRAZXhhbXBsZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdHVzZXJ0QGV4YW1wbGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.rktWh2UkeHIR29dESJXeNmlhBTDS8kOY9cGKBcRgNuAMj-jqbdT5RY2dqjskQBflVa7wAZEellEIfsPxkjDycUZ4FnTwSf279fPzG3-VkTwqdMKX6Psrgmd5sM7NXpeJCG1dwVRVrdwlohCR-4ZxEw2UBgt3-KMovZjrhnKPdMjqfcp4NPGzanqsYFWsFXuFYexrVJx7pLM4v_I9x1H-ReZkrl_UOhy7VhrGPKJ3sRMI4ivHcvrckjJtH60V5bBJgkYf5ae6InCh4iVumgPdPNLYvXNAcidv8GjgZNUfwrcjVOWvPNX5kCOfXj0loHoZTIaW8jKdgNIKXBJPoNYF3Q" for ::1 at 2020-01-09 15:51:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/requests/tables/users/eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NTc5OTc5LCJ1c2VyX2lkIjoibEFsWEhXdEN3Rk82aTlodVgybklJSzl2S3J4MSIsInN1YiI6ImxBbFhIV3RDd0ZPNmk5aHVYMm5JSUs5dktyeDEiLCJpYXQiOjE1Nzg1Nzk5NzksImV4cCI6MTU3ODU4MzU3OSwiZW1haWwiOiJ0ZXN0dXNlcnRAZXhhbXBsZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsidGVzdHVzZXJ0QGV4YW1wbGUuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.rktWh2UkeHIR29dESJXeNmlhBTDS8kOY9cGKBcRgNuAMj-jqbdT5RY2dqjskQBflVa7wAZEellEIfsPxkjDycUZ4FnTwSf279fPzG3-VkTwqdMKX6Psrgmd5sM7NXpeJCG1dwVRVrdwlohCR-4ZxEw2UBgt3-KMovZjrhnKPdMjqfcp4NPGzanqsYFWsFXuFYexrVJx7pLM4v_I9x1H-ReZkrl_UOhy7VhrGPKJ3sRMI4ivHcvrckjJtH60V5bBJgkYf5ae6InCh4iVumgPdPNLYvXNAcidv8GjgZNUfwrcjVOWvPNX5kCOfXj0loHoZTIaW8jKdgNIKXBJPoNYF3Q"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/sign_up" for ::1 at 2020-01-09 17:21:48 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Requests::Tables::UsersManagerController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/sign_up" for ::1 at 2020-01-09 17:23:30 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Requests::Tables::UsersManagerController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/sign_up" for ::1 at 2020-01-09 17:26:34 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Requests::Tables::UsersManager::UserController
+Did you mean?  Api::V1::Requests::Tables::UsersManager::UsersController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/sign_up" for ::1 at 2020-01-09 17:27:32 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Requests::Tables::UsersManager::UserController
+Did you mean?  Api::V1::Requests::Tables::UsersManager::UsersController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/sign_up" for ::1 at 2020-01-09 17:28:34 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Requests::Tables::UsersManager::UserController
+Did you mean?  Api::V1::Requests::Tables::UsersManager::UsersController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/sign_up" for ::1 at 2020-01-09 17:29:05 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/requests/tables/users_manager/sign_up"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/user_private_access" for ::1 at 2020-01-09 17:29:26 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#create as */*
+  Parameters: {"email"=>"user10@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user10@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 204 No Content in 1090ms (ActiveRecord: 1.4ms | Allocations: 7015)
+
+
+Started POST "/api/v1/requests/tables/users_manager/user_private_access" for ::1 at 2020-01-09 17:35:02 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#create as */*
+  Parameters: {"email"=>"user11@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user11@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 471ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 6698)
+
+
+Started POST "/api/v1/requests/tables/users_manager/user_private_access/signup" for ::1 at 2020-01-09 17:36:54 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/requests/tables/users_manager/user_private_access/signup"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/signup" for ::1 at 2020-01-09 17:39:35 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/requests/tables/users_manager/signup"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/signup" for ::1 at 2020-01-09 17:46:14 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Requests::Tables::UsersManager::UserController
+Did you mean?  Api::V1::Requests::Tables::UsersManager::UsersController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/signup" for ::1 at 2020-01-09 17:47:15 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'sign_up' could not be found for Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController):
+  
+actionpack (6.0.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/requests/tables/users_manager/signup" for ::1 at 2020-01-09 17:47:37 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user11@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user11@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 639ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 7166)
+
+
+Started POST "/api/v1/requests/tables/users_manager/signup" for ::1 at 2020-01-09 17:47:50 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user11@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user11@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 1449ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 7117)
+
+
+Started POST "/api/v1/requests/tables/users_manager/signup" for ::1 at 2020-01-09 17:48:37 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Requests::Tables::UsersManager::Api):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:297:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:297:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/signup" for ::1 at 2020-01-09 18:10:14 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant UserPrivateAccessController):
+  
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `const_get'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:282:in `block in constantize'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/signup" for ::1 at 2020-01-09 18:12:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user11@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user11@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 563ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 7254)
+
+
+Started POST "/signup" for ::1 at 2020-01-09 18:13:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/signup" for ::1 at 2020-01-09 18:13:16 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user11@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user11@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 754ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 6922)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:19:52 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user11@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user11@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 808ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 6980)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:21:08 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user12@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user12@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 621ms (ActiveRecord: 0.8ms | Allocations: 8214)
+
+
+  
+NoMethodError (undefined method `er' for #<String:0x00007f10dd718ed8>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:34:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-09 18:21:31 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user12@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user12@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 819ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 6989)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:21:41 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user13@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user13@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 616ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 2277)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:22:17 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user13@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user13@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 1.1ms | Allocations: 8371)
+
+
+  
+NoMethodError (undefined method `error' for #<String:0x00007f10dd3295e8>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:34:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-09 18:24:30 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user13@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user13@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 628ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 7223)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:24:58 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user13@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user13@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 1031ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7265)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:25:35 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user14@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user14@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 1190ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 7569)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:28:13 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user14@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user14@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 474ms (Views: 0.6ms | ActiveRecord: 4.8ms | Allocations: 7165)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:28:23 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user15@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user15@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 841ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 1948)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:28:53 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user15@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user15@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 411ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 7193)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:29:44 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user15@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user15@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 851ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 7236)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:29:55 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 661ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2204)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-09 18:58:40 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/Documents/Firm/Totem/api/totem-agency-api/apiV1/app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:46: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:46: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:46: syntax error, unexpected end, expecting end-of-input
+Started POST "/user/signup" for ::1 at 2020-01-09 18:59:02 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `HttpRequestsManager' for Api::V1::Requests::HttpRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:11:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-09 18:59:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/requests/http_requests/http_requests_manager.rb):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:1:in `<main>'
+Started POST "/user/signup" for ::1 at 2020-01-09 18:59:48 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/requests/http_requests/http_requests_manager):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:1:in `<main>'
+Started POST "/user/signup" for ::1 at 2020-01-10 12:55:57 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/requests/http_requests/http_requests_manager):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:1:in `<main>'
+Started POST "/user/signup" for ::1 at 2020-01-10 12:57:41 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `HttpRequestsManager' for Api::V1::Requests::HttpRequests:Module):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:14:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:01:03 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `HttpRequestsManager' for #<Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController:0x00007f10dc2f21c0>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:14:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:05:29 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `HttpRequestsManager' for #<Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController:0x0000000003e99050>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:14:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:11:36 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (uninitialized constant #<Class:0x0000000002e38eb8>::HttpRequestsManager
+Did you mean?  Api::V1::Requests::HttpRequests):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:14:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:12:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 544)
+
+
+Started POST "/totem/authentication" for ::1 at 2020-01-10 13:12:41 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user16@example.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 31ms (Views: 0.5ms | ActiveRecord: 13.9ms | Allocations: 2168)
+
+
+Started POST "/totem/authentication" for ::1 at 2020-01-10 13:13:03 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 1064ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 4660)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:13:24 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 561ms (ActiveRecord: 0.4ms | Allocations: 2885)
+
+
+  
+NoMethodError (undefined method `status' for #<Net::HTTPBadRequest 400 Bad Request readbody=true>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:41:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:14:21 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 429ms (ActiveRecord: 4.5ms | Allocations: 7997)
+
+
+  
+NoMethodError (undefined method `status' for #<Net::HTTPBadRequest 400 Bad Request readbody=true>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:41:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:20:26 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 566ms (ActiveRecord: 3.7ms | Allocations: 7465)
+
+
+  
+NoMethodError (undefined method `status' for #<Net::HTTPBadRequest 400 Bad Request readbody=true>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:41:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:20:57 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 457ms (ActiveRecord: 2.8ms | Allocations: 8347)
+
+
+  
+NoMethodError (undefined method `downcase' for 2:Integer):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:41:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:21:24 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 583ms (ActiveRecord: 1.3ms | Allocations: 7943)
+
+
+  
+NoMethodError (undefined method `downcase' for 2:Integer):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:41:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:22:12 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 592ms (ActiveRecord: 1.5ms | Allocations: 7944)
+
+
+  
+NoMethodError (undefined method `downcase' for 2:Integer):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:41:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:24:08 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/Documents/Firm/Totem/api/totem-agency-api/apiV1/app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:49: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:49: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:49: syntax error, unexpected end, expecting end-of-input
+Started POST "/user/signup" for ::1 at 2020-01-10 13:24:29 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 749ms (Views: 0.4ms | ActiveRecord: 3.1ms | Allocations: 7341)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:25:08 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 609ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 7602)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:25:21 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 492ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 7204)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:25:33 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 744ms (Views: 0.9ms | ActiveRecord: 4.8ms | Allocations: 7455)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:26:46 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 504ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 6951)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:28:31 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 984ms (ActiveRecord: 4.4ms | Allocations: 8367)
+
+
+  
+NoMethodError (undefined method `error' for #<String:0x00007f10dd2b8af0>):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:11:in `response_analyzer'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:41:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:28:56 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 683ms (ActiveRecord: 2.4ms | Allocations: 8234)
+
+
+  
+NoMethodError (undefined method `status' for #<Hash:0x00007f10dd3c3238>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:42:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:30:26 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 1103ms (ActiveRecord: 1.7ms | Allocations: 8363)
+
+
+  
+NoMethodError (undefined method `data' for #<Hash:0x00007f10dd3e3588>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:45:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:30:50 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 575ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 7417)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:32:48 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 503ms (Views: 0.7ms | ActiveRecord: 2.5ms | Allocations: 7292)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:33:08 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 895ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 7245)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:34:15 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 1239ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 7190)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:34:29 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 609ms (ActiveRecord: 1.4ms | Allocations: 8083)
+
+
+  
+NoMethodError (undefined method `error' for #<String:0x000000000340b430>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:41:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:34:38 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user16@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user16@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 599ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 7210)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:37:13 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user17@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user17@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 1028ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 7162)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:38:04 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user18@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user18@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 702ms (Views: 0.2ms | ActiveRecord: 4.8ms | Allocations: 7296)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:38:21 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/Documents/Firm/Totem/api/totem-agency-api/apiV1/app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:44: syntax error, unexpected tLABEL
+...           render json: status: 200
+...                        ^~~~~~~):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:44: syntax error, unexpected tLABEL
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:44: syntax error, unexpected tLABEL
+Started POST "/user/signup" for ::1 at 2020-01-10 13:39:18 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user20@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user20@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 809ms (Views: 0.2ms | ActiveRecord: 4.7ms | Allocations: 7373)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:39:31 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user20@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user20@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 711ms (ActiveRecord: 2.8ms | Allocations: 7402)
+
+
+  
+TypeError (no implicit conversion of Net::HTTPBadRequest into String):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:12:in `response_analyzer'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:42:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:39:45 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user21@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user21@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 857ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 2382)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:44:23 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user22@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user22@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 739ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 7115)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:47:24 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user22@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user22@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 453ms (ActiveRecord: 1.8ms | Allocations: 7124)
+
+
+  
+TypeError (no implicit conversion of Net::HTTPBadRequest into String):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:16:in `response_analyzer'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:42:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:47:37 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user22@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user22@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 474ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 7095)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:48:14 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user22@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user22@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 345ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 7114)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:50:43 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user22@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user22@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 439ms (Views: 0.2ms | ActiveRecord: 6.2ms | Allocations: 7220)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:51:48 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user22@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user22@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 377ms (ActiveRecord: 1.6ms | Allocations: 7278)
+
+
+  
+TypeError (no implicit conversion of Net::HTTPBadRequest into String):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:12:in `response_analyzer'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:42:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:52:36 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user22@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user22@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 772ms (ActiveRecord: 2.5ms | Allocations: 7807)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:12:in `response_analyzer'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:42:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 13:53:51 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user22@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user22@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 583ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 7411)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:55:04 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user22@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user22@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 481ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 7086)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 13:56:16 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"password"=>"[FILTERED]", "user_private_access"=>{"password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 507ms (Views: 0.1ms | ActiveRecord: 3.7ms | Allocations: 7064)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 14:19:16 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (uninitialized constant Api::V1::FirebaseRequests::FireDatabaseStore::FIREBASE_PROJECT_ID):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:25:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:42:06 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (uninitialized class variable @@macro in Api::V1::FirebaseRequests::FireDatabaseStore):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:25:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:43:42 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `FIREBASE_PROJECT_ID' for nil:NilClass):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:26:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:47:23 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (uninitialized constant Api::V1::FirebaseRequests::FireDatabaseStore::FIREBASE_PROJECT_ID):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:24:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:49:02 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (uninitialized constant Api::V1::FirebaseRequests::FireDatabaseStore::FIREBASE_PROJECT_ID):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:24:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:49:39 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- app/controllers/api/v1/tools/macro_list):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:23:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:49:59 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- macro_list):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:23:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:50:12 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'sign_up' could not be found for Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController):
+  
+actionpack (6.0.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:50:35 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 1173ms (Views: 0.4ms | ActiveRecord: 4.6ms | Allocations: 7242)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 14:51:37 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.6ms | Allocations: 7817)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dd469250>::SIGN_UP_URL):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:18:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:53:38 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 3.6ms | Allocations: 2766)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dd469250>::SIGN_UP_URL):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:18:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:54:06 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 691ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 7207)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 14:54:48 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'sign_up' could not be found for Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController):
+  
+actionpack (6.0.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:55:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 443ms (Views: 0.5ms | ActiveRecord: 5.8ms | Allocations: 7289)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 14:55:18 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'sign_up' could not be found for Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController):
+  
+actionpack (6.0.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:56:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 2.3ms | Allocations: 7807)
+
+
+  
+NameError (uninitialized constant #<Class:0x00000000040d63b8>::SIGN_UP_URL):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:22:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 14:56:30 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 404 Not Found in 386ms (Views: 0.7ms | ActiveRecord: 2.6ms | Allocations: 6725)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:05:12 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.4ms | Allocations: 7435)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dd9add88>::TOTO):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:22:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:05:32 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 404 Not Found in 450ms (Views: 0.2ms | ActiveRecord: 5.2ms | Allocations: 6725)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:06:00 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 2.2ms | Allocations: 7776)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dcf92da8>::TOTO):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:22:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:06:20 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.1ms | Allocations: 7811)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dd3cc3d8>::TOTO):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:22:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:06:25 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 2770)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dd3cc3d8>::TOTO):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:22:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:06:44 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.0ms | Allocations: 7809)
+
+
+  
+NameError (uninitialized constant #<Class:0x000000000248ef20>::SIGN_UP_URL):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:22:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:06:56 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'sign_up' could not be found for Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController):
+  
+actionpack (6.0.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:07:13 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 741ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 7008)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:08:28 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 737ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 7284)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:11:13 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms | Allocations: 7809)
+
+
+  
+NameError (uninitialized constant #<Class:0x0000000003fedd20>::SIGN_UP_URL):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:21:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:11:45 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'sign_up' could not be found for Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController):
+  
+actionpack (6.0.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:11:53 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (uninitialized constant #<Class:0x00007f10dd5b2b48>::SIGN_UP_URL):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:13:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:11:58 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NameError (uninitialized constant #<Class:0x00007f10dceffdc8>::SIGN_UP_URL):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:14:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:12:20 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 404 Not Found in 310ms (Views: 0.2ms | ActiveRecord: 4.1ms | Allocations: 6728)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:13:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 185ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 6712)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:13:43 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 712ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 7382)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:15:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 695ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 7060)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:15:18 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 378ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 6897)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:15:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.0ms | Allocations: 7807)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dcec09e8>::SIGN_UP_URL):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:20:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:16:43 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 503ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 7288)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:19:54 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 643ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 7312)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:24:26 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user23@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user23@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 241ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 6975)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:25:25 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 397ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 7365)
+
+
+Started POST "/totem/authentication" for ::1 at 2020-01-10 16:25:45 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 806ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 1567)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:25:58 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 247ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 2212)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:26:23 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 278ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 7019)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:27:22 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 315ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 7027)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:27:42 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 301ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 7339)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:28:07 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 334ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 7363)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:28:25 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 430ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 7274)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:28:48 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 248ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 7165)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:29:07 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 383ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 7123)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:29:22 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 256ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 7314)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:30:06 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 297ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 7391)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:31:06 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 259ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 7348)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:31:32 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 442ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 6964)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:31:43 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 292ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 7390)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:32:33 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 2.9ms | Allocations: 7928)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dd14e750>::FIREBASE_SIGN_UP_USER
+Did you mean?  FIREBASE_SING_UP_USER):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:20:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:33:23 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 2.4ms | Allocations: 7966)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dd478700>::FIREBASE_SIGN_UP_USER
+Did you mean?  FIREBASE_SING_UP_USER):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:20:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:34:05 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.9ms | Allocations: 7966)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f10dd3bce88>::FIREBASE_SIGN_UP_USER
+Did you mean?  FIREBASE_SING_UP_USER):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:20:in `sign_up'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:34:23 +0100
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant Api::V1::FirebaseRequests::FireDatabaseStore::FIREBASE_PROJECT_ID):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:9:in `initialize'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:12:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:36:17 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 262ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 8114)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:37:42 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 889ms (Views: 0.9ms | ActiveRecord: 1.4ms | Allocations: 7335)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:38:12 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 381ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 7204)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:38:25 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 258ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 7573)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:38:39 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 272ms (Views: 0.4ms | ActiveRecord: 2.9ms | Allocations: 7212)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:39:30 +0100
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 226ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 7434)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:39:50 +0100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 251ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 8349)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:40:09 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 310ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 7674)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:40:35 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 327ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 8399)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:40:47 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 188ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 2479)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:41:10 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 338ms (Views: 0.6ms | ActiveRecord: 6.1ms | Allocations: 7549)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:41:23 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 787ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 7975)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:41:52 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (uninitialized constant Api::V1::FirebaseRequests::FireDatabaseStore::FIREBASE_PROJECT_ID):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:9:in `initialize'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:12:in `initialize'
+Started POST "/user/signup" for ::1 at 2020-01-10 16:42:15 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 1120ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 7818)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:42:28 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 627ms (Views: 0.4ms | ActiveRecord: 2.3ms | Allocations: 6902)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 16:43:47 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 1209ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 8022)
+
+
+Started POST "/user/signin" for ::1 at 2020-01-10 17:01:26 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_in as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 394ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 6530)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:07:46 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>"true", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>"true"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 557ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 6881)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:08:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>"true", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>"true"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 4.3ms | Allocations: 5766)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:08:46 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>"false", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>"false"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 746)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:09:10 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 742)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:09:17 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 759)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:09:45 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 610ms (Views: 1.5ms | ActiveRecord: 4.6ms | Allocations: 7388)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:10:00 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 476ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1912)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:10:09 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user25@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user25@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 507ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 2317)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:12:29 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user25@example.com", "password"=>"[FILTERED]", "user_private_access"=>{"email"=>"user25@example.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 636ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 7136)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:12:41 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 721ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 2141)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:12:56 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 491ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1962)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:13:23 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 633ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2290)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:19:07 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"registered"=>true, "user_private_access"=>{"registered"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 514ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 6545)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:22:49 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"registered"=>true, "user_private_access"=>{"registered"=>true}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 496ms (Views: 0.2ms | ActiveRecord: 4.0ms | Allocations: 7175)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:23:16 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"registered"=>true, "user_private_access"=>{"registered"=>true}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 62ms (Views: 0.4ms | ActiveRecord: 11.8ms | Allocations: 5754)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:28:29 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"registered"=>true, "user_private_access"=>{"registered"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 746)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:28:50 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"registered"=>true, "user_private_access"=>{"registered"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 308ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 7348)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:33:03 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"registered"=>true, "user_private_access"=>{"registered"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 516ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 7348)
+
+
+Started POST "/user/signup" for ::1 at 2020-01-10 17:35:39 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"registered"=>true, "user_private_access"=>{"registered"=>true}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 908ms (Views: 0.3ms | ActiveRecord: 6.0ms | Allocations: 6915)
+
+
+Started POST "/user/signxx" for ::1 at 2020-01-10 17:37:50 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"registered"=>true, "user_private_access"=>{"registered"=>true}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 886ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 7100)
+
+
+Started POST "/user/signxx" for ::1 at 2020-01-10 17:37:59 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"user24@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 483ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 2112)
+
+
+Started POST "/user/signxx" for ::1 at 2020-01-10 17:38:07 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 490ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 2209)
+
+
+Started POST "/user/signxx" for ::1 at 2020-01-10 17:38:15 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+{"email":"user26@example.com","password":"666666", "registered":fals}
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '{"email":"user26@example.com","password":"666666", "registered":fals}'):
+  
+actionpack (6.0.1) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.1) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (6.0.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.1) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.1) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.1) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{"email":"user26@example.com","password":"666666", "registered":fals}
+Started POST "/user/signxx" for ::1 at 2020-01-10 17:38:28 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 669ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2363)
+
+
