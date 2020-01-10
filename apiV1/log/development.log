@@ -10250,3 +10250,233 @@ Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessControll
 Completed 200 OK in 669ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2363)
 
 
+Started POST "/user/signep" for ::1 at 2020-01-10 17:40:29 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_up as */*
+  Parameters: {"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 599ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 7083)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-10 17:52:33 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 696ms (ActiveRecord: 1.0ms | Allocations: 7736)
+
+
+  
+NoMethodError (undefined method `render' for #<Api::V1::Requests::HttpRequests::HttpRequestsManager:0x00007efe8d25a598>):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:15:in `curl_exe'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:24:in `sign_ep'
+Started POST "/user/signep" for ::1 at 2020-01-10 17:53:12 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 454ms (ActiveRecord: 0.0ms | Allocations: 7003)
+
+
+  
+Module::DelegationError (ActionController::Metal#status= delegated to @_response.status=, but @_response is nil: #<Api::V1::Requests::HttpRequests::HttpRequestsManager:0x00007efe8cedadf0 @_routes=nil, @_request=nil, @_response=nil, @_config={}, @_db_runtime=0.8628859941381961>):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:15:in `curl_exe'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:24:in `sign_ep'
+Started POST "/user/signep" for ::1 at 2020-01-10 17:53:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 642ms (ActiveRecord: 3.2ms | Allocations: 8250)
+
+
+  
+NoMethodError (undefined method `render' for #<Api::V1::Requests::HttpRequests::HttpRequestsManager:0x00007efe8d5585d8>):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:15:in `curl_exe'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:24:in `sign_ep'
+Started POST "/user/signep" for ::1 at 2020-01-10 17:58:31 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"user26@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 469ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 7362)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-10 18:15:15 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 827ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 6840)
+
+
+Started POST "/user/id/pwd/reset/code/email" for ::1 at 2020-01-10 18:39:22 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#reset_pwd_send_email as */*
+  Parameters: {"requestType"=>"PASSWORD_RESET", "email"=>"mackendy-pierre.anselin@epitech.eu", "user_private_access"=>{"requestType"=>"PASSWORD_RESET", "email"=>"mackendy-pierre.anselin@epitech.eu"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 831ms (Views: 0.6ms | ActiveRecord: 1.8ms | Allocations: 8039)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:55:57 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#reset_pwd_send_email as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 250ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 6618)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:56:53 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#reset_pwd_send_email as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 233ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 7272)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:57:37 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#reset_pwd_send_email as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 335ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 2137)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:57:54 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#reset_pwd_send_email as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 316ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 7289)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:58:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#reset_pwd_send_email as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 264ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 7235)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:58:24 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#reset_pwd_send_email as */*
+  Parameters: {"user_private_access"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 456ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1910)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:58:59 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#reset_pwd_send_email as */*
+  Parameters: {"user_private_access"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 204 No Content in 11ms (ActiveRecord: 0.8ms | Allocations: 5724)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:59:30 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#pwd_reset_verification as */*
+  Parameters: {"user_private_access"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 333ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 7198)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:20:in `render_action'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:55:in `pwd_reset_verification'
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:59:43 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#pwd_reset_verification as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 439ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 2294)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:20:in `render_action'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:55:in `pwd_reset_verification'
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 18:59:52 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#pwd_reset_verification as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 387ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 7414)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 19:00:20 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#pwd_reset_verification as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 5774)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 19:00:33 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#pwd_reset_verification as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 5748)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 19:00:48 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#pwd_reset_verification as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 5791)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 19:00:59 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#pwd_reset_verification as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 5767)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 19:01:24 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#pwd_reset_verification as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 5798)
+
+
+Started POST "/user/id/pwd/reset/code/confirmation" for ::1 at 2020-01-10 19:01:31 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#pwd_reset_verification as */*
+  Parameters: {"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr", "user_private_access"=>{"oobCode"=>"https://totem2-f3e2e.firebaseapp.com/__/auth/action?mode=resetPassword&oobCode=mXd4ji3U65GguF1nwKSvWv6jWl4VqaQLuG24j-R7Uh8AAAFvkIoIxg&apiKey=AIzaSyAriR9Ydg4l0frGiJ2-0SpbE82xxRWVtEM&lang=fr"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 465ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 7120)
+
+
