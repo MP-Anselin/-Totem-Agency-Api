@@ -10480,3 +10480,682 @@ Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessControll
 Completed 400 Bad Request in 465ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 7120)
 
 
+Started POST "/user/signep" for ::1 at 2020-01-11 10:44:09 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 793ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 6558)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-11 10:44:18 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 710ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 2166)
+
+
+Started POST "/user/id/change" for ::1 at 2020-01-11 10:46:41 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#user_change_id as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM1ODU5LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3MzU4NTksImV4cCI6MTU3ODczOTQ1OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.yQy5SFEHIww6bhHc3xluCZgJlLRw-i4UKz8r5xdVI2fqVtuUyvTPn6Mdr1HAD1aG9E0ihXU92oPZhO4INPXTxB5_kAkiIqLxitd3u9SxtNtVNtVMYKVWnR90IYBjDiDAqT2pOXvyDlFJoQh3kDTQRE8bh03a5f14rm0DVT4xO0BvztdGO50nclAkQyCEhB58SEf2__IygCDFfV43nlcPis2Li2wxp3aP-mxM3IXGAUKMB_KHUBzigSCt3BuTE-TV-7gfaDXqnh_3WPxWP4iXEiVmuUK4M5ozyMfVehc3x1SJFAr4CAUm9wTadu27G94a_ERo5uz-wYOYWBVSNP6neg", "password"=>"[FILTERED]", "returnSecureToken"=>true, "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM1ODU5LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3MzU4NTksImV4cCI6MTU3ODczOTQ1OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.yQy5SFEHIww6bhHc3xluCZgJlLRw-i4UKz8r5xdVI2fqVtuUyvTPn6Mdr1HAD1aG9E0ihXU92oPZhO4INPXTxB5_kAkiIqLxitd3u9SxtNtVNtVMYKVWnR90IYBjDiDAqT2pOXvyDlFJoQh3kDTQRE8bh03a5f14rm0DVT4xO0BvztdGO50nclAkQyCEhB58SEf2__IygCDFfV43nlcPis2Li2wxp3aP-mxM3IXGAUKMB_KHUBzigSCt3BuTE-TV-7gfaDXqnh_3WPxWP4iXEiVmuUK4M5ozyMfVehc3x1SJFAr4CAUm9wTadu27G94a_ERo5uz-wYOYWBVSNP6neg", "password"=>"[FILTERED]", "returnSecureToken"=>true}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 481ms (Views: 0.6ms | ActiveRecord: 4.2ms | Allocations: 7868)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-11 10:47:03 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 446ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 2397)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-11 10:47:10 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 782ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 2080)
+
+
+Started POST "/user/id/change" for ::1 at 2020-01-11 10:47:29 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#user_change_id as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MDMxLCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3MzYwMzEsImV4cCI6MTU3ODczOTYzMSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.sQnWGmJm_H4UxBRjnM_xZm1SJ6RzJqwjWcX_Kbp3Gc2JImxgf1-HOmAlOLpeLjPualjIsVZ28ZL44yJh3uAIEJgjJASv7w3Cf8jvKIrfR_0q4dSkefN3rwYuGTtZLf1H6Vt92etgaB_T7WnBYJn_rt8Bed7o5WbBnfGFbsMqxiVPcIqIJqqcNHe3TobeFN1O6yNKrGmMlgzxMRCCtnbvg5-V0HYH4xAsL7WKw1q_JeBC0sRUJ3accrGY5pEmppb1ostJS3MW4UjmDU3A8I38uEUHFopQ9bYy115qpfnhJ8Pl3RRvOa3r27PlEO3Lf-z1rxY_iHWtIjWkVHn40VJzEw", "password"=>"[FILTERED]", "returnSecureToken"=>true, "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MDMxLCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3MzYwMzEsImV4cCI6MTU3ODczOTYzMSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.sQnWGmJm_H4UxBRjnM_xZm1SJ6RzJqwjWcX_Kbp3Gc2JImxgf1-HOmAlOLpeLjPualjIsVZ28ZL44yJh3uAIEJgjJASv7w3Cf8jvKIrfR_0q4dSkefN3rwYuGTtZLf1H6Vt92etgaB_T7WnBYJn_rt8Bed7o5WbBnfGFbsMqxiVPcIqIJqqcNHe3TobeFN1O6yNKrGmMlgzxMRCCtnbvg5-V0HYH4xAsL7WKw1q_JeBC0sRUJ3accrGY5pEmppb1ostJS3MW4UjmDU3A8I38uEUHFopQ9bYy115qpfnhJ8Pl3RRvOa3r27PlEO3Lf-z1rxY_iHWtIjWkVHn40VJzEw", "password"=>"[FILTERED]", "returnSecureToken"=>true}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 422ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 2078)
+
+
+Started POST "/user/id/change" for ::1 at 2020-01-11 10:48:12 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#user_change_id as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MDMxLCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3MzYwMzEsImV4cCI6MTU3ODczOTYzMSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.sQnWGmJm_H4UxBRjnM_xZm1SJ6RzJqwjWcX_Kbp3Gc2JImxgf1-HOmAlOLpeLjPualjIsVZ28ZL44yJh3uAIEJgjJASv7w3Cf8jvKIrfR_0q4dSkefN3rwYuGTtZLf1H6Vt92etgaB_T7WnBYJn_rt8Bed7o5WbBnfGFbsMqxiVPcIqIJqqcNHe3TobeFN1O6yNKrGmMlgzxMRCCtnbvg5-V0HYH4xAsL7WKw1q_JeBC0sRUJ3accrGY5pEmppb1ostJS3MW4UjmDU3A8I38uEUHFopQ9bYy115qpfnhJ8Pl3RRvOa3r27PlEO3Lf-z1rxY_iHWtIjWkVHn40VJzEw", "password"=>"[FILTERED]", "returnSecureToken"=>true, "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MDMxLCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3MzYwMzEsImV4cCI6MTU3ODczOTYzMSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.sQnWGmJm_H4UxBRjnM_xZm1SJ6RzJqwjWcX_Kbp3Gc2JImxgf1-HOmAlOLpeLjPualjIsVZ28ZL44yJh3uAIEJgjJASv7w3Cf8jvKIrfR_0q4dSkefN3rwYuGTtZLf1H6Vt92etgaB_T7WnBYJn_rt8Bed7o5WbBnfGFbsMqxiVPcIqIJqqcNHe3TobeFN1O6yNKrGmMlgzxMRCCtnbvg5-V0HYH4xAsL7WKw1q_JeBC0sRUJ3accrGY5pEmppb1ostJS3MW4UjmDU3A8I38uEUHFopQ9bYy115qpfnhJ8Pl3RRvOa3r27PlEO3Lf-z1rxY_iHWtIjWkVHn40VJzEw", "password"=>"[FILTERED]", "returnSecureToken"=>true}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 329ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 1995)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-11 10:48:17 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 368ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2016)
+
+
+Started POST "/user/id/change" for ::1 at 2020-01-11 10:48:34 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#user_change_id as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxNDAyYjNkMDQyYjI5NzY5NDNmMDVmZTJlZDQyOWI3MzY0M2Y2NTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MDk3LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3MzYwOTcsImV4cCI6MTU3ODczOTY5NywiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.TCXjoQYO_hkUeLxfdc71TxWYax-MncRUA0pI_WBMglqXEjbooBAhqD2-PslHw-QbCBeqvF4m2wrWxBWvDVYC3jrSgIxi6TZKdFv_xjAKX_0QzkujCp0pDp4nyD-bNECMfwTO-qIo4zs5lpma8PNQUsB6SdzeTE_XQvwZmf3CsLIYMSRX4dG1-oSVNrtg793Pj6JYZAQ0d_vj7MT5NfvynS6NbDpdWgfESa8fHlBQT6PP2Ipnd4AnAyOtdMNifK0p-mIRlMFFAQW3u8FL1hejxb2Yzi4lzm7jwIEdYfVnEolZs8dKY3ENcLGa0af5v6xYqZbfMDSGB71DSq_wu-L88A", "password"=>"[FILTERED]", "returnSecureToken"=>true, "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxNDAyYjNkMDQyYjI5NzY5NDNmMDVmZTJlZDQyOWI3MzY0M2Y2NTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MDk3LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3MzYwOTcsImV4cCI6MTU3ODczOTY5NywiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.TCXjoQYO_hkUeLxfdc71TxWYax-MncRUA0pI_WBMglqXEjbooBAhqD2-PslHw-QbCBeqvF4m2wrWxBWvDVYC3jrSgIxi6TZKdFv_xjAKX_0QzkujCp0pDp4nyD-bNECMfwTO-qIo4zs5lpma8PNQUsB6SdzeTE_XQvwZmf3CsLIYMSRX4dG1-oSVNrtg793Pj6JYZAQ0d_vj7MT5NfvynS6NbDpdWgfESa8fHlBQT6PP2Ipnd4AnAyOtdMNifK0p-mIRlMFFAQW3u8FL1hejxb2Yzi4lzm7jwIEdYfVnEolZs8dKY3ENcLGa0af5v6xYqZbfMDSGB71DSq_wu-L88A", "password"=>"[FILTERED]", "returnSecureToken"=>true}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 457ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 2135)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-11 10:48:44 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 586ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 2287)
+
+
+Started POST "/user/id/refreh" for ::1 at 2020-01-11 11:14:45 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/user/id/refreh"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:14:56 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundaryJKCtYsUJ3HekasBn\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundaryJKCtYsUJ3HekasBn\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundaryJKCtYsUJ3HekasBn--\r\n"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 378ms (Views: 0.5ms | ActiveRecord: 6.3ms | Allocations: 8068)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:19:10 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundaryWlDqGNpW4mRK85Ea\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundaryWlDqGNpW4mRK85Ea\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundaryWlDqGNpW4mRK85Ea--\r\n"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 376ms (Views: 0.5ms | ActiveRecord: 6.3ms | Allocations: 7403)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:20:06 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundary3kSKWqhIcfPcZf8A\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundary3kSKWqhIcfPcZf8A\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundary3kSKWqhIcfPcZf8A--\r\n"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 5762)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:22:11 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundaryqkAEAD2ozjIxnAqC\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundaryqkAEAD2ozjIxnAqC\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundaryqkAEAD2ozjIxnAqC--\r\n"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.5ms | Allocations: 6824)
+
+
+  
+NameError (undefined local variable or method `request' for #<Api::V1::Requests::HttpRequests::HttpRequestsManager:0x0000000004ab4088>
+Did you mean?  require):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:15:in `curl_exe'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:24:in `render_action'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:38:in `refresh_token'
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:22:24 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundaryc5kdifDGJHUEq4AB\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundaryc5kdifDGJHUEq4AB\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundaryc5kdifDGJHUEq4AB--\r\n"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 280ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 6882)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:23:22 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundarynqGqfuJ6AjRNa6YK\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundarynqGqfuJ6AjRNa6YK\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundarynqGqfuJ6AjRNa6YK--\r\n"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 5751)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:23:53 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundaryU5bVgmEAB4cX1DbO\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundaryU5bVgmEAB4cX1DbO\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundaryU5bVgmEAB4cX1DbO--\r\n"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 320ms (Views: 0.6ms | ActiveRecord: 5.3ms | Allocations: 6833)
+
+
+Started POST "/client/authentication" for ::1 at 2020-01-11 11:24:08 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 869ms (Views: 0.2ms | ActiveRecord: 10.4ms | Allocations: 1585)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:24:23 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundary6nPGLHBwVbP9DOIj\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundary6nPGLHBwVbP9DOIj\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundary6nPGLHBwVbP9DOIj--\r\n"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 314ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2181)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:25:34 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundary7iwYe5DKMbF9I8Pd\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundary7iwYe5DKMbF9I8Pd\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundary7iwYe5DKMbF9I8Pd--\r\n"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 201ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 7132)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:26:02 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundaryT42bFcNKyCVbdrLK\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundaryT42bFcNKyCVbdrLK\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundaryT42bFcNKyCVbdrLK--\r\n"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.5ms | Allocations: 6448)
+
+
+  
+NoMethodError (undefined method `code' for #<Net::HTTP::Post POST>):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:25:in `render_action'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:38:in `refresh_token'
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:26:27 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundarynUBpFVGB2lkRkHjf\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundarynUBpFVGB2lkRkHjf\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundarynUBpFVGB2lkRkHjf--\r\n"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 204 No Content in 323ms (ActiveRecord: 5.5ms | Allocations: 6920)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:26:35 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundarybC7z0a137PwTYNFy\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundarybC7z0a137PwTYNFy\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundarybC7z0a137PwTYNFy--\r\n"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 281ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 7163)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:27:27 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundaryXu2oNNvNB5nKRSAb\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundaryXu2oNNvNB5nKRSAb\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundaryXu2oNNvNB5nKRSAb--\r\n"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 445ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 2246)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:33:44 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundarym8cNDMNrIp05xyjH\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundarym8cNDMNrIp05xyjH\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundarym8cNDMNrIp05xyjH--\r\n"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 446ms (Views: 0.7ms | ActiveRecord: 5.2ms | Allocations: 6950)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:35:44 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundarytQvgt3wKv2AeAY5J\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundarytQvgt3wKv2AeAY5J\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundarytQvgt3wKv2AeAY5J--\r\n"}
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 292ms (Views: 0.6ms | ActiveRecord: 9.8ms | Allocations: 6881)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:36:43 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundary5Fs5Qcrm1eiWFWnU\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundary5Fs5Qcrm1eiWFWnU\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundary5Fs5Qcrm1eiWFWnU--\r\n"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 416ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 7261)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:37:48 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundaryCLEPbo0oPS7GvXNY\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundaryCLEPbo0oPS7GvXNY\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundaryCLEPbo0oPS7GvXNY--\r\n"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 267ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 6936)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:38:45 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundarygv2DZGJ8YLvploGP\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundarygv2DZGJ8YLvploGP\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundarygv2DZGJ8YLvploGP--\r\n"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 723ms (Views: 0.4ms | ActiveRecord: 5.1ms | Allocations: 7145)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:38:58 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundarylMSEnypEDczSPlZA\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundarylMSEnypEDczSPlZA\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundarylMSEnypEDczSPlZA--\r\n"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 357ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 7079)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:40:16 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundary9GOauhaDBBOkthM4\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundary9GOauhaDBBOkthM4\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundary9GOauhaDBBOkthM4--\r\n"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 5858)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:41:32 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"------WebKitFormBoundarygAB03B1Qbpzw7f5A\r\nContent-Disposition: form-data; name"=>"\"grant_type\"\r\n\r\nrefresh_token\r\n------WebKitFormBoundarygAB03B1Qbpzw7f5A\r\nContent-Disposition: form-data; name=\"refresh_token\"\r\n\r\nAEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w\r\n------WebKitFormBoundarygAB03B1Qbpzw7f5A--\r\n"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 64ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 5849)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:43:40 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 12ms (Views: 1.1ms | ActiveRecord: 0.8ms | Allocations: 843)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:44:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 5853)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:44:58 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 262ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 7097)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:45:21 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 227ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 7272)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:45:31 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 336ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 7457)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:46:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 189ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 7156)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:46:57 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 284ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 7084)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:48:13 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 644ms (Views: 0.6ms | ActiveRecord: 3.5ms | Allocations: 6947)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-11 11:50:26 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 403 Forbidden in 333ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 7060)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-11 11:50:59 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 285ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 7159)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-11 11:51:35 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 588ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 7365)
+
+
+Started POST "/user/signep" for ::1 at 2020-01-11 11:51:46 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 506ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 2017)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:51:56 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 284ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 2200)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:52:19 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 273ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 7073)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:52:35 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 371ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 7306)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 11:53:09 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 603ms (Views: 0.1ms | ActiveRecord: 3.5ms | Allocations: 7344)
+
+
+Started POST "/user/authentication/signep" for ::1 at 2020-01-11 12:14:01 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.2ms | Allocations: 5448)
+
+
+  
+ArgumentError (invalid enctype: application/json):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:13:in `curl_exe'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:24:in `render_action'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:49:in `sign_ep'
+Started POST "/user/authentication/signep" for ::1 at 2020-01-11 12:14:58 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms | Allocations: 5827)
+
+
+  
+ArgumentError (invalid enctype: application/json):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:13:in `curl_exe'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:24:in `render_action'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:49:in `sign_ep'
+Started POST "/user/authentication/signep" for ::1 at 2020-01-11 12:15:25 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 643ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 7367)
+
+
+Started POST "/user/authentication/signep" for ::1 at 2020-01-11 12:16:19 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 5846)
+
+
+  
+ArgumentError (invalid enctype: application/json):
+  
+app/controllers/api/v1/requests/http_requests/http_requests_manager.rb:14:in `curl_exe'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:24:in `render_action'
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:49:in `sign_ep'
+Started POST "/user/authentication/signep" for ::1 at 2020-01-11 12:16:50 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 518ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 7435)
+
+
+Started POST "/user/id/refresh" for ::1 at 2020-01-11 12:17:05 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#refresh_token as */*
+  Parameters: {"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w", "user_private_access"=>{"grant_type"=>"refresh_token", "refresh_token"=>"AEu4IL1ddpI31qnUluSIUOMvhSzxI2D7mbnZFazajQgeuJYgCkEyQb7szT_rLxCtwywXzVevQpRynuLQAhPIhKEvnqwJTA2GM3ikmGMV1DgtrH6xi9S-ugeZL-fG8X_cU0vQ9FVohtsIN1qCYFlTcdRS2kAmOqelB9t8H6Q3pzPPvwt1AIx-s3NjBzRvet2xJ33s2CmkKtzxK-OlmfwHDDwMrgsDUelV8w"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 254ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 2361)
+
+
+Started POST "/user/datat/update" for ::1 at 2020-01-11 12:22:40 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/user/datat/update"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/data/update" for ::1 at 2020-01-11 12:22:51 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#user_update_data as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MTE1LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3Mzk5ODksImV4cCI6MTU3ODc0MzU4OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.uDu6tXg9quoSafdOo_3iWIShslhpN9nEdSJVRTXWt8BEwifTuLOdB2ezitAztB7RPMY4U3Vga7zF82UihhMl3vMhkfwP0nxjAe_w9sET8HYjdAKKc2q-ikfZWKGgeCSlGOB7qVWkDjUtM-zVKNOIKpswc2uH5ibnIP2AD975P7q4e-8AnlZ-zbRenV-bW20UaWyAK14sIDGiNYykLijPxaa3iS6AaWvwEwokbeYO1XmVnUz-W2lzJq5YLsodN5tDwjCXz6uIEsO4T680H7KKWnWwrB_QqIhxrMlUgFhjZYzZLVl_tfC20XQioXdVci2YYnIJUVpt3SbqPecSII2wFA", "displayName"=>"Monsieur test", "photoUrl"=>"https://www.vrak.tv/polopoly_fs/1.1439635.1413830411!/image/Bob_Test.jpg_gen/derivatives/vrak_816_459/Bob_Test.jpg", "returnSecureToken"=>true, "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MTE1LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3Mzk5ODksImV4cCI6MTU3ODc0MzU4OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.uDu6tXg9quoSafdOo_3iWIShslhpN9nEdSJVRTXWt8BEwifTuLOdB2ezitAztB7RPMY4U3Vga7zF82UihhMl3vMhkfwP0nxjAe_w9sET8HYjdAKKc2q-ikfZWKGgeCSlGOB7qVWkDjUtM-zVKNOIKpswc2uH5ibnIP2AD975P7q4e-8AnlZ-zbRenV-bW20UaWyAK14sIDGiNYykLijPxaa3iS6AaWvwEwokbeYO1XmVnUz-W2lzJq5YLsodN5tDwjCXz6uIEsO4T680H7KKWnWwrB_QqIhxrMlUgFhjZYzZLVl_tfC20XQioXdVci2YYnIJUVpt3SbqPecSII2wFA", "displayName"=>"Monsieur test", "photoUrl"=>"https://www.vrak.tv/polopoly_fs/1.1439635.1413830411!/image/Bob_Test.jpg_gen/derivatives/vrak_816_459/Bob_Test.jpg", "returnSecureToken"=>true}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 477ms (Views: 0.4ms | ActiveRecord: 5.2ms | Allocations: 7012)
+
+
+Started POST "/user/data/get" for ::1 at 2020-01-11 12:29:50 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#user_get_data as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MTE1LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3Mzk5ODksImV4cCI6MTU3ODc0MzU4OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.uDu6tXg9quoSafdOo_3iWIShslhpN9nEdSJVRTXWt8BEwifTuLOdB2ezitAztB7RPMY4U3Vga7zF82UihhMl3vMhkfwP0nxjAe_w9sET8HYjdAKKc2q-ikfZWKGgeCSlGOB7qVWkDjUtM-zVKNOIKpswc2uH5ibnIP2AD975P7q4e-8AnlZ-zbRenV-bW20UaWyAK14sIDGiNYykLijPxaa3iS6AaWvwEwokbeYO1XmVnUz-W2lzJq5YLsodN5tDwjCXz6uIEsO4T680H7KKWnWwrB_QqIhxrMlUgFhjZYzZLVl_tfC20XQioXdVci2YYnIJUVpt3SbqPecSII2wFA", "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MTE1LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3Mzk5ODksImV4cCI6MTU3ODc0MzU4OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.uDu6tXg9quoSafdOo_3iWIShslhpN9nEdSJVRTXWt8BEwifTuLOdB2ezitAztB7RPMY4U3Vga7zF82UihhMl3vMhkfwP0nxjAe_w9sET8HYjdAKKc2q-ikfZWKGgeCSlGOB7qVWkDjUtM-zVKNOIKpswc2uH5ibnIP2AD975P7q4e-8AnlZ-zbRenV-bW20UaWyAK14sIDGiNYykLijPxaa3iS6AaWvwEwokbeYO1XmVnUz-W2lzJq5YLsodN5tDwjCXz6uIEsO4T680H7KKWnWwrB_QqIhxrMlUgFhjZYzZLVl_tfC20XQioXdVci2YYnIJUVpt3SbqPecSII2wFA"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 576ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 6906)
+
+
+Started POST "/user/data/manage" for ::1 at 2020-01-11 12:34:08 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#user_manage_data as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MTE1LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3Mzk5ODksImV4cCI6MTU3ODc0MzU4OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.uDu6tXg9quoSafdOo_3iWIShslhpN9nEdSJVRTXWt8BEwifTuLOdB2ezitAztB7RPMY4U3Vga7zF82UihhMl3vMhkfwP0nxjAe_w9sET8HYjdAKKc2q-ikfZWKGgeCSlGOB7qVWkDjUtM-zVKNOIKpswc2uH5ibnIP2AD975P7q4e-8AnlZ-zbRenV-bW20UaWyAK14sIDGiNYykLijPxaa3iS6AaWvwEwokbeYO1XmVnUz-W2lzJq5YLsodN5tDwjCXz6uIEsO4T680H7KKWnWwrB_QqIhxrMlUgFhjZYzZLVl_tfC20XQioXdVci2YYnIJUVpt3SbqPecSII2wFA", "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MTE1LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3Mzk5ODksImV4cCI6MTU3ODc0MzU4OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.uDu6tXg9quoSafdOo_3iWIShslhpN9nEdSJVRTXWt8BEwifTuLOdB2ezitAztB7RPMY4U3Vga7zF82UihhMl3vMhkfwP0nxjAe_w9sET8HYjdAKKc2q-ikfZWKGgeCSlGOB7qVWkDjUtM-zVKNOIKpswc2uH5ibnIP2AD975P7q4e-8AnlZ-zbRenV-bW20UaWyAK14sIDGiNYykLijPxaa3iS6AaWvwEwokbeYO1XmVnUz-W2lzJq5YLsodN5tDwjCXz6uIEsO4T680H7KKWnWwrB_QqIhxrMlUgFhjZYzZLVl_tfC20XQioXdVci2YYnIJUVpt3SbqPecSII2wFA"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 471ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 7079)
+
+
+Started POST "/user/data/manage" for ::1 at 2020-01-11 12:34:35 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#user_manage_data as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MTE1LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3Mzk5ODksImV4cCI6MTU3ODc0MzU4OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.uDu6tXg9quoSafdOo_3iWIShslhpN9nEdSJVRTXWt8BEwifTuLOdB2ezitAztB7RPMY4U3Vga7zF82UihhMl3vMhkfwP0nxjAe_w9sET8HYjdAKKc2q-ikfZWKGgeCSlGOB7qVWkDjUtM-zVKNOIKpswc2uH5ibnIP2AD975P7q4e-8AnlZ-zbRenV-bW20UaWyAK14sIDGiNYykLijPxaa3iS6AaWvwEwokbeYO1XmVnUz-W2lzJq5YLsodN5tDwjCXz6uIEsO4T680H7KKWnWwrB_QqIhxrMlUgFhjZYzZLVl_tfC20XQioXdVci2YYnIJUVpt3SbqPecSII2wFA", "displayName"=>"Monsieur test", "photoUrl"=>"https://www.vrak.tv/polopoly_fs/1.1439635.1413830411!/image/Bob_Test.jpg_gen/derivatives/vrak_816_459/Bob_Test.jpg", "returnSecureToken"=>true, "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzM2MTE1LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3Mzk5ODksImV4cCI6MTU3ODc0MzU4OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.uDu6tXg9quoSafdOo_3iWIShslhpN9nEdSJVRTXWt8BEwifTuLOdB2ezitAztB7RPMY4U3Vga7zF82UihhMl3vMhkfwP0nxjAe_w9sET8HYjdAKKc2q-ikfZWKGgeCSlGOB7qVWkDjUtM-zVKNOIKpswc2uH5ibnIP2AD975P7q4e-8AnlZ-zbRenV-bW20UaWyAK14sIDGiNYykLijPxaa3iS6AaWvwEwokbeYO1XmVnUz-W2lzJq5YLsodN5tDwjCXz6uIEsO4T680H7KKWnWwrB_QqIhxrMlUgFhjZYzZLVl_tfC20XQioXdVci2YYnIJUVpt3SbqPecSII2wFA", "displayName"=>"Monsieur test", "photoUrl"=>"https://www.vrak.tv/polopoly_fs/1.1439635.1413830411!/image/Bob_Test.jpg_gen/derivatives/vrak_816_459/Bob_Test.jpg", "returnSecureToken"=>true}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 704ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 2425)
+
+
+Started POST "/user/authentication/signep" for ::1 at 2020-01-11 12:45:24 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 601ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 6550)
+
+
+Started POST "/user/id/email/code/validation" for ::1 at 2020-01-11 12:48:51 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#email_validation as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzQzMTI1LCJ1c2VyX2lkIjoiYlNwVWdwSzFLdk5ZUVRkbk9kajFUSURDaVpxMSIsInN1YiI6ImJTcFVncEsxS3ZOWVFUZG5PZGoxVElEQ2lacTEiLCJpYXQiOjE1Nzg3NDMxMjUsImV4cCI6MTU3ODc0NjcyNSwiZW1haWwiOiJtYWNrZW5keS1waWVycmUuYW5zZWxpbkBlcGl0ZWNoLmV1IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWFja2VuZHktcGllcnJlLmFuc2VsaW5AZXBpdGVjaC5ldSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ZD2Aa-YOESI2yCBmdJCwQJdI3DOlDItJMbRXF7idK9QZmviqWgRha3Hay424gWZSBVcmK4CqltkpZC_EPdG6AvMc1x4UsswEoiXFuYYYLSxTNquBLTvE-SdpexWrRrECbFUMJfzMsFF_JO1-qYR9_CEgk3-FvpR36dD8KK9D1MxlM-i7x8XyZyUP4mRzRBGrRjWcwBjSBNaEqWU4CF7WVZHz9Dwx6dut1dgLYmndPR87kbBhzkArUPRzpInVfQ9oEdeYFYv_h7s2U8l1vn4n2rRXoIVW_1xf1JFC-MI2YtroKLqY5c7wtFyk4X-o7D4-oRQmADmQ_m5TAOVF21QMnw", "requestType"=>"VERIFY_EMAIL", "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzQzMTI1LCJ1c2VyX2lkIjoiYlNwVWdwSzFLdk5ZUVRkbk9kajFUSURDaVpxMSIsInN1YiI6ImJTcFVncEsxS3ZOWVFUZG5PZGoxVElEQ2lacTEiLCJpYXQiOjE1Nzg3NDMxMjUsImV4cCI6MTU3ODc0NjcyNSwiZW1haWwiOiJtYWNrZW5keS1waWVycmUuYW5zZWxpbkBlcGl0ZWNoLmV1IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWFja2VuZHktcGllcnJlLmFuc2VsaW5AZXBpdGVjaC5ldSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ZD2Aa-YOESI2yCBmdJCwQJdI3DOlDItJMbRXF7idK9QZmviqWgRha3Hay424gWZSBVcmK4CqltkpZC_EPdG6AvMc1x4UsswEoiXFuYYYLSxTNquBLTvE-SdpexWrRrECbFUMJfzMsFF_JO1-qYR9_CEgk3-FvpR36dD8KK9D1MxlM-i7x8XyZyUP4mRzRBGrRjWcwBjSBNaEqWU4CF7WVZHz9Dwx6dut1dgLYmndPR87kbBhzkArUPRzpInVfQ9oEdeYFYv_h7s2U8l1vn4n2rRXoIVW_1xf1JFC-MI2YtroKLqY5c7wtFyk4X-o7D4-oRQmADmQ_m5TAOVF21QMnw", "requestType"=>"VERIFY_EMAIL"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 4.5ms | Allocations: 8124)
+
+
+  
+NameError (uninitialized constant #<Class:0x0000000004ac5860>::FIREBASE_MANGE_INFO_USER
+Did you mean?  FIREBASE_SING_IN_USER
+               FIREBASE_CHANGE_ID_USER):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:58:in `email_validation'
+Started POST "/user/id/email/code/validation" for ::1 at 2020-01-11 12:49:10 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#email_validation as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzQzMTI1LCJ1c2VyX2lkIjoiYlNwVWdwSzFLdk5ZUVRkbk9kajFUSURDaVpxMSIsInN1YiI6ImJTcFVncEsxS3ZOWVFUZG5PZGoxVElEQ2lacTEiLCJpYXQiOjE1Nzg3NDMxMjUsImV4cCI6MTU3ODc0NjcyNSwiZW1haWwiOiJtYWNrZW5keS1waWVycmUuYW5zZWxpbkBlcGl0ZWNoLmV1IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWFja2VuZHktcGllcnJlLmFuc2VsaW5AZXBpdGVjaC5ldSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ZD2Aa-YOESI2yCBmdJCwQJdI3DOlDItJMbRXF7idK9QZmviqWgRha3Hay424gWZSBVcmK4CqltkpZC_EPdG6AvMc1x4UsswEoiXFuYYYLSxTNquBLTvE-SdpexWrRrECbFUMJfzMsFF_JO1-qYR9_CEgk3-FvpR36dD8KK9D1MxlM-i7x8XyZyUP4mRzRBGrRjWcwBjSBNaEqWU4CF7WVZHz9Dwx6dut1dgLYmndPR87kbBhzkArUPRzpInVfQ9oEdeYFYv_h7s2U8l1vn4n2rRXoIVW_1xf1JFC-MI2YtroKLqY5c7wtFyk4X-o7D4-oRQmADmQ_m5TAOVF21QMnw", "requestType"=>"VERIFY_EMAIL", "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzQzMTI1LCJ1c2VyX2lkIjoiYlNwVWdwSzFLdk5ZUVRkbk9kajFUSURDaVpxMSIsInN1YiI6ImJTcFVncEsxS3ZOWVFUZG5PZGoxVElEQ2lacTEiLCJpYXQiOjE1Nzg3NDMxMjUsImV4cCI6MTU3ODc0NjcyNSwiZW1haWwiOiJtYWNrZW5keS1waWVycmUuYW5zZWxpbkBlcGl0ZWNoLmV1IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWFja2VuZHktcGllcnJlLmFuc2VsaW5AZXBpdGVjaC5ldSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ZD2Aa-YOESI2yCBmdJCwQJdI3DOlDItJMbRXF7idK9QZmviqWgRha3Hay424gWZSBVcmK4CqltkpZC_EPdG6AvMc1x4UsswEoiXFuYYYLSxTNquBLTvE-SdpexWrRrECbFUMJfzMsFF_JO1-qYR9_CEgk3-FvpR36dD8KK9D1MxlM-i7x8XyZyUP4mRzRBGrRjWcwBjSBNaEqWU4CF7WVZHz9Dwx6dut1dgLYmndPR87kbBhzkArUPRzpInVfQ9oEdeYFYv_h7s2U8l1vn4n2rRXoIVW_1xf1JFC-MI2YtroKLqY5c7wtFyk4X-o7D4-oRQmADmQ_m5TAOVF21QMnw", "requestType"=>"VERIFY_EMAIL"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 478ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 7818)
+
+
+Started POST "/user/id/email/code/validation" for ::1 at 2020-01-11 12:50:25 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#email_validation as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzQzMTI1LCJ1c2VyX2lkIjoiYlNwVWdwSzFLdk5ZUVRkbk9kajFUSURDaVpxMSIsInN1YiI6ImJTcFVncEsxS3ZOWVFUZG5PZGoxVElEQ2lacTEiLCJpYXQiOjE1Nzg3NDMxMjUsImV4cCI6MTU3ODc0NjcyNSwiZW1haWwiOiJtYWNrZW5keS1waWVycmUuYW5zZWxpbkBlcGl0ZWNoLmV1IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWFja2VuZHktcGllcnJlLmFuc2VsaW5AZXBpdGVjaC5ldSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ZD2Aa-YOESI2yCBmdJCwQJdI3DOlDItJMbRXF7idK9QZmviqWgRha3Hay424gWZSBVcmK4CqltkpZC_EPdG6AvMc1x4UsswEoiXFuYYYLSxTNquBLTvE-SdpexWrRrECbFUMJfzMsFF_JO1-qYR9_CEgk3-FvpR36dD8KK9D1MxlM-i7x8XyZyUP4mRzRBGrRjWcwBjSBNaEqWU4CF7WVZHz9Dwx6dut1dgLYmndPR87kbBhzkArUPRzpInVfQ9oEdeYFYv_h7s2U8l1vn4n2rRXoIVW_1xf1JFC-MI2YtroKLqY5c7wtFyk4X-o7D4-oRQmADmQ_m5TAOVF21QMnw", "requestType"=>"VERIFY_EMAIL", "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzQzMTI1LCJ1c2VyX2lkIjoiYlNwVWdwSzFLdk5ZUVRkbk9kajFUSURDaVpxMSIsInN1YiI6ImJTcFVncEsxS3ZOWVFUZG5PZGoxVElEQ2lacTEiLCJpYXQiOjE1Nzg3NDMxMjUsImV4cCI6MTU3ODc0NjcyNSwiZW1haWwiOiJtYWNrZW5keS1waWVycmUuYW5zZWxpbkBlcGl0ZWNoLmV1IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsibWFja2VuZHktcGllcnJlLmFuc2VsaW5AZXBpdGVjaC5ldSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.ZD2Aa-YOESI2yCBmdJCwQJdI3DOlDItJMbRXF7idK9QZmviqWgRha3Hay424gWZSBVcmK4CqltkpZC_EPdG6AvMc1x4UsswEoiXFuYYYLSxTNquBLTvE-SdpexWrRrECbFUMJfzMsFF_JO1-qYR9_CEgk3-FvpR36dD8KK9D1MxlM-i7x8XyZyUP4mRzRBGrRjWcwBjSBNaEqWU4CF7WVZHz9Dwx6dut1dgLYmndPR87kbBhzkArUPRzpInVfQ9oEdeYFYv_h7s2U8l1vn4n2rRXoIVW_1xf1JFC-MI2YtroKLqY5c7wtFyk4X-o7D4-oRQmADmQ_m5TAOVF21QMnw", "requestType"=>"VERIFY_EMAIL"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 750ms (Views: 0.5ms | ActiveRecord: 1.8ms | Allocations: 7383)
+
+
+Started POST "/user/authentication/signep" for ::1 at 2020-01-11 13:12:26 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/user/authentication/signep"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/user/account/signep" for ::1 at 2020-01-11 13:12:39 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>true}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 468ms (Views: 0.6ms | ActiveRecord: 2.0ms | Allocations: 7957)
+
+
+Started POST "/user/account/delete" for ::1 at 2020-01-11 13:13:04 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#delete_user_account as */*
+  Parameters: {"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTW9uc2lldXIgdGVzdCIsInBpY3R1cmUiOiJodHRwczovL3d3dy52cmFrLnR2L3BvbG9wb2x5X2ZzLzEuMTQzOTYzNS4xNDEzODMwNDExIS9pbWFnZS9Cb2JfVGVzdC5qcGdfZ2VuL2Rlcml2YXRpdmVzL3ZyYWtfODE2XzQ1OS9Cb2JfVGVzdC5qcGciLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzQ0NzU5LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3NDQ3NTksImV4cCI6MTU3ODc0ODM1OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.fX3C2qHBJBi2tKrVFMxdxudNhcXaXMe2Ej_7yL6N-ZRqc8Oq9k0I5ZC_JNrx5nBd7eAb0SQ_6cXBUJNRBWSZKgDOMHvhNv94DjV6smejTYfsiXR_HfmPGgAUccDogE4Nvp7h4hNn9DUYZslYrBSNHv0qPn253WRQyxE55s9FNpGIzOCfnWDFBdIRv4SQ2rT605peWayM3kcK29JvcsDdnH-JEvSdB5GTUzKrXzaVKiOyJhk2tmRNHCdiHA0Fp8-UCjfg9fAOrG0Xt7CyDwjVjZnUkdu9C7ze_U81fgNCBZRvqEMlZ1gN0TbflvIIMPuZD1AnkKjFT1MnvolxQW453Q", "user_private_access"=>{"idToken"=>"eyJhbGciOiJSUzI1NiIsImtpZCI6IjUxMjRjY2JhZDVkNWZiZjNiYTJhOGI1ZWE3MTE4NDVmOGNiMjZhMzYiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTW9uc2lldXIgdGVzdCIsInBpY3R1cmUiOiJodHRwczovL3d3dy52cmFrLnR2L3BvbG9wb2x5X2ZzLzEuMTQzOTYzNS4xNDEzODMwNDExIS9pbWFnZS9Cb2JfVGVzdC5qcGdfZ2VuL2Rlcml2YXRpdmVzL3ZyYWtfODE2XzQ1OS9Cb2JfVGVzdC5qcGciLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vdG90ZW0yLWYzZTJlIiwiYXVkIjoidG90ZW0yLWYzZTJlIiwiYXV0aF90aW1lIjoxNTc4NzQ0NzU5LCJ1c2VyX2lkIjoieTJtcHBQWmhTUE8xdFJiRGQyZEUxQVJYQWZ0MSIsInN1YiI6InkybXBwUFpoU1BPMXRSYkRkMmRFMUFSWEFmdDEiLCJpYXQiOjE1Nzg3NDQ3NTksImV4cCI6MTU3ODc0ODM1OSwiZW1haWwiOiJtb25zaWV1cl90ZXN0QGV4YW1wbGUuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbIm1vbnNpZXVyX3Rlc3RAZXhhbXBsZS5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.fX3C2qHBJBi2tKrVFMxdxudNhcXaXMe2Ej_7yL6N-ZRqc8Oq9k0I5ZC_JNrx5nBd7eAb0SQ_6cXBUJNRBWSZKgDOMHvhNv94DjV6smejTYfsiXR_HfmPGgAUccDogE4Nvp7h4hNn9DUYZslYrBSNHv0qPn253WRQyxE55s9FNpGIzOCfnWDFBdIRv4SQ2rT605peWayM3kcK29JvcsDdnH-JEvSdB5GTUzKrXzaVKiOyJhk2tmRNHCdiHA0Fp8-UCjfg9fAOrG0Xt7CyDwjVjZnUkdu9C7ze_U81fgNCBZRvqEMlZ1gN0TbflvIIMPuZD1AnkKjFT1MnvolxQW453Q"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 736ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 2135)
+
+

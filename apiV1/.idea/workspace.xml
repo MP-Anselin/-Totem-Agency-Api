@@ -61,13 +61,16 @@
       <change beforePath="$PROJECT_DIR$/../apiV1-2/tmp/.keep" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/vendor/.keep" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/requests/http_requests/http_requests_manager.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/http_requests/http_requests_manager.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/tools/macro_list.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/tools/macro_list.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/48/8b55513398e74e" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/48/8b55513398e74e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7d/233fde97ea9de6" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7d/233fde97ea9de6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/8b/074aa769d43bc1" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/8b/074aa769d43bc1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c2/83012abeb577a7" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c2/83012abeb577a7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c5/49fe83d85fc035" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c5/49fe83d85fc035" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f4/398b6d99761e2b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f4/398b6d99761e2b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" afterDir="false" />
@@ -277,7 +280,7 @@
       <workItem from="1576769553913" duration="1364000" />
       <workItem from="1577096462874" duration="7187000" />
       <workItem from="1577728638381" duration="2873000" />
-      <workItem from="1578500609097" duration="62689000" />
+      <workItem from="1578500609097" duration="73471000" />
     </task>
     <servers />
   </component>
@@ -332,6 +335,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="255" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1577193385593" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1578741303474">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.27.1920.1053@0.27.1920.1053" timestamp="1578741303474" />
     <state x="601" y="271" width="718" height="574" key="find.popup" timestamp="1578670382706">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

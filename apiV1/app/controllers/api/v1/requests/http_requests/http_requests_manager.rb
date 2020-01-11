@@ -5,11 +5,13 @@ module Api
         # Class to manage http request
         class HttpRequestsManager
           # function to exec curl request to firebase
-          def curl_exe(path, params)
+          def curl_exe(path, params, enctyp)
             uri_dest = URI.parse(path)
             http = Net::HTTP.new(uri_dest.host, uri_dest.port)
             http.use_ssl = true
             request = Net::HTTP::Post.new(uri_dest.request_uri)
+            request.set_content_type(enctyp, params)
+            #request.set_form(params, enctyp)
             request.set_form_data(params)
             http.request(request)
           end
