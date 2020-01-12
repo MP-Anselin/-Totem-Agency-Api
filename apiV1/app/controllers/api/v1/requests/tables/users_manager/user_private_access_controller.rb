@@ -26,6 +26,20 @@ module Api
               set_default_curl_variable
             end
 
+            # GET /user/account/generate generate customer token
+            def customer_token_generator
+              generator = Firebase::FirebaseTokenGenerator.new(FIREBASE_API_KEY)
+              payload = {:uid => "some-uid"}
+
+              customer_token = generator.create_token(payload)
+              if customer_token.nil?
+                render json: {'customerToken': customer_token}, status: :ok
+              else
+                render json: {'error': {'errors': [{'message': 'wrong'}]}, 'code': 400}, status: :ok
+              end
+
+            end
+
             # POST /user/id/refresh user get token
             def refresh_token
               grant_type = params[:grant_type]

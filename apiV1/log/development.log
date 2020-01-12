@@ -11159,3 +11159,216 @@ Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessControll
 Completed 200 OK in 736ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 2135)
 
 
+Started GET "/user/account/generate" for ::1 at 2020-01-11 16:31:55 +0100
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- firebase_token_generator):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:12:in `initialize'
+Started POST "/user/account/signep" for ::1 at 2020-01-12 06:31:17 +0100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (cannot load such file -- firebase_token_generator):
+  
+app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb:12:in `initialize'
+Started POST "/user/account/signep" for ::1 at 2020-01-12 06:31:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 592)
+
+
+Started POST "/client/authentication" for ::1 at 2020-01-12 06:31:44 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 1050ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 6900)
+
+
+Started POST "/user/account/signep" for ::1 at 2020-01-12 06:32:08 +0100
+Processing by Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController#sign_ep as */*
+  Parameters: {"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>false, "user_private_access"=>{"email"=>"monsieur_test@example.com", "password"=>"[FILTERED]", "registered"=>false}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 530ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 2432)
+
+
+Started POST "/authenticate" for ::1 at 2020-01-12 06:44:50 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/authenticate"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/client/authentication" for ::1 at 2020-01-12 06:45:12 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"agencytotem59@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"agencytotem59@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "agencytotem59@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 401 Unauthorized in 6ms (Views: 0.4ms | ActiveRecord: 3.2ms | Allocations: 657)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "agencytotem59@gmail.com"], ["password_digest", "$2a$12$nYtGr.NDRi55P.Ee3KL6EOjqVgqkqDRYD5SavgyeG.1xHFwW66ZLC"], ["created_at", "2020-01-12 05:47:49.320934"], ["updated_at", "2020-01-12 05:47:49.320934"]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/client/authentication" for ::1 at 2020-01-12 06:48:09 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"agencytotem59@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"agencytotem59@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "agencytotem59@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "agencytotem59@gmail.com"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 1011ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1231)
+
+
+Started GET "/products/list" for ::1 at 2020-01-12 07:12:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 487ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 17366)
+
+
+Started GET "/products/list" for ::1 at 2020-01-12 07:15:55 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 350ms (Views: 331.6ms | ActiveRecord: 1.9ms | Allocations: 17996)
+
+
+Started GET "/products/list" for ::1 at 2020-01-12 07:16:55 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.8ms | Allocations: 6543)
+
+
+  
+NoMethodError (undefined method `list_documents' for #<Enumerator:0x00007f3cf8273490>):
+  
+app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:24:in `product_list'
+Started GET "/products/list" for ::1 at 2020-01-12 07:17:12 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/Documents/Firm/Totem/api/totem-agency-api/apiV1/app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:24: syntax error, unexpected '}'
+...     render json: {data: test.}, status: :ok
+...                              ^):
+  
+app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:24: syntax error, unexpected '}'
+app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:24: syntax error, unexpected '}'
+Started GET "/products/list" for ::1 at 2020-01-12 07:17:23 +0100
+  
+SyntaxError (/home/Documents/Firm/Totem/api/totem-agency-api/apiV1/app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:24: syntax error, unexpected '}'
+...     render json: {data: test.}, status: :ok
+...                              ^):
+  
+app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:24: syntax error, unexpected '}'
+app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:24: syntax error, unexpected '}'
+Started GET "/products/list" for ::1 at 2020-01-12 07:17:30 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 463ms (Views: 426.5ms | ActiveRecord: 1.8ms | Allocations: 18088)
+
+
+Started GET "/products/list" for ::1 at 2020-01-12 07:18:06 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.9ms | Allocations: 6529)
+
+
+  
+NoMethodError (undefined method `[]' for #<Enumerator:0x00007f3cf955a4c8>):
+  
+app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:24:in `product_list'
+Started GET "/products/list" for ::1 at 2020-01-12 07:18:19 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 369ms (Views: 350.3ms | ActiveRecord: 1.5ms | Allocations: 18038)
+
+
+Started GET "/products/list" for ::1 at 2020-01-12 07:20:05 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 272ms (Views: 218.6ms | ActiveRecord: 5.7ms | Allocations: 17870)
+
+
+Started GET "/products/list" for ::1 at 2020-01-12 07:28:57 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 482ms (ActiveRecord: 0.5ms | Allocations: 77426)
+
+
+  
+NameError (undefined local variable or method `cities_ref' for #<Api::V1::Requests::Tables::ProductsManager::ProductsController:0x00007f3cf947eab8>):
+  
+app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:23:in `product_list'
+Started GET "/products/list" for ::1 at 2020-01-12 07:30:53 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 204 No Content in 243ms (ActiveRecord: 3.7ms | Allocations: 37414)
+
+
+Started GET "/products/list" for ::1 at 2020-01-12 07:35:19 +0100
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#product_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 506ms (ActiveRecord: 1.2ms | Allocations: 39078)
+
+
+  
+Google::Cloud::PermissionDeniedError (7:Missing or insufficient permissions.):
+  
+app/controllers/api/v1/requests/tables/products_manager/products_controller.rb:23:in `product_list'

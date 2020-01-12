@@ -1,9 +1,10 @@
 class Api::V1::FirebaseRequests::FirebaseManager < ApplicationController
-  @@BASE_URI = 'https://totem2-f3e2e.firebaseio.com/'
-  @@PRIVATE_KEY_JSON_STRING = File.open('app/controllers/api/v1/resources/totem2-f3e2e-firebase-adminsdk-lfqcp-3e7ed4ba43.json').read
+  @@BASE_URI = 'https://totem-db-38dee.firebaseio.com/'
+  @@PRIVATE_KEY_JSON_STRING = File.open('app/controllers/api/v1/resources/totem-db-38dee-firebase-adminsdk-8f9c4-1d7269d9fa.json').read
 
   def initialize
     @firebase = Firebase::Client.new(@@BASE_URI, @@PRIVATE_KEY_JSON_STRING)
+
   end
 
   def get(path)
