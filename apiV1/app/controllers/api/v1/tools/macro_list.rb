@@ -1,6 +1,6 @@
 FIREBASE_URI = 'https://totem-db-38dee.firebaseio.com/'.freeze
 RESOURCES_PATH = 'app/controllers/api/v1/resources/'.freeze
-FIREBASE_PATH_KEY = RESOURCES_PATH + 'totem2-f3e2e-firebase-adminsdk-lfqcp-3e7ed4ba43.json'.freeze
+FIREBASE_PATH_KEY = RESOURCES_PATH + 'totem-db-38dee-firebase-adminsdk-8f9c4-6110e91b76.json'.freeze
 FIREBASE_PROJECT_ID = 'totem-db-38dee'.freeze
 FIREBASE_PRIVATE_KEY = File.open(FIREBASE_PATH_KEY).read.freeze
 FIREBASE_API_KEY = 'AIzaSyCx2OEKeoSaSzx5h2YGjoahLEcZoTNqBaY'.freeze

@@ -3,7 +3,9 @@ module Api
     module FirebaseRequests
       # Class to manage the connection with Firebase
       class FireDatabaseStore < ApplicationController
+
         def initialize
+          super
           require 'google/cloud/firestore'
           # Explicitly use service account credentials by specifying the private key
           @firestore = Google::Cloud::Firestore.new project: FIREBASE_PROJECT_ID,
