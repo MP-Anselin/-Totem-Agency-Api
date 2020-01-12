@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e4def4-221a-4e34-bd7c-d156844337b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/api/v1/resources/totem-db-38dee-firebase-adminsdk-8f9c4-6110e91b76.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/.ruby-version" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/Gemfile" beforeDir="false" />
@@ -62,20 +61,8 @@
       <change beforePath="$PROJECT_DIR$/../apiV1-2/tmp/.keep" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/vendor/.keep" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/products_manager/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/products_manager/products_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/resources/totem-db-38dee-firebase-adminsdk-8f9c4-1d7269d9fa.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/tools/macro_list.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/tools/macro_list.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/07/0998c79f306f00" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/07/0998c79f306f00" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2b/c1c10f397722ab" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2b/c1c10f397722ab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7d/233fde97ea9de6" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7d/233fde97ea9de6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/90/2f758905927446" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/90/2f758905927446" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f4/398b6d99761e2b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f4/398b6d99761e2b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +270,7 @@
       <workItem from="1577096462874" duration="7187000" />
       <workItem from="1577728638381" duration="2873000" />
       <workItem from="1578500609097" duration="76249000" />
-      <workItem from="1578756581766" duration="22904000" />
+      <workItem from="1578756581766" duration="23426000" />
     </task>
     <servers />
   </component>

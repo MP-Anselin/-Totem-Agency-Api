@@ -12682,3 +12682,20 @@ Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#new
 Completed 409 Conflict in 373ms (Views: 0.9ms | ActiveRecord: 1.0ms | Allocations: 17418)
 
 
+Started POST "/products/product/delete" for ::1 at 2020-01-12 17:03:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#delete_product as */*
+  Parameters: {"id"=>"Czef1FkRaUQXcVcbYXPc", "product"=>{"id"=>"Czef1FkRaUQXcVcbYXPc"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 204 No Content in 572ms (ActiveRecord: 1.0ms | Allocations: 36665)
+
+
+Started POST "/products/product/delete" for ::1 at 2020-01-12 17:03:36 +0100
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#delete_product as */*
+  Parameters: {"id"=>"3", "product"=>{"id"=>"3"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 204 No Content in 483ms (ActiveRecord: 0.2ms | Allocations: 32611)
+
+

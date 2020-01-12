@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get '/products/list', to: 'api/v1/requests/tables/products_manager/products#product_list'
   post '/products/product', to: 'api/v1/requests/tables/products_manager/products#one_product'
   post '/products/product/new', to: 'api/v1/requests/tables/products_manager/products#new_product'
+  post '/products/product/delete', to: 'api/v1/requests/tables/products_manager/products#delete_product'
 
 
 

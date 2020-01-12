@@ -71,6 +71,12 @@ module Api
                 @db_products.doc.set(name: prod_name, brand: prod_brand, url: prod_url)
               end
             end
+
+            # /products/product/delete delete user
+            def delete_product
+              db_product = @firestore.doc 'products/' + params[:id].to_s
+              db_product.delete
+            end
           end
         end
       end
