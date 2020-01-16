@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e4def4-221a-4e34-bd7c-d156844337b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/save" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/shop_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/0e/55fa0196392150" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/.ruby-version" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/Gemfile" beforeDir="false" />
@@ -60,9 +63,22 @@
       <change beforePath="$PROJECT_DIR$/../apiV1-2/test/test_helper.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/tmp/.keep" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiV1-2/vendor/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/products_manager/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/products_manager/products_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/users_manager/user_private_access_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/users_manager/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/users_manager/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/07/0998c79f306f00" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/07/0998c79f306f00" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2b/c1c10f397722ab" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2b/c1c10f397722ab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/48/8b55513398e74e" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/48/8b55513398e74e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/90/2f758905927446" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/90/2f758905927446" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f4/398b6d99761e2b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/f4/398b6d99761e2b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,19 +131,19 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/products_manager" />
-      <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/users_manager" />
-      <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/user_private_access" />
-      <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables" />
-      <recent name="$PROJECT_DIR$/app/controllers/api/v1/Firebase_Requests" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables" />
       <recent name="$PROJECT_DIR$/app/controllers/api/v1/Firebase_Requests" />
       <recent name="$PROJECT_DIR$/app/controllers/api/v1/authentication" />
       <recent name="$PROJECT_DIR$/app/controllers" />
       <recent name="$PROJECT_DIR$/config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/shop_manager" />
+      <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/products_manager" />
+      <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/users_manager" />
+      <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/user_private_access" />
+      <recent name="$PROJECT_DIR$/app/controllers/api/v1/requests/tables" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -270,7 +286,8 @@
       <workItem from="1577096462874" duration="7187000" />
       <workItem from="1577728638381" duration="2873000" />
       <workItem from="1578500609097" duration="76249000" />
-      <workItem from="1578756581766" duration="23426000" />
+      <workItem from="1578756581766" duration="29170000" />
+      <workItem from="1578910865226" duration="31934000" />
     </task>
     <servers />
   </component>
@@ -281,6 +298,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="681" y="345" width="548" height="415" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578997573414">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="681" y="345" width="548" height="415" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1578997573414" />
     <state x="643" y="280" width="624" height="545" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578756554160">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -293,22 +314,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="311" width="424" height="482" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1578509239497" />
-    <state width="1874" height="255" key="GridCell.Tab.0.bottom" timestamp="1578809426336">
+    <state width="1874" height="255" key="GridCell.Tab.0.bottom" timestamp="1579096052473">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="255" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1578809426336" />
-    <state width="1874" height="255" key="GridCell.Tab.0.center" timestamp="1578809426335">
+    <state width="1874" height="255" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1579096052473" />
+    <state width="1874" height="255" key="GridCell.Tab.0.center" timestamp="1579096052471">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="255" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1578809426335" />
-    <state width="1874" height="255" key="GridCell.Tab.0.left" timestamp="1578809426335">
+    <state width="1874" height="255" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1579096052471" />
+    <state width="1874" height="255" key="GridCell.Tab.0.left" timestamp="1579096052469">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="255" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1578809426335" />
-    <state width="1874" height="255" key="GridCell.Tab.0.right" timestamp="1578809426335">
+    <state width="1874" height="255" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1579096052469" />
+    <state width="1874" height="255" key="GridCell.Tab.0.right" timestamp="1579096052471">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="255" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1578809426335" />
+    <state width="1874" height="255" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1579096052471" />
     <state width="1874" height="255" key="GridCell.Tab.1.bottom" timestamp="1577193385593">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -325,18 +346,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1874" height="255" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1577193385593" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1578741303474">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1579009479652">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.27.1920.1053@0.27.1920.1053" timestamp="1578741303474" />
+    <state width="498" height="446" key="SwitcherDM/0.27.1920.1053@0.27.1920.1053" timestamp="1579009479652" />
     <state x="601" y="271" width="718" height="574" key="find.popup" timestamp="1578807902780">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="601" y="271" width="718" height="574" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1578807902780" />
-    <state x="624" y="254" width="672" height="677" key="run.anything.popup" timestamp="1578808732065">
+    <state x="624" y="254" width="672" height="677" key="run.anything.popup" timestamp="1579108056660">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="624" y="254" width="672" height="677" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1578808732065" />
+    <state x="624" y="254" width="672" height="677" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1579108056660" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1578660487606">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

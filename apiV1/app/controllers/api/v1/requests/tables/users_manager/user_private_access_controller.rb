@@ -24,6 +24,7 @@ module Api
               response = @http_requests.curl_exe(@path, @params, @enctyp)
               render json: response.body, status: response.code
               set_default_curl_variable
+              response.code
             end
 
             # GET /user/account/generate generate customer token
@@ -82,7 +83,7 @@ module Api
               render_action
             end
 
-            # POST /user/id/pwd/reset/code/email send email to reset password user
+            # POST /user/id/pwd/reset/code/mail send email to reset password user
             def reset_pwd_send_mail
               email = params[:email]
               request_type = params[:requestType]

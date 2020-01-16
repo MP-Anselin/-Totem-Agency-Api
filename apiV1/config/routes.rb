@@ -19,11 +19,17 @@ Rails.application.routes.draw do
 
   post '/user/account/data/manage', to: 'api/v1/requests/tables/users_manager/user_private_access#user_manage_data'
 
-  get '/products/list', to: 'api/v1/requests/tables/products_manager/products#product_list'
-  post '/products/product', to: 'api/v1/requests/tables/products_manager/products#one_product'
+  get '/products/list', to: 'api/v1/requests/tables/products_manager/products#products_list'
+  post '/products/product', to: 'api/v1/requests/tables/products_manager/products#product_information'
   post '/products/product/new', to: 'api/v1/requests/tables/products_manager/products#new_product'
+  post '/products/product/update', to: 'api/v1/requests/tables/products_manager/products#update_product'
   post '/products/product/delete', to: 'api/v1/requests/tables/products_manager/products#delete_product'
 
+  get '/users/list', to: 'api/v1/requests/tables/users_manager/users#users_list'
+  post '/users/user', to: 'api/v1/requests/tables/users_manager/users#user_information'
+  post '/users/user/new', to: 'api/v1/requests/tables/users_manager/users#new_user'
+  post '/users/user/update', to: 'api/v1/requests/tables/users_manager/users#update_user'
+  post '/users/user/delete', to: 'api/v1/requests/tables/users_manager/users#delete_user'
 
 
 

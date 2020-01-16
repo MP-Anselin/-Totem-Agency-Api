@@ -12,120 +12,59 @@ module Api
             def initialize
               super
 
-              @db_users = @firestore.col 'users'
-              @information = []
-              @error_info = {status: 500, error: 'Internal Server Error'}
+              collection_init('users')
             end
 
-            # GET /users
-            def index
+            # GET /users/list list of the users information
+            def users_list
+              collection_list_documents
+            end
 
-              @db_users.get do |user|
-                @information.push(id: user.document_id,
-                                  user_information: user.data)
+            # POST /users/user get one product information
+            def user_information
+              collection_get_document
+            end
+
+            def where_users(id)
+              list = []
+              query = @db_collection.where 'id', '=', id
+
+              query.get do |product|
+                list.push(id: product.document_id,
+                          product_information: product.data)
               end
-
-              render json: {data: @information}
+              list
             end
 
-            # GET /user/1
-            def show
-              user_idToken = params[:id]
+            # POST /users/user/new add new user
+            def new_user
+              user_id = params[:id]
+              user_first_name = params[:first_name]
+              user_last_name = params[:last_name]
 
-              path_url = FIREBASE_GET_USER_INFO + FIREBASE_API_KEY
-              uri_dest = URI.parse(path_url)
-              http = Net::HTTP.new(uri_dest.host, uri_dest.port)
-              http.use_ssl = true
-              request = Net::HTTP::Post.new(uri_dest.request_uri)
-              request.set_form_data("idToken": user_idToken)
-              response = http.request(request)
-              render json: response.body
-
-              #info = {}
-              #id = params[:id]
-              #user = @db_users.doc(id).get.data
-              #
-              #unless id.nil? || user.nil?
-              #  info['id'] = id
-              #  user.each { |key, value|
-              #    info[key] = value
-              #  }
-              #  render json: {data: info, status: "success", code: 200}
-              #else
-              #  @error_info[:status] = 404
-              #  @error_info[:error] = 'Not Found'
-              #  render json: @error_info
-              #end
-            end
-
-            def hasDuplicate(fields)
-              check_duplicate = @db_users.where("email", "=", "#{fields[:email]}")
-              if check_duplicate.get() do |user|
-                unless user.document_id.nil?
-                  return 1
-                end
-              end
-              end
-              return 0
-            end
-
-            # POST /users
-            def create
-              path_url = FIREBASE_SING_UP_USER + FIREBASE_API_KEY
-              uri_dest = URI.parse(path_url)
-              http = Net::HTTP.new(uri_dest.host, uri_dest.port)
-              http.use_ssl = true
-              request = Net::HTTP::Post.new(uri_dest.request_uri)
-              request.set_form_data({"email" => "testuser7@example.com", "password" => "666666", "returnSecureToken" => true})
-              response = http.request(request)
-              render json: response.body
-
-              #end
-              #
-              #if isValid == 1
-              #  @error_info[:status] = 400
-              #  @error_info[:error] = 'Bad request'
-              #  render json: @error_info, status: :bad_request
-              #elsif hasDuplicate(fields) == 1
-              #  @error_info[:status] = 409
-              #  @error_info[:error] = 'Conflict'
-              #  render json: @error_info, status: :conflict
-              #else
-              #  new_user = @db_users.add(fields)
-              #  if new_user.document_id.nil?
-              #    @error_info[:status] = 503
-              #    @error_info[:error] = 'Service Unavailable'
-              #    render json: @error_info, status: :service_unavailable
-              #  end
-              #
-              #  render json: {status: "Created", code: 201}, status: :created
-              #end
-            end
-
-            # PATCH/PUT /users/1
-            def update
-              render json: {status: "update ok", code: 204}
-            end
-
-            # DELETE /users/1
-            def destroy
-              id = params[:id]
-              isExisted = @db_users.doc(id).get.data
-              if isExisted.nil?
-                @error_info[:status] = 204
-                @error_info[:error] = 'No Content'
-                render json: @error_info, status: :no_content
+              if (user_id.nil? || user_id == '') || (user_first_name.nil? || user_first_name == '') || (user_last_name.nil? || user_last_name == '')
+                pro_inf = user_id.empty? ? 'id' : user_first_name.empty? ? 'first_name' : 'last_name'
+                rendering_answer('User ' + pro_inf + " can't be empty", :bad_request)
+              elsif !where_users(user_id).empty?
+                rendering_answer('User already existed', :conflict)
               else
-                @db_users.doc(id).delete
-                check_delete = @db_users.doc(id).get.data
-                if check_delete.nil?
-                  render json: {status: "Document deleted", code: 200}
-                else
-                  @error_info[:status] = 406
-                  @error_info[:error] = 'Not Acceptable'
-                  render json: @error_info, status: :not_acceptable
-                end
+                new_document({first_name: first_name, last_name: user_last_name}, user_id)
               end
+            end
+
+            # POST /users/user/update update user
+            def update_user
+              id = params[:id]
+              if id.nil? || id == ''
+                rendering_answer('User ' + 'id' + " can't be empty", :bad_request)
+              else
+                update_document
+              end
+            end
+
+            # POST /users/user/delete delete user
+            def delete_user
+              delete_document
             end
           end
         end
