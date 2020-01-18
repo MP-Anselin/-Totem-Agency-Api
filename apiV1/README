@@ -1,0 +1,15 @@
+TOTEM AGENCY API DOCUMENT
+
+1) install ruby and rails last version advise you to use postman
+
+2) start server run command "rails server"
+
+3) to see the routes available run command "rails routes"
+
+4) first you need api jwt key use the route "client/authentification" in post and pass email and password as parameter
+    email: agencytotem59gmail.com
+    password: TotO/gen]1.XxZ
+
+5) now you have the jwt key you can execute the other requests
+
+..coming soon
