@@ -45,7 +45,7 @@ module Api
             bucket = @storage.bucket bucket
             #file = bucket.file "IphoneXS.mp4"
             file = bucket.file file_path + '/' + file_name
-            #file.download "app/controllers/api/v1/requests/tables/assets_manager/IphoneXS.mp4"
+            #file.download "app/controllers/api/v1/requests/tables/multimedia_manager/IphoneXS.mp4"
             file.download file_destination + '/' + file_new_name
             rendering_answer
           end
@@ -67,7 +67,7 @@ module Api
             file_destination = params[:fileDestination]
             #bucket = @storage.bucket "totem-db-38dee.appspot.com"
             bucket = @storage.bucket bucket
-            #_file = "app/controllers/api/v1/requests/tables/assets_manager/Bob.jpg"
+            #_file = "app/controllers/api/v1/requests/tables/multimedia_manager/Bob.jpg"
             path = file_path + '/' + file_name
             destination = file_destination + '/' + file_new_name
             bucket.create_file path, destination

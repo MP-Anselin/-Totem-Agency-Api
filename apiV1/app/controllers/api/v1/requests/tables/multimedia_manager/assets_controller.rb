@@ -2,28 +2,38 @@ module Api
   module V1
     module Requests
       module Tables
-        module AssetsManager
+        module MultimediaManager
           # Class to manage the assets
           class AssetsController < Api::V1::FirebaseRequests::FireDatabaseStore
             def initialize
               super
 
+                #@multimedia = Api::V1::Requests::Tables::MultimediaManager::MultimediaController.new
             end
 
-            # GET/POST /assets/list of list the assets information
-            def assets_list_info
+            # GET/ /assets/list of list the assets information
+            def buckets_list
               list = []
-              bucket_name = params[:bucketName]
-              element = if bucket_name.nil?
-                          @firestorage.storage_variable.buckets
-                        else
-                          bucket = @firestorage.storage_variable.bucket bucket_name
-                          bucket.files
-                        end
+              element = @firestorage.storage_variable.buckets
               element.all do |info|
-                list.push(name: info.name)
+                list.push(name: info.name, size: info.size)
               end
               rendering_answer nil, nil, list
+            end
+
+            # POST /assets/list of list the assets information
+            def assets_list
+              bucket_name = params[:bucketName]
+              if var_empty(bucket_name)
+                rendering_answer("Bucket name  can't be empty", :bad_request)
+              else
+                list = []
+                bucket = @firestorage.storage_variable.bucket bucket_name
+                bucket.files.all do |info|
+                  list.push(name: info.name, size: info.size, path: info.id, bucket: info.bucket, content_type: info.content_type)
+                end
+                rendering_answer nil, nil, list
+              end
             end
 
             # POST /assets/asset get one asset information
@@ -42,7 +52,7 @@ module Api
                 #file = bucket.file "IphoneXS.mp4"
                 begin
                   file = folder_path == '' ? bucket.file(file_name) : bucket.file(folder_path + '/' + file_name)
-                  #file.download "app/controllers/api/v1/requests/tables/assets_manager/IphoneXS.mp4"
+                  #file.download "app/controllers/api/v1/requests/tables/multimedia_manager/IphoneXS.mp4"
                   file.download folder_destination + '/' + file_new_name
                 rescue StandardError
                   rendering_answer('BAD REQUEST', :bad_request)
@@ -65,15 +75,15 @@ module Api
               else
                 #bucket = @firestorage.storage_variable.bucket "totem-db-38dee.appspot.com"
                 bucket = @firestorage.storage_variable.bucket bucket
-                #_file = "app/controllers/api/v1/requests/tables/assets_manager/Bob.jpg"
+                #_file = "app/controllers/api/v1/requests/tables/multimedia_manager/Bob.jpg"
                 file_path = folder_path == '' ? file_name : folder_path + '/' + file_name
                 destination = folder_destination + '/' + (file_new_name == '' ? file_name : file_new_name)
                 begin
-                  bucket.create_file file_path, destination
+                  file = bucket.create_file file_path, destination
                 rescue StandardError
                   rendering_answer('BAD REQUEST', :bad_request)
                 else
-                  rendering_answer
+                  {'path_name': file.name, size: file.size, path_id: file.id, bucket: file.bucket, content_type: file.content_type}
                 end
               end
             end

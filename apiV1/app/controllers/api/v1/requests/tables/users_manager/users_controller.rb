@@ -39,8 +39,8 @@ module Api
             # POST /users/user/new add new user
             def new_user
               user_id = params[:id]
-              user_first_name = params[:first_name]
-              user_last_name = params[:last_name]
+              user_first_name = params[:firstName]
+              user_last_name = params[:lastName]
 
               if (user_id.nil? || user_id == '') || (user_first_name.nil? || user_first_name == '') || (user_last_name.nil? || user_last_name == '')
                 pro_inf = user_id.empty? ? 'id' : user_first_name.empty? ? 'first_name' : 'last_name'
@@ -48,7 +48,7 @@ module Api
               elsif !where_users(user_id).empty?
                 rendering_answer('User already existed', :conflict)
               else
-                new_document({first_name: first_name, last_name: user_last_name}, user_id)
+                new_document({first_name: user_first_name, last_name: user_last_name}, user_id)
               end
             end
 

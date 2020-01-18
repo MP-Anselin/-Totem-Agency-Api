@@ -59,9 +59,9 @@ module Api
           end
         end
 
-        # POST /products/product/update update product
         def update_document
-          if id_document(params[:id])
+          id = params[:id]
+          if id_document(id)
             rendering_answer('Document does not exist', :not_found)
           else
             data = params.permit(params.keys).to_h || {}
