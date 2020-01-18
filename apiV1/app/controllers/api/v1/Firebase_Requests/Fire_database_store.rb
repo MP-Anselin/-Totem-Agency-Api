@@ -6,11 +6,14 @@ module Api
 
         def initialize
           super
-          require 'google/cloud/firestore'
+          #require 'google/cloud/firestore'
+          #require 'google/cloud/storage'
+
           # Explicitly use service account credentials by specifying the private key
-          @firestore = Google::Cloud::Firestore.new project: FIREBASE_PROJECT_ID,
-                                                    keyfile: FIREBASE_PATH_KEY
-          @firebase = Firebase::Client.new(FIREBASE_URI, FIREBASE_PRIVATE_KEY)
+          @firestore = Api::V1::FirebaseRequests::FireTools::FirestoreManager.new.firestore_variable
+          @firebase = Api::V1::FirebaseRequests::FireTools::FirebaseManager.new.firebase_variable
+          @firestorage = Api::V1::FirebaseRequests::FireTools::FirestorageManager.new
+
 
           @collection = nil
           @collection_name = nil

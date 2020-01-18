@@ -51,4 +51,8 @@ gem 'firebase'
 
 gem 'google-cloud-firestore'
 
+gem 'google-cloud-storage'
+
+gem 'google-cloud'
+
 gem 'google-api-client'

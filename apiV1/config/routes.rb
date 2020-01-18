@@ -32,6 +32,14 @@ Rails.application.routes.draw do
   post '/users/user/delete', to: 'api/v1/requests/tables/users_manager/users#delete_user'
 
 
+  get '/assets/bucket/list', to: 'api/v1/requests/tables/assets_manager/assets#assets_list_info'
+  post '/assets/bucket/new', to: 'api/v1/requests/tables/assets_manager/assets#new_bucket'
+  post '/assets/bucket/asset/list', to: 'api/v1/requests/tables/assets_manager/assets#assets_list_info'
+  post '/assets/bucket/asset/download', to: 'api/v1/requests/tables/assets_manager/assets#asset_download'
+  post '/assets/bucket/asset/new', to: 'api/v1/requests/tables/assets_manager/assets#new_asset'
+  #post '/assets/user/update', to: 'api/v1/requests/tables/assets_manager/assets#update_asset'
+  post '/assets/bucket/asset/delete', to: 'api/v1/requests/tables/assets_manager/assets#delete_asset'
+
 
   namespace :api do
     namespace :v1 do

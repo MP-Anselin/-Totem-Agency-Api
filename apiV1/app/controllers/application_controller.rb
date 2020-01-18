@@ -9,27 +9,35 @@ class ApplicationController < ActionController::API
 
   def initialize
     super
-    @error_render = {"error": {
-        "code": 500,
-        "message": "INTERNAL_SERVER_ERRROR",
-        "errors": [{
-                       "message": "INTERNAL_SERVER_ERRROR",
-                       "domain": "global",
-                       "reason": "invalid"
+    @error_render = {'error': {
+        'code': 500,
+        'message': 'INTERNAL_SERVER_ERRROR',
+        'errors': [{
+                       'message': 'INTERNAL_SERVER_ERRROR',
+                       'domain': 'global',
+                       'reason': 'invalid'
                    }]}}
 
   end
 
   def rendering_answer(message = nil, status_code = nil, information = nil)
     if message
-      @error_render[:error][:message] = message
-      @error_render[:error][:errors][0][:message] = message
+      @error_render[:error][:message] = message.upcase
+      @error_render[:error][:errors][0][:message] = message.upcase
       @error_render[:error][:code] = status_code
       render json: @error_render, status: status_code
     elsif !information.nil?
       render json: {data: information}, status: :ok
     else
       render status: :ok
+    end
+  end
+
+  def var_empty(var)
+    if var.nil? || var == ''
+      true
+    else
+      false
     end
   end
 
