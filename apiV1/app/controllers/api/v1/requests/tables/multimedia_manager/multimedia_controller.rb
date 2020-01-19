@@ -16,8 +16,8 @@ module Api
               collection_list_documents
             end
 
-            # POST /multimedia/file get one multimediaType information
-            def multimedia_information
+            # POST /multimedia/media get one multimediaType information
+            def media_information
               collection_get_document
             end
 
@@ -34,23 +34,21 @@ module Api
               list
             end
 
-            # POST /assets/multimedia/new add new asset
+            # POST /multimedia/media/new add new asset
             def new_multimedia
               list = new_asset
-              if list.nil?
-                file_name = list[:path_name].split('/').last.split('/')[0]
-                file_storage_id = list[:path_id].split('/').last.split('/')[0]
-                storage_path = list[:path_name].split(file_name)[0]
-                if !where_multimedia(file_name, file_storage_id, list[:content_type]).empty?
-                  rendering_answer('multimedia already existed', :conflict)
-                else
-                  new_document({name: file_name, storage_id: file_storage_id,
-                                type: list[:content_type], storage_path: storage_path}, file_storage_id)
-                end
+              file_name = list[:path_name].split('/').last.split('/')[0]
+              file_storage_id = list[:path_id].split('/').last.split('/')[0]
+              storage_path = list[:path_name].split(file_name)[0]
+              if !where_multimedia(file_name, file_storage_id, list[:content_type]).empty?
+                rendering_answer('multimedia already existed', :conflict)
+              else
+                media_info = {name: file_name, storage_id: file_storage_id, type: list[:content_type], storage_path: storage_path}
+                new_document(media_info, file_storage_id, true)
               end
             end
 
-            # POST /multimedia/file/update update user
+            # POST /multimedia/media/update update user
             def update_multimedia
               id = params[:id]
               if id.nil? || id == ''

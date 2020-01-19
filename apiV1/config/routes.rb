@@ -28,12 +28,32 @@ Rails.application.routes.draw do
 
 
   get '/assets/bucket/list', to: 'api/v1/requests/tables/multimedia_manager/assets#buckets_list'
-  post '/assets/bucket/new', to: 'api/v1/requests/tables/multimedia_manager/assets#new_bucket'
   post '/assets/bucket/multimedia/list', to: 'api/v1/requests/tables/multimedia_manager/assets#assets_list'
   post '/assets/bucket/multimedia/download', to: 'api/v1/requests/tables/multimedia_manager/assets#asset_download'
-  #post '/assets/bucket/multimedia/new', to: 'api/v1/requests/tables/multimedia_manager/assets#new_asset'
+  post '/assets/bucket/multimedia/new', to: 'api/v1/requests/tables/multimedia_manager/multimedia#new_multimedia'
   post '/assets/bucket/multimedia/delete', to: 'api/v1/requests/tables/multimedia_manager/assets#delete_asset'
 
-  post '/assets/bucket/multimedia/new', to: 'api/v1/requests/tables/multimedia_manager/multimedia#new_multimedia'
+  get '/multimedia/list', to: 'api/v1/requests/tables/multimedia_manager/multimedia#multimedia_list'
+  post '/multimedia/media', to: 'api/v1/requests/tables/multimedia_manager/multimedia#media_information'
+  post '/multimedia/media/update', to: 'api/v1/requests/tables/multimedia_manager/multimedia#update_multimedia'
+  #post '/multimedia/media/new', to: 'api/v1/requests/tables/multimedia_manager/assets#new_asset'
+  post '/multimedia/media/delete', to: 'api/v1/requests/tables/multimedia_manager/multimedia#delete_multimedia'
+
+  get '/users_multimedia/list', to: 'api/v1/requests/tables/relations_manager/users_multimedia#users_multimedia_list'
+  post '/users_multimedia/information', to: 'api/v1/requests/tables/relations_manager/users_multimedia#users_multimedia_information'
+  post '/users_multimedia/information/user', to: 'api/v1/requests/tables/relations_manager/users_multimedia#users_multimedia_by_id'
+  post '/users_multimedia/information/multimedia', to: 'api/v1/requests/tables/relations_manager/users_multimedia#users_multimedia_by_id'
+  post '/users_multimedia/new', to: 'api/v1/requests/tables/relations_manager/users_multimedia#new_users_multimedia'
+  post '/users_multimedia/update', to: 'api/v1/requests/tables/relations_manager/users_multimedia#update_users_multimedia'
+  post '/users_multimedia/delete', to: 'api/v1/requests/tables/relations_manager/users_multimedia#delete_users_multimedia'
+
+  get '/products_multimedia/list', to: 'api/v1/requests/tables/relations_manager/products_multimedia#products_multimedia_list'
+  post '/products_multimedia/information', to: 'api/v1/requests/tables/relations_manager/products_multimedia#products_multimedia_information'
+  post '/products_multimedia/information/product', to: 'api/v1/requests/tables/relations_manager/products_multimedia#products_multimedia_by_id'
+  post '/products_multimedia/information/multimedia', to: 'api/v1/requests/tables/relations_manager/products_multimedia#products_multimedia_by_id'
+  post '/products_multimedia/new', to: 'api/v1/requests/tables/relations_manager/products_multimedia#new_products_multimedia'
+  post '/products_multimedia/update', to: 'api/v1/requests/tables/relations_manager/products_multimedia#update_products_multimedia'
+  post '/products_multimedia/delete', to: 'api/v1/requests/tables/relations_manager/products_multimedia#delete_products_multimedia'
+
 
 end

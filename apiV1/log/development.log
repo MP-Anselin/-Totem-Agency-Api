@@ -29442,3 +29442,1741 @@ Error - #<Google::Apis::ClientError: notFound: Not Found status_code: 404 header
 Completed 400 Bad Request in 317ms (Views: 1.7ms | ActiveRecord: 1.4ms | Allocations: 7620)
 
 
+Started GET "/products/list" for ::1 at 2020-01-19 10:07:38 +0100
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#products_list as */*
+  Parameters: {"product"=>{}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 869)
+
+
+Started POST "/client/authentication" for ::1 at 2020-01-19 10:07:45 +0100
+Processing by Api::V1::Authentication::AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]", "authentication"=>{"email"=>"mackendy-pierre.anselin@epitech.eu", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mackendy-pierre.anselin@epitech.eu"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:18:in `user'
+Completed 200 OK in 1131ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 7050)
+
+
+Started GET "/products/list" for ::1 at 2020-01-19 10:08:02 +0100
+Processing by Api::V1::Requests::Tables::ProductsManager::ProductsController#products_list as */*
+  Parameters: {"product"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 553ms (Views: 5.5ms | ActiveRecord: 0.6ms | Allocations: 16816)
+
+
+Started GET "/assets/bucket/list" for ::1 at 2020-01-19 10:08:54 +0100
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#buckets_list as */*
+  Parameters: {"asset"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b?project=totem-db-38dee
+200
+#<HTTP::Message:0x00007fd0e0f75e78 @http_header=#<HTTP::Message::Headers:0x00007fd0e0f75e50 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe8707bb8b0 URI:https://storage.googleapis.com/storage/v1/b?project=totem-db-38dee>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2Ur-YFRUFn_4aH7uJV5W9e9dc1m4PRDcUodkmlz-2zua30I3FpUdrUcPxAbay_Ia_cMIsIKteUchdE4UK7oWhERI1mrzudYV1nG1fZ8ZPxdrD8CWTxY"], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:08:55 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:08:55 GMT"], ["Content-Length", "1646"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e0fada08>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e0f75d10 @body="{\n  \"kind\": \"storage#buckets\",\n  \"items\": [\n    {\n      \"kind\": \"storage#bucket\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/staging.totem-db-38dee.appspot.com\",\n      \"id\": \"staging.totem-db-38dee.appspot.com\",\n      \"name\": \"staging.totem-db-38dee.appspot.com\",\n      \"projectNumber\": \"549444221751\",\n      \"metageneration\": \"1\",\n      \"location\": \"EU\",\n      \"storageClass\": \"STANDARD\",\n      \"etag\": \"CAE=\",\n      \"timeCreated\": \"2019-11-24T09:19:11.088Z\",\n      \"updated\": \"2019-11-24T09:19:11.088Z\",\n      \"lifecycle\": {\n        \"rule\": [\n          {\n            \"action\": {\n              \"type\": \"Delete\"\n            },\n            \"condition\": {\n              \"age\": 15\n            }\n          }\n        ]\n      },\n      \"iamConfiguration\": {\n        \"bucketPolicyOnly\": {\n          \"enabled\": false\n        },\n        \"uniformBucketLevelAccess\": {\n          \"enabled\": false\n        }\n      },\n      \"locationType\": \"multi-region\"\n    },\n    {\n      \"kind\": \"storage#bucket\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n      \"id\": \"totem-db-38dee.appspot.com\",\n      \"name\": \"totem-db-38dee.appspot.com\",\n      \"projectNumber\": \"549444221751\",\n      \"metageneration\": \"2\",\n      \"location\": \"EU\",\n      \"storageClass\": \"STANDARD\",\n      \"etag\": \"CAI=\",\n      \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n      \"updated\": \"2019-11-24T09:19:18.093Z\",\n      \"iamConfiguration\": {\n        \"bucketPolicyOnly\": {\n          \"enabled\": false\n        },\n        \"uniformBucketLevelAccess\": {\n          \"enabled\": false\n        }\n      },\n      \"locationType\": \"multi-region\"\n    }\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Buckets:0x00007fd0e0faccc0
+ @items=
+  [#<Google::Apis::StorageV1::Bucket:0x00007fd0e0fc5478
+    @etag="CAE=",
+    @iam_configuration=
+     #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e0fdc8d0
+      @bucket_policy_only=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e0fe6718
+        @enabled=false>,
+      @uniform_bucket_level_access=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e0fe5610
+        @enabled=false>>,
+    @id="staging.totem-db-38dee.appspot.com",
+    @kind="storage#bucket",
+    @lifecycle=
+     #<Google::Apis::StorageV1::Bucket::Lifecycle:0x00007fd0e1006e50
+      @rule=
+       [#<Google::Apis::StorageV1::Bucket::Lifecycle::Rule:0x00007fd0e10045b0
+         @action=
+          #<Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Action:0x00007fd0e10125e8
+           @type="Delete">,
+         @condition=
+          #<Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Condition:0x00007fd0e1010e28
+           @age=15>>]>,
+    @location="EU",
+    @location_type="multi-region",
+    @metageneration=1,
+    @name="staging.totem-db-38dee.appspot.com",
+    @project_number=549444221751,
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/staging.totem-db-38dee.appspot.com",
+    @storage_class="STANDARD",
+    @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+    @updated=Sun, 24 Nov 2019 09:19:11 +0000>,
+   #<Google::Apis::StorageV1::Bucket:0x00007fd0e1087f50
+    @etag="CAI=",
+    @iam_configuration=
+     #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e1084120
+      @bucket_policy_only=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e10a39f8
+        @enabled=false>,
+      @uniform_bucket_level_access=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e10a2fd0
+        @enabled=false>>,
+    @id="totem-db-38dee.appspot.com",
+    @kind="storage#bucket",
+    @location="EU",
+    @location_type="multi-region",
+    @metageneration=2,
+    @name="totem-db-38dee.appspot.com",
+    @project_number=549444221751,
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+    @storage_class="STANDARD",
+    @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+    @updated=Sun, 24 Nov 2019 09:19:18 +0000>],
+ @kind="storage#buckets">
+
+Completed 500 Internal Server Error in 691ms (ActiveRecord: 0.2ms | Allocations: 7814)
+
+
+  
+NoMethodError (undefined method `size' for #<Google::Cloud::Storage::Bucket:0x00007fd0e1180218>):
+  
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:19:in `block in buckets_list'
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:18:in `buckets_list'
+Started GET "/assets/bucket/list" for ::1 at 2020-01-19 10:09:33 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#buckets_list as */*
+  Parameters: {"asset"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b?project=totem-db-38dee
+200
+#<HTTP::Message:0x00007fd0e12fd780 @http_header=#<HTTP::Message::Headers:0x00007fd0e12fd758 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe87097f0d4 URI:https://storage.googleapis.com/storage/v1/b?project=totem-db-38dee>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UqkBi49r0ss-VU-0BDhK7Fj4oDgJZKEva5EanGrS-xrl-zRfoVLvGgyO1jEymMVQsjWMXllvYHycOKJQCBK2SY263w9SuNv9F6O91zsuq5fXs73AP8"], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:09:34 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:09:34 GMT"], ["Content-Length", "1646"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e135d3d8>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e12fd6e0 @body="{\n  \"kind\": \"storage#buckets\",\n  \"items\": [\n    {\n      \"kind\": \"storage#bucket\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/staging.totem-db-38dee.appspot.com\",\n      \"id\": \"staging.totem-db-38dee.appspot.com\",\n      \"name\": \"staging.totem-db-38dee.appspot.com\",\n      \"projectNumber\": \"549444221751\",\n      \"metageneration\": \"1\",\n      \"location\": \"EU\",\n      \"storageClass\": \"STANDARD\",\n      \"etag\": \"CAE=\",\n      \"timeCreated\": \"2019-11-24T09:19:11.088Z\",\n      \"updated\": \"2019-11-24T09:19:11.088Z\",\n      \"lifecycle\": {\n        \"rule\": [\n          {\n            \"action\": {\n              \"type\": \"Delete\"\n            },\n            \"condition\": {\n              \"age\": 15\n            }\n          }\n        ]\n      },\n      \"iamConfiguration\": {\n        \"bucketPolicyOnly\": {\n          \"enabled\": false\n        },\n        \"uniformBucketLevelAccess\": {\n          \"enabled\": false\n        }\n      },\n      \"locationType\": \"multi-region\"\n    },\n    {\n      \"kind\": \"storage#bucket\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n      \"id\": \"totem-db-38dee.appspot.com\",\n      \"name\": \"totem-db-38dee.appspot.com\",\n      \"projectNumber\": \"549444221751\",\n      \"metageneration\": \"2\",\n      \"location\": \"EU\",\n      \"storageClass\": \"STANDARD\",\n      \"etag\": \"CAI=\",\n      \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n      \"updated\": \"2019-11-24T09:19:18.093Z\",\n      \"iamConfiguration\": {\n        \"bucketPolicyOnly\": {\n          \"enabled\": false\n        },\n        \"uniformBucketLevelAccess\": {\n          \"enabled\": false\n        }\n      },\n      \"locationType\": \"multi-region\"\n    }\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Buckets:0x00007fd0e135cca8
+ @items=
+  [#<Google::Apis::StorageV1::Bucket:0x00007fd0e139f670
+    @etag="CAE=",
+    @iam_configuration=
+     #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e139e428
+      @bucket_policy_only=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e139dff0
+        @enabled=false>,
+      @uniform_bucket_level_access=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e139d820
+        @enabled=false>>,
+    @id="staging.totem-db-38dee.appspot.com",
+    @kind="storage#bucket",
+    @lifecycle=
+     #<Google::Apis::StorageV1::Bucket::Lifecycle:0x00007fd0e139cba0
+      @rule=
+       [#<Google::Apis::StorageV1::Bucket::Lifecycle::Rule:0x00007fd0e139c5b0
+         @action=
+          #<Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Action:0x00007fd0e13dbf80
+           @type="Delete">,
+         @condition=
+          #<Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Condition:0x00007fd0e13db710
+           @age=15>>]>,
+    @location="EU",
+    @location_type="multi-region",
+    @metageneration=1,
+    @name="staging.totem-db-38dee.appspot.com",
+    @project_number=549444221751,
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/staging.totem-db-38dee.appspot.com",
+    @storage_class="STANDARD",
+    @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+    @updated=Sun, 24 Nov 2019 09:19:11 +0000>,
+   #<Google::Apis::StorageV1::Bucket:0x00007fd0e13d8240
+    @etag="CAI=",
+    @iam_configuration=
+     #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e13dec58
+      @bucket_policy_only=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e13de7d0
+        @enabled=false>,
+      @uniform_bucket_level_access=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e13dddd0
+        @enabled=false>>,
+    @id="totem-db-38dee.appspot.com",
+    @kind="storage#bucket",
+    @location="EU",
+    @location_type="multi-region",
+    @metageneration=2,
+    @name="totem-db-38dee.appspot.com",
+    @project_number=549444221751,
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+    @storage_class="STANDARD",
+    @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+    @updated=Sun, 24 Nov 2019 09:19:18 +0000>],
+ @kind="storage#buckets">
+
+Completed 200 OK in 387ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 11422)
+
+
+Started GET "/assets/bucket/list" for ::1 at 2020-01-19 10:10:35 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#buckets_list as */*
+  Parameters: {"asset"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b?project=totem-db-38dee
+200
+#<HTTP::Message:0x00007fd0e10a8f98 @http_header=#<HTTP::Message::Headers:0x00007fd0e10a8ef8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe870855690 URI:https://storage.googleapis.com/storage/v1/b?project=totem-db-38dee>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UoBwRdpGnhG1Ze-O7-1waWqrHYy0OK1zclNeA9FHfKkdsvH1TfnP51Qb7okr-V9vCLJCphGvDB4YgdHfu5cQcPyHbWjeZDXKEIDG8Hd7DVbmNqivg0"], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:10:36 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:10:36 GMT"], ["Content-Length", "1646"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e10facf8>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e10a8d18 @body="{\n  \"kind\": \"storage#buckets\",\n  \"items\": [\n    {\n      \"kind\": \"storage#bucket\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/staging.totem-db-38dee.appspot.com\",\n      \"id\": \"staging.totem-db-38dee.appspot.com\",\n      \"name\": \"staging.totem-db-38dee.appspot.com\",\n      \"projectNumber\": \"549444221751\",\n      \"metageneration\": \"1\",\n      \"location\": \"EU\",\n      \"storageClass\": \"STANDARD\",\n      \"etag\": \"CAE=\",\n      \"timeCreated\": \"2019-11-24T09:19:11.088Z\",\n      \"updated\": \"2019-11-24T09:19:11.088Z\",\n      \"lifecycle\": {\n        \"rule\": [\n          {\n            \"action\": {\n              \"type\": \"Delete\"\n            },\n            \"condition\": {\n              \"age\": 15\n            }\n          }\n        ]\n      },\n      \"iamConfiguration\": {\n        \"bucketPolicyOnly\": {\n          \"enabled\": false\n        },\n        \"uniformBucketLevelAccess\": {\n          \"enabled\": false\n        }\n      },\n      \"locationType\": \"multi-region\"\n    },\n    {\n      \"kind\": \"storage#bucket\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n      \"id\": \"totem-db-38dee.appspot.com\",\n      \"name\": \"totem-db-38dee.appspot.com\",\n      \"projectNumber\": \"549444221751\",\n      \"metageneration\": \"2\",\n      \"location\": \"EU\",\n      \"storageClass\": \"STANDARD\",\n      \"etag\": \"CAI=\",\n      \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n      \"updated\": \"2019-11-24T09:19:18.093Z\",\n      \"iamConfiguration\": {\n        \"bucketPolicyOnly\": {\n          \"enabled\": false\n        },\n        \"uniformBucketLevelAccess\": {\n          \"enabled\": false\n        }\n      },\n      \"locationType\": \"multi-region\"\n    }\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Buckets:0x00007fd0e10fa118
+ @items=
+  [#<Google::Apis::StorageV1::Bucket:0x00007fd0e1102e30
+    @etag="CAE=",
+    @iam_configuration=
+     #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e11009c8
+      @bucket_policy_only=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e1100130
+        @enabled=false>,
+      @uniform_bucket_level_access=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e11133e8
+        @enabled=false>>,
+    @id="staging.totem-db-38dee.appspot.com",
+    @kind="storage#bucket",
+    @lifecycle=
+     #<Google::Apis::StorageV1::Bucket::Lifecycle:0x00007fd0e1111b10
+      @rule=
+       [#<Google::Apis::StorageV1::Bucket::Lifecycle::Rule:0x00007fd0e1111110
+         @action=
+          #<Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Action:0x00007fd0e1110ad0
+           @type="Delete">,
+         @condition=
+          #<Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Condition:0x00007fd0e11102d8
+           @age=15>>]>,
+    @location="EU",
+    @location_type="multi-region",
+    @metageneration=1,
+    @name="staging.totem-db-38dee.appspot.com",
+    @project_number=549444221751,
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/staging.totem-db-38dee.appspot.com",
+    @storage_class="STANDARD",
+    @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+    @updated=Sun, 24 Nov 2019 09:19:11 +0000>,
+   #<Google::Apis::StorageV1::Bucket:0x00007fd0e1134160
+    @etag="CAI=",
+    @iam_configuration=
+     #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e1145910
+      @bucket_policy_only=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e11453e8
+        @enabled=false>,
+      @uniform_bucket_level_access=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e11443a8
+        @enabled=false>>,
+    @id="totem-db-38dee.appspot.com",
+    @kind="storage#bucket",
+    @location="EU",
+    @location_type="multi-region",
+    @metageneration=2,
+    @name="totem-db-38dee.appspot.com",
+    @project_number=549444221751,
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+    @storage_class="STANDARD",
+    @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+    @updated=Sun, 24 Nov 2019 09:19:18 +0000>],
+ @kind="storage#buckets">
+
+Completed 500 Internal Server Error in 618ms (ActiveRecord: 1.8ms | Allocations: 12216)
+
+
+  
+NoMethodError (undefined method `link' for #<Google::Cloud::Storage::Bucket:0x00007fd0e11f8e98>):
+  
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:19:in `block in buckets_list'
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:18:in `buckets_list'
+Started GET "/assets/bucket/list" for ::1 at 2020-01-19 10:11:06 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#buckets_list as */*
+  Parameters: {"asset"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b?project=totem-db-38dee
+200
+#<HTTP::Message:0x00007fd0e120e400 @http_header=#<HTTP::Message::Headers:0x00007fd0e120e3b0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe87090791c URI:https://storage.googleapis.com/storage/v1/b?project=totem-db-38dee>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UrIZWdc207lp5Isz1CyFwszhAxAHatMgLbiZKYQtHVmclSQtzu_6-vkapvAhVZcezuMfGgvdDrf_vI7pzX6LvahV6P2r9_9hQgbVF5UrzdyQEMs4n0"], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:11:07 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:11:07 GMT"], ["Content-Length", "1646"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e129b328>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e120e298 @body="{\n  \"kind\": \"storage#buckets\",\n  \"items\": [\n    {\n      \"kind\": \"storage#bucket\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/staging.totem-db-38dee.appspot.com\",\n      \"id\": \"staging.totem-db-38dee.appspot.com\",\n      \"name\": \"staging.totem-db-38dee.appspot.com\",\n      \"projectNumber\": \"549444221751\",\n      \"metageneration\": \"1\",\n      \"location\": \"EU\",\n      \"storageClass\": \"STANDARD\",\n      \"etag\": \"CAE=\",\n      \"timeCreated\": \"2019-11-24T09:19:11.088Z\",\n      \"updated\": \"2019-11-24T09:19:11.088Z\",\n      \"lifecycle\": {\n        \"rule\": [\n          {\n            \"action\": {\n              \"type\": \"Delete\"\n            },\n            \"condition\": {\n              \"age\": 15\n            }\n          }\n        ]\n      },\n      \"iamConfiguration\": {\n        \"bucketPolicyOnly\": {\n          \"enabled\": false\n        },\n        \"uniformBucketLevelAccess\": {\n          \"enabled\": false\n        }\n      },\n      \"locationType\": \"multi-region\"\n    },\n    {\n      \"kind\": \"storage#bucket\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n      \"id\": \"totem-db-38dee.appspot.com\",\n      \"name\": \"totem-db-38dee.appspot.com\",\n      \"projectNumber\": \"549444221751\",\n      \"metageneration\": \"2\",\n      \"location\": \"EU\",\n      \"storageClass\": \"STANDARD\",\n      \"etag\": \"CAI=\",\n      \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n      \"updated\": \"2019-11-24T09:19:18.093Z\",\n      \"iamConfiguration\": {\n        \"bucketPolicyOnly\": {\n          \"enabled\": false\n        },\n        \"uniformBucketLevelAccess\": {\n          \"enabled\": false\n        }\n      },\n      \"locationType\": \"multi-region\"\n    }\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Buckets:0x00007fd0e129ab58
+ @items=
+  [#<Google::Apis::StorageV1::Bucket:0x00007fd0e1299320
+    @etag="CAE=",
+    @iam_configuration=
+     #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e1298100
+      @bucket_policy_only=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e1293c90
+        @enabled=false>,
+      @uniform_bucket_level_access=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e12934c0
+        @enabled=false>>,
+    @id="staging.totem-db-38dee.appspot.com",
+    @kind="storage#bucket",
+    @lifecycle=
+     #<Google::Apis::StorageV1::Bucket::Lifecycle:0x00007fd0e1292610
+      @rule=
+       [#<Google::Apis::StorageV1::Bucket::Lifecycle::Rule:0x00007fd0e1292048
+         @action=
+          #<Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Action:0x00007fd0e1291be8
+           @type="Delete">,
+         @condition=
+          #<Google::Apis::StorageV1::Bucket::Lifecycle::Rule::Condition:0x00007fd0e1291378
+           @age=15>>]>,
+    @location="EU",
+    @location_type="multi-region",
+    @metageneration=1,
+    @name="staging.totem-db-38dee.appspot.com",
+    @project_number=549444221751,
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/staging.totem-db-38dee.appspot.com",
+    @storage_class="STANDARD",
+    @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+    @updated=Sun, 24 Nov 2019 09:19:11 +0000>,
+   #<Google::Apis::StorageV1::Bucket:0x00007fd0e12b1fb0
+    @etag="CAI=",
+    @iam_configuration=
+     #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e12b0de0
+      @bucket_policy_only=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e12b0930
+        @enabled=false>,
+      @uniform_bucket_level_access=
+       #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e12b00c0
+        @enabled=false>>,
+    @id="totem-db-38dee.appspot.com",
+    @kind="storage#bucket",
+    @location="EU",
+    @location_type="multi-region",
+    @metageneration=2,
+    @name="totem-db-38dee.appspot.com",
+    @project_number=549444221751,
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+    @storage_class="STANDARD",
+    @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+    @updated=Sun, 24 Nov 2019 09:19:18 +0000>],
+ @kind="storage#buckets">
+
+Completed 200 OK in 575ms (Views: 1.1ms | ActiveRecord: 1.7ms | Allocations: 11432)
+
+
+Started POST "/multimedia/list" for ::1 at 2020-01-19 10:11:35 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/multimedia/list"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/assets/bucket/multimedia/list" for ::1 at 2020-01-19 10:12:00 +0100
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#assets_list as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "asset"=>{"bucketName"=>"totem-db-38dee.appspot.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x0000000003abc8d8 @http_header=#<HTTP::Message::Headers:0x0000000003abc680 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x1d7d1c8 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UrUkF1uGSXSdhzOJ5a2vkKtmygizl7iIEp1a3zR8NpWeMgsil6b4j0NOJwhDUvzFxss70HR16vmsr8oAaFiKicIIFurXN_GL1mpZdraqr-PCbgC9aI"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:12:01 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:12:01 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x0000000003c7dfa0>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x0000000003ad3d08 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x0000000003c931e8
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x0000000003cb5f68
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x0000000003cb4168
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x0000000003cd3360
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o?
+200
+#<HTTP::Message:0x00000000049139b8 @http_header=#<HTTP::Message::Headers:0x00000000049138f0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x2487478 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UqxDfBBmNNfs910TQJ0C9QVtZTHvQonBSLreBQ6KEdaO_LTElX5jxx-KKT2TMeob3yLFgZxD95XGeoB1ebJnNfl1FjmgnNi4eio3QLs2aZV5PHX48M"], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:12:01 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:12:01 GMT"], ["Content-Length", "8417"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00000000049dee38>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x0000000004913800 @body="{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/IphoneXS.mp4/1579168845264244\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/IphoneXS.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/IphoneXS.mp4?generation=1579168845264244&alt=media\",\n      \"name\": \"IphoneXS.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579168845264244\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"18088681\",\n      \"md5Hash\": \"SMXJlmx0TdDJ7WsclFsFdw==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''IphoneXS.mp4\",\n      \"crc32c\": \"ACVIbg==\",\n      \"etag\": \"CPTqv7Duh+cCEAE=\",\n      \"timeCreated\": \"2020-01-16T10:00:45.264Z\",\n      \"updated\": \"2020-01-16T10:00:45.264Z\",\n      \"timeStorageClassUpdated\": \"2020-01-16T10:00:45.264Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"56838915-6b5e-4cee-b0ef-7f21327cc053\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/Publicite_iPhone_XS_-_Apple_hd.mp4/1579168425601971\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/Publicite_iPhone_XS_-_Apple_hd.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/Publicite_iPhone_XS_-_Apple_hd.mp4?generation=1579168425601971&alt=media\",\n      \"name\": \"Publicite_iPhone_XS_-_Apple_hd.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579168425601971\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"18088681\",\n      \"md5Hash\": \"SMXJlmx0TdDJ7WsclFsFdw==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''Publicite_iPhone_XS_-_Apple_hd.mp4\",\n      \"crc32c\": \"ACVIbg==\",\n      \"etag\": \"CLPXsejsh+cCEAE=\",\n      \"timeCreated\": \"2020-01-16T09:53:45.601Z\",\n      \"updated\": \"2020-01-16T09:53:45.601Z\",\n      \"timeStorageClassUpdated\": \"2020-01-16T09:53:45.601Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"45bba684-f57d-46ec-ae0f-667ae1a75605\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/glace.mp4/1575279685281422\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/glace.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/glace.mp4?generation=1575279685281422&alt=media\",\n      \"name\": \"glace.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1575279685281422\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"3089620\",\n      \"md5Hash\": \"W+/4VdZduUsN6uLOXtdZCw==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''glace.mp4\",\n      \"crc32c\": \"JiqEWw==\",\n      \"etag\": \"CI7NwJDWluYCEAE=\",\n      \"timeCreated\": \"2019-12-02T09:41:25.281Z\",\n      \"updated\": \"2019-12-02T09:41:25.281Z\",\n      \"timeStorageClassUpdated\": \"2019-12-02T09:41:25.281Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"11a636e1-1c66-4ea0-9cbc-a6b5488c3273\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge.jpg/1579360310395832\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge.jpg\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge.jpg?generation=1579360310395832&alt=media\",\n      \"name\": \"images/SpongeBob/Bob l'eponge.jpg\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579360310395832\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"image/jpeg\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"204460\",\n      \"md5Hash\": \"M1j1jxEfH94WEXNyGC3B8Q==\",\n      \"crc32c\": \"1YtOdQ==\",\n      \"etag\": \"CLiHmNK3jecCEAE=\",\n      \"timeCreated\": \"2020-01-18T15:11:50.395Z\",\n      \"updated\": \"2020-01-18T15:11:50.395Z\",\n      \"timeStorageClassUpdated\": \"2020-01-18T15:11:50.395Z\"\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge2.jpg/1579368143057415\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge2.jpg\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge2.jpg?generation=1579368143057415&alt=media\",\n      \"name\": \"images/SpongeBob/Bob l'eponge2.jpg\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579368143057415\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"image/jpeg\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"204460\",\n      \"md5Hash\": \"M1j1jxEfH94WEXNyGC3B8Q==\",\n      \"crc32c\": \"1YtOdQ==\",\n      \"etag\": \"CIfki+nUjecCEAE=\",\n      \"timeCreated\": \"2020-01-18T17:22:23.057Z\",\n      \"updated\": \"2020-01-18T17:22:23.057Z\",\n      \"timeStorageClassUpdated\": \"2020-01-18T17:22:23.057Z\"\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/velo.mp4/1575279650674597\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/velo.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/velo.mp4?generation=1575279650674597&alt=media\",\n      \"name\": \"velo.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1575279650674597\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"2981888\",\n      \"md5Hash\": \"bQJGgZYpq8iejtOLW6Xapg==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''velo.mp4\",\n      \"crc32c\": \"GPgmsw==\",\n      \"etag\": \"CKWvgIDWluYCEAE=\",\n      \"timeCreated\": \"2019-12-02T09:40:50.674Z\",\n      \"updated\": \"2019-12-02T09:40:50.674Z\",\n      \"timeStorageClassUpdated\": \"2019-12-02T09:40:50.674Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"425ea1ad-c4d1-4359-9def-e3c59af2bf84\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/video//1579349695998502\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/video%2F\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/video%2F?generation=1579349695998502&alt=media\",\n      \"name\": \"video/\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579349695998502\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"application/x-www-form-urlencoded;charset=UTF-8\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"0\",\n      \"md5Hash\": \"1B2M2Y8AsgTpgAmY7PhCfg==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''video\",\n      \"crc32c\": \"AAAAAA==\",\n      \"etag\": \"CKbU7IyQjecCEAE=\",\n      \"timeCreated\": \"2020-01-18T12:14:55.998Z\",\n      \"updated\": \"2020-01-18T12:14:55.998Z\",\n      \"timeStorageClassUpdated\": \"2020-01-18T12:14:55.998Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"90823ecb-d915-4dfb-b85e-7cee4b8f5f47\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/waiting_screen.mp4/1579173738136131\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/waiting_screen.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/waiting_screen.mp4?generation=1579173738136131&alt=media\",\n      \"name\": \"waiting_screen.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579173738136131\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"4631216\",\n      \"md5Hash\": \"ZIYQe/8cKHihMvUg4bUn8Q==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''waiting_screen.mp4\",\n      \"crc32c\": \"ceioVA==\",\n      \"etag\": \"CMOEzc2AiOcCEAE=\",\n      \"timeCreated\": \"2020-01-16T11:22:18.135Z\",\n      \"updated\": \"2020-01-16T11:22:18.135Z\",\n      \"timeStorageClassUpdated\": \"2020-01-16T11:22:18.135Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"34614cdb-be45-4a70-9e42-e821186457c8\"\n      }\n    }\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Objects:0x00000000049dc0c0
+ @items=
+  [#<Google::Apis::StorageV1::Object:0x0000000004a85558
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''IphoneXS.mp4",
+    @content_type="video/mp4",
+    @crc32c="ACVIbg==",
+    @etag="CPTqv7Duh+cCEAE=",
+    @generation=1579168845264244,
+    @id="totem-db-38dee.appspot.com/IphoneXS.mp4/1579168845264244",
+    @kind="storage#object",
+    @md5_hash="SMXJlmx0TdDJ7WsclFsFdw==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/IphoneXS.mp4?generation=1579168845264244&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"56838915-6b5e-4cee-b0ef-7f21327cc053"},
+    @metageneration=1,
+    @name="IphoneXS.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/IphoneXS.mp4",
+    @size=18088681,
+    @storage_class="STANDARD",
+    @time_created=Thu, 16 Jan 2020 10:00:45 +0000,
+    @time_storage_class_updated=Thu, 16 Jan 2020 10:00:45 +0000,
+    @updated=Thu, 16 Jan 2020 10:00:45 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004aa02b8
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition=
+     "inline; filename*=utf-8''Publicite_iPhone_XS_-_Apple_hd.mp4",
+    @content_type="video/mp4",
+    @crc32c="ACVIbg==",
+    @etag="CLPXsejsh+cCEAE=",
+    @generation=1579168425601971,
+    @id=
+     "totem-db-38dee.appspot.com/Publicite_iPhone_XS_-_Apple_hd.mp4/1579168425601971",
+    @kind="storage#object",
+    @md5_hash="SMXJlmx0TdDJ7WsclFsFdw==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/Publicite_iPhone_XS_-_Apple_hd.mp4?generation=1579168425601971&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"45bba684-f57d-46ec-ae0f-667ae1a75605"},
+    @metageneration=1,
+    @name="Publicite_iPhone_XS_-_Apple_hd.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/Publicite_iPhone_XS_-_Apple_hd.mp4",
+    @size=18088681,
+    @storage_class="STANDARD",
+    @time_created=Thu, 16 Jan 2020 09:53:45 +0000,
+    @time_storage_class_updated=Thu, 16 Jan 2020 09:53:45 +0000,
+    @updated=Thu, 16 Jan 2020 09:53:45 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004ab07f8
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''glace.mp4",
+    @content_type="video/mp4",
+    @crc32c="JiqEWw==",
+    @etag="CI7NwJDWluYCEAE=",
+    @generation=1575279685281422,
+    @id="totem-db-38dee.appspot.com/glace.mp4/1575279685281422",
+    @kind="storage#object",
+    @md5_hash="W+/4VdZduUsN6uLOXtdZCw==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/glace.mp4?generation=1575279685281422&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"11a636e1-1c66-4ea0-9cbc-a6b5488c3273"},
+    @metageneration=1,
+    @name="glace.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/glace.mp4",
+    @size=3089620,
+    @storage_class="STANDARD",
+    @time_created=Mon, 02 Dec 2019 09:41:25 +0000,
+    @time_storage_class_updated=Mon, 02 Dec 2019 09:41:25 +0000,
+    @updated=Mon, 02 Dec 2019 09:41:25 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004af2900
+    @bucket="totem-db-38dee.appspot.com",
+    @content_type="image/jpeg",
+    @crc32c="1YtOdQ==",
+    @etag="CLiHmNK3jecCEAE=",
+    @generation=1579360310395832,
+    @id=
+     "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge.jpg/1579360310395832",
+    @kind="storage#object",
+    @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge.jpg?generation=1579360310395832&alt=media",
+    @metageneration=1,
+    @name="images/SpongeBob/Bob l'eponge.jpg",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge.jpg",
+    @size=204460,
+    @storage_class="STANDARD",
+    @time_created=Sat, 18 Jan 2020 15:11:50 +0000,
+    @time_storage_class_updated=Sat, 18 Jan 2020 15:11:50 +0000,
+    @updated=Sat, 18 Jan 2020 15:11:50 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004b71cc8
+    @bucket="totem-db-38dee.appspot.com",
+    @content_type="image/jpeg",
+    @crc32c="1YtOdQ==",
+    @etag="CIfki+nUjecCEAE=",
+    @generation=1579368143057415,
+    @id=
+     "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge2.jpg/1579368143057415",
+    @kind="storage#object",
+    @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge2.jpg?generation=1579368143057415&alt=media",
+    @metageneration=1,
+    @name="images/SpongeBob/Bob l'eponge2.jpg",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge2.jpg",
+    @size=204460,
+    @storage_class="STANDARD",
+    @time_created=Sat, 18 Jan 2020 17:22:23 +0000,
+    @time_storage_class_updated=Sat, 18 Jan 2020 17:22:23 +0000,
+    @updated=Sat, 18 Jan 2020 17:22:23 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004bd2460
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''velo.mp4",
+    @content_type="video/mp4",
+    @crc32c="GPgmsw==",
+    @etag="CKWvgIDWluYCEAE=",
+    @generation=1575279650674597,
+    @id="totem-db-38dee.appspot.com/velo.mp4/1575279650674597",
+    @kind="storage#object",
+    @md5_hash="bQJGgZYpq8iejtOLW6Xapg==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/velo.mp4?generation=1575279650674597&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"425ea1ad-c4d1-4359-9def-e3c59af2bf84"},
+    @metageneration=1,
+    @name="velo.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/velo.mp4",
+    @size=2981888,
+    @storage_class="STANDARD",
+    @time_created=Mon, 02 Dec 2019 09:40:50 +0000,
+    @time_storage_class_updated=Mon, 02 Dec 2019 09:40:50 +0000,
+    @updated=Mon, 02 Dec 2019 09:40:50 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004c18b18
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''video",
+    @content_type="application/x-www-form-urlencoded;charset=UTF-8",
+    @crc32c="AAAAAA==",
+    @etag="CKbU7IyQjecCEAE=",
+    @generation=1579349695998502,
+    @id="totem-db-38dee.appspot.com/video//1579349695998502",
+    @kind="storage#object",
+    @md5_hash="1B2M2Y8AsgTpgAmY7PhCfg==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/video%2F?generation=1579349695998502&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"90823ecb-d915-4dfb-b85e-7cee4b8f5f47"},
+    @metageneration=1,
+    @name="video/",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/video%2F",
+    @size=0,
+    @storage_class="STANDARD",
+    @time_created=Sat, 18 Jan 2020 12:14:55 +0000,
+    @time_storage_class_updated=Sat, 18 Jan 2020 12:14:55 +0000,
+    @updated=Sat, 18 Jan 2020 12:14:55 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004c95910
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''waiting_screen.mp4",
+    @content_type="video/mp4",
+    @crc32c="ceioVA==",
+    @etag="CMOEzc2AiOcCEAE=",
+    @generation=1579173738136131,
+    @id="totem-db-38dee.appspot.com/waiting_screen.mp4/1579173738136131",
+    @kind="storage#object",
+    @md5_hash="ZIYQe/8cKHihMvUg4bUn8Q==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/waiting_screen.mp4?generation=1579173738136131&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"34614cdb-be45-4a70-9e42-e821186457c8"},
+    @metageneration=1,
+    @name="waiting_screen.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/waiting_screen.mp4",
+    @size=4631216,
+    @storage_class="STANDARD",
+    @time_created=Thu, 16 Jan 2020 11:22:18 +0000,
+    @time_storage_class_updated=Thu, 16 Jan 2020 11:22:18 +0000,
+    @updated=Thu, 16 Jan 2020 11:22:18 +0000>],
+ @kind="storage#objects">
+
+Completed 200 OK in 328ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 18921)
+
+
+Started POST "/assets/bucket/multimedia/list" for ::1 at 2020-01-19 10:14:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#assets_list as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "asset"=>{"bucketName"=>"totem-db-38dee.appspot.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x0000000002c29280 @http_header=#<HTTP::Message::Headers:0x0000000002c28ec0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x1c04f80 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UoEeKQqqDIkPWE_8P_Gt3pU8YLNmygzdaga-5V1BhGyax_SCRAHiFBzbZhvWRC7-XX9s9lOibsnAUNQd0fP-zFhxOepuzrQxCG_gDGrMcHv7d5msc8"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:14:04 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:14:04 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x0000000003b20ae0>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00000000038cba60 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x0000000003b6b0e0
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x0000000003ba2298
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x0000000003baeb10
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x0000000003bad300
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o?
+200
+#<HTTP::Message:0x000000000482d5a8 @http_header=#<HTTP::Message::Headers:0x000000000482d0a8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x23ff398 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UqDOkfSCDUYKaUovurLW52q18tA6iWn_L4pl9k4RaTgREs-tHw2bSGClxkpuifclDhomVT_iuQo22-2mPSOQRVWND4SJrt3uYJ_w40KPSXTYRWHK84"], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:14:05 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:14:05 GMT"], ["Content-Length", "8417"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x000000000490e878>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x0000000004837878 @body="{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/IphoneXS.mp4/1579168845264244\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/IphoneXS.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/IphoneXS.mp4?generation=1579168845264244&alt=media\",\n      \"name\": \"IphoneXS.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579168845264244\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"18088681\",\n      \"md5Hash\": \"SMXJlmx0TdDJ7WsclFsFdw==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''IphoneXS.mp4\",\n      \"crc32c\": \"ACVIbg==\",\n      \"etag\": \"CPTqv7Duh+cCEAE=\",\n      \"timeCreated\": \"2020-01-16T10:00:45.264Z\",\n      \"updated\": \"2020-01-16T10:00:45.264Z\",\n      \"timeStorageClassUpdated\": \"2020-01-16T10:00:45.264Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"56838915-6b5e-4cee-b0ef-7f21327cc053\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/Publicite_iPhone_XS_-_Apple_hd.mp4/1579168425601971\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/Publicite_iPhone_XS_-_Apple_hd.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/Publicite_iPhone_XS_-_Apple_hd.mp4?generation=1579168425601971&alt=media\",\n      \"name\": \"Publicite_iPhone_XS_-_Apple_hd.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579168425601971\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"18088681\",\n      \"md5Hash\": \"SMXJlmx0TdDJ7WsclFsFdw==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''Publicite_iPhone_XS_-_Apple_hd.mp4\",\n      \"crc32c\": \"ACVIbg==\",\n      \"etag\": \"CLPXsejsh+cCEAE=\",\n      \"timeCreated\": \"2020-01-16T09:53:45.601Z\",\n      \"updated\": \"2020-01-16T09:53:45.601Z\",\n      \"timeStorageClassUpdated\": \"2020-01-16T09:53:45.601Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"45bba684-f57d-46ec-ae0f-667ae1a75605\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/glace.mp4/1575279685281422\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/glace.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/glace.mp4?generation=1575279685281422&alt=media\",\n      \"name\": \"glace.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1575279685281422\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"3089620\",\n      \"md5Hash\": \"W+/4VdZduUsN6uLOXtdZCw==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''glace.mp4\",\n      \"crc32c\": \"JiqEWw==\",\n      \"etag\": \"CI7NwJDWluYCEAE=\",\n      \"timeCreated\": \"2019-12-02T09:41:25.281Z\",\n      \"updated\": \"2019-12-02T09:41:25.281Z\",\n      \"timeStorageClassUpdated\": \"2019-12-02T09:41:25.281Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"11a636e1-1c66-4ea0-9cbc-a6b5488c3273\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge.jpg/1579360310395832\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge.jpg\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge.jpg?generation=1579360310395832&alt=media\",\n      \"name\": \"images/SpongeBob/Bob l'eponge.jpg\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579360310395832\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"image/jpeg\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"204460\",\n      \"md5Hash\": \"M1j1jxEfH94WEXNyGC3B8Q==\",\n      \"crc32c\": \"1YtOdQ==\",\n      \"etag\": \"CLiHmNK3jecCEAE=\",\n      \"timeCreated\": \"2020-01-18T15:11:50.395Z\",\n      \"updated\": \"2020-01-18T15:11:50.395Z\",\n      \"timeStorageClassUpdated\": \"2020-01-18T15:11:50.395Z\"\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge2.jpg/1579368143057415\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge2.jpg\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge2.jpg?generation=1579368143057415&alt=media\",\n      \"name\": \"images/SpongeBob/Bob l'eponge2.jpg\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579368143057415\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"image/jpeg\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"204460\",\n      \"md5Hash\": \"M1j1jxEfH94WEXNyGC3B8Q==\",\n      \"crc32c\": \"1YtOdQ==\",\n      \"etag\": \"CIfki+nUjecCEAE=\",\n      \"timeCreated\": \"2020-01-18T17:22:23.057Z\",\n      \"updated\": \"2020-01-18T17:22:23.057Z\",\n      \"timeStorageClassUpdated\": \"2020-01-18T17:22:23.057Z\"\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/velo.mp4/1575279650674597\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/velo.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/velo.mp4?generation=1575279650674597&alt=media\",\n      \"name\": \"velo.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1575279650674597\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"2981888\",\n      \"md5Hash\": \"bQJGgZYpq8iejtOLW6Xapg==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''velo.mp4\",\n      \"crc32c\": \"GPgmsw==\",\n      \"etag\": \"CKWvgIDWluYCEAE=\",\n      \"timeCreated\": \"2019-12-02T09:40:50.674Z\",\n      \"updated\": \"2019-12-02T09:40:50.674Z\",\n      \"timeStorageClassUpdated\": \"2019-12-02T09:40:50.674Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"425ea1ad-c4d1-4359-9def-e3c59af2bf84\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/video//1579349695998502\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/video%2F\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/video%2F?generation=1579349695998502&alt=media\",\n      \"name\": \"video/\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579349695998502\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"application/x-www-form-urlencoded;charset=UTF-8\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"0\",\n      \"md5Hash\": \"1B2M2Y8AsgTpgAmY7PhCfg==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''video\",\n      \"crc32c\": \"AAAAAA==\",\n      \"etag\": \"CKbU7IyQjecCEAE=\",\n      \"timeCreated\": \"2020-01-18T12:14:55.998Z\",\n      \"updated\": \"2020-01-18T12:14:55.998Z\",\n      \"timeStorageClassUpdated\": \"2020-01-18T12:14:55.998Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"90823ecb-d915-4dfb-b85e-7cee4b8f5f47\"\n      }\n    },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"totem-db-38dee.appspot.com/waiting_screen.mp4/1579173738136131\",\n      \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/waiting_screen.mp4\",\n      \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/waiting_screen.mp4?generation=1579173738136131&alt=media\",\n      \"name\": \"waiting_screen.mp4\",\n      \"bucket\": \"totem-db-38dee.appspot.com\",\n      \"generation\": \"1579173738136131\",\n      \"metageneration\": \"1\",\n      \"contentType\": \"video/mp4\",\n      \"storageClass\": \"STANDARD\",\n      \"size\": \"4631216\",\n      \"md5Hash\": \"ZIYQe/8cKHihMvUg4bUn8Q==\",\n      \"contentDisposition\": \"inline; filename*=utf-8''waiting_screen.mp4\",\n      \"crc32c\": \"ceioVA==\",\n      \"etag\": \"CMOEzc2AiOcCEAE=\",\n      \"timeCreated\": \"2020-01-16T11:22:18.135Z\",\n      \"updated\": \"2020-01-16T11:22:18.135Z\",\n      \"timeStorageClassUpdated\": \"2020-01-16T11:22:18.135Z\",\n      \"metadata\": {\n        \"firebaseStorageDownloadTokens\": \"34614cdb-be45-4a70-9e42-e821186457c8\"\n      }\n    }\n  ]\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Objects:0x000000000490c4d8
+ @items=
+  [#<Google::Apis::StorageV1::Object:0x00000000049a7910
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''IphoneXS.mp4",
+    @content_type="video/mp4",
+    @crc32c="ACVIbg==",
+    @etag="CPTqv7Duh+cCEAE=",
+    @generation=1579168845264244,
+    @id="totem-db-38dee.appspot.com/IphoneXS.mp4/1579168845264244",
+    @kind="storage#object",
+    @md5_hash="SMXJlmx0TdDJ7WsclFsFdw==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/IphoneXS.mp4?generation=1579168845264244&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"56838915-6b5e-4cee-b0ef-7f21327cc053"},
+    @metageneration=1,
+    @name="IphoneXS.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/IphoneXS.mp4",
+    @size=18088681,
+    @storage_class="STANDARD",
+    @time_created=Thu, 16 Jan 2020 10:00:45 +0000,
+    @time_storage_class_updated=Thu, 16 Jan 2020 10:00:45 +0000,
+    @updated=Thu, 16 Jan 2020 10:00:45 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004a4ff70
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition=
+     "inline; filename*=utf-8''Publicite_iPhone_XS_-_Apple_hd.mp4",
+    @content_type="video/mp4",
+    @crc32c="ACVIbg==",
+    @etag="CLPXsejsh+cCEAE=",
+    @generation=1579168425601971,
+    @id=
+     "totem-db-38dee.appspot.com/Publicite_iPhone_XS_-_Apple_hd.mp4/1579168425601971",
+    @kind="storage#object",
+    @md5_hash="SMXJlmx0TdDJ7WsclFsFdw==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/Publicite_iPhone_XS_-_Apple_hd.mp4?generation=1579168425601971&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"45bba684-f57d-46ec-ae0f-667ae1a75605"},
+    @metageneration=1,
+    @name="Publicite_iPhone_XS_-_Apple_hd.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/Publicite_iPhone_XS_-_Apple_hd.mp4",
+    @size=18088681,
+    @storage_class="STANDARD",
+    @time_created=Thu, 16 Jan 2020 09:53:45 +0000,
+    @time_storage_class_updated=Thu, 16 Jan 2020 09:53:45 +0000,
+    @updated=Thu, 16 Jan 2020 09:53:45 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004a8e838
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''glace.mp4",
+    @content_type="video/mp4",
+    @crc32c="JiqEWw==",
+    @etag="CI7NwJDWluYCEAE=",
+    @generation=1575279685281422,
+    @id="totem-db-38dee.appspot.com/glace.mp4/1575279685281422",
+    @kind="storage#object",
+    @md5_hash="W+/4VdZduUsN6uLOXtdZCw==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/glace.mp4?generation=1575279685281422&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"11a636e1-1c66-4ea0-9cbc-a6b5488c3273"},
+    @metageneration=1,
+    @name="glace.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/glace.mp4",
+    @size=3089620,
+    @storage_class="STANDARD",
+    @time_created=Mon, 02 Dec 2019 09:41:25 +0000,
+    @time_storage_class_updated=Mon, 02 Dec 2019 09:41:25 +0000,
+    @updated=Mon, 02 Dec 2019 09:41:25 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004aa2bd0
+    @bucket="totem-db-38dee.appspot.com",
+    @content_type="image/jpeg",
+    @crc32c="1YtOdQ==",
+    @etag="CLiHmNK3jecCEAE=",
+    @generation=1579360310395832,
+    @id=
+     "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge.jpg/1579360310395832",
+    @kind="storage#object",
+    @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge.jpg?generation=1579360310395832&alt=media",
+    @metageneration=1,
+    @name="images/SpongeBob/Bob l'eponge.jpg",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge.jpg",
+    @size=204460,
+    @storage_class="STANDARD",
+    @time_created=Sat, 18 Jan 2020 15:11:50 +0000,
+    @time_storage_class_updated=Sat, 18 Jan 2020 15:11:50 +0000,
+    @updated=Sat, 18 Jan 2020 15:11:50 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004ab32a0
+    @bucket="totem-db-38dee.appspot.com",
+    @content_type="image/jpeg",
+    @crc32c="1YtOdQ==",
+    @etag="CIfki+nUjecCEAE=",
+    @generation=1579368143057415,
+    @id=
+     "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge2.jpg/1579368143057415",
+    @kind="storage#object",
+    @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge2.jpg?generation=1579368143057415&alt=media",
+    @metageneration=1,
+    @name="images/SpongeBob/Bob l'eponge2.jpg",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge2.jpg",
+    @size=204460,
+    @storage_class="STANDARD",
+    @time_created=Sat, 18 Jan 2020 17:22:23 +0000,
+    @time_storage_class_updated=Sat, 18 Jan 2020 17:22:23 +0000,
+    @updated=Sat, 18 Jan 2020 17:22:23 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004adacb0
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''velo.mp4",
+    @content_type="video/mp4",
+    @crc32c="GPgmsw==",
+    @etag="CKWvgIDWluYCEAE=",
+    @generation=1575279650674597,
+    @id="totem-db-38dee.appspot.com/velo.mp4/1575279650674597",
+    @kind="storage#object",
+    @md5_hash="bQJGgZYpq8iejtOLW6Xapg==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/velo.mp4?generation=1575279650674597&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"425ea1ad-c4d1-4359-9def-e3c59af2bf84"},
+    @metageneration=1,
+    @name="velo.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/velo.mp4",
+    @size=2981888,
+    @storage_class="STANDARD",
+    @time_created=Mon, 02 Dec 2019 09:40:50 +0000,
+    @time_storage_class_updated=Mon, 02 Dec 2019 09:40:50 +0000,
+    @updated=Mon, 02 Dec 2019 09:40:50 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004b54ad8
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''video",
+    @content_type="application/x-www-form-urlencoded;charset=UTF-8",
+    @crc32c="AAAAAA==",
+    @etag="CKbU7IyQjecCEAE=",
+    @generation=1579349695998502,
+    @id="totem-db-38dee.appspot.com/video//1579349695998502",
+    @kind="storage#object",
+    @md5_hash="1B2M2Y8AsgTpgAmY7PhCfg==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/video%2F?generation=1579349695998502&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"90823ecb-d915-4dfb-b85e-7cee4b8f5f47"},
+    @metageneration=1,
+    @name="video/",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/video%2F",
+    @size=0,
+    @storage_class="STANDARD",
+    @time_created=Sat, 18 Jan 2020 12:14:55 +0000,
+    @time_storage_class_updated=Sat, 18 Jan 2020 12:14:55 +0000,
+    @updated=Sat, 18 Jan 2020 12:14:55 +0000>,
+   #<Google::Apis::StorageV1::Object:0x0000000004bc2970
+    @bucket="totem-db-38dee.appspot.com",
+    @content_disposition="inline; filename*=utf-8''waiting_screen.mp4",
+    @content_type="video/mp4",
+    @crc32c="ceioVA==",
+    @etag="CMOEzc2AiOcCEAE=",
+    @generation=1579173738136131,
+    @id="totem-db-38dee.appspot.com/waiting_screen.mp4/1579173738136131",
+    @kind="storage#object",
+    @md5_hash="ZIYQe/8cKHihMvUg4bUn8Q==",
+    @media_link=
+     "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/waiting_screen.mp4?generation=1579173738136131&alt=media",
+    @metadata=
+     {"firebaseStorageDownloadTokens"=>"34614cdb-be45-4a70-9e42-e821186457c8"},
+    @metageneration=1,
+    @name="waiting_screen.mp4",
+    @self_link=
+     "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/waiting_screen.mp4",
+    @size=4631216,
+    @storage_class="STANDARD",
+    @time_created=Thu, 16 Jan 2020 11:22:18 +0000,
+    @time_storage_class_updated=Thu, 16 Jan 2020 11:22:18 +0000,
+    @updated=Thu, 16 Jan 2020 11:22:18 +0000>],
+ @kind="storage#objects">
+
+Completed 200 OK in 354ms (Views: 1.7ms | ActiveRecord: 3.3ms | Allocations: 23840)
+
+
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:21:17 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'new_bucket' could not be found for Api::V1::Requests::Tables::MultimediaManager::AssetsController):
+  
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.1.1) lib/rack/etag.rb:27:in `call'
+rack (2.1.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.1) lib/rack/head.rb:14:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:21:56 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#new_asset as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/assets_manager", "fileName"=>"Bob.jpg", "fileNewName"=>"Bob2.jpg", "folderDestination"=>"images/SpongeBob", "asset"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/assets_manager", "fileName"=>"Bob.jpg", "fileNewName"=>"Bob2.jpg", "folderDestination"=>"images/SpongeBob"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0d85afab8 @http_header=#<HTTP::Message::Headers:0x00007fd0d85afa90 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe86c2d22a8 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UqcopB-2CsvAHFtb2m2T5MNiMY8Kn53Exgr0s3LsjkjfCu09aSpp-Zk7eMF5YBkU4HJT1Ui4-GTY7nvs7wRzeODmTW_i-pBPRShce65dYkjx549jEo"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:21:57 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:21:57 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0d86c33a0>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0d85afa18 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0d86c2c48
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0d86c1438
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0d86c1000
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0d86c0880
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Completed 400 Bad Request in 277ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 8986)
+
+
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:22:43 +0100
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#new_asset as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge3.jpg", "folderDestination"=>"imag/SpongeBob", "asset"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge3.jpg", "folderDestination"=>"imag/SpongeBob"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0d01c0b58 @http_header=#<HTTP::Message::Headers:0x00007fd0d01c0b30 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe8680e0ac0 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2Upahqx7GIU2aggq5PxMaGeFng_WZam6aWvaUd3wftbJ1OLyzUrOusNjsznygQS_HyDqqKeWdTWL4XiXmUJdcJTJJ9IOLA"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:22:44 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:22:44 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0d0478670>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0d01c0ab8 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0d047fee8
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0d047e890
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0d047e458
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0d047dcd8
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending upload start command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=imag%2FSpongeBob%2FBob%20l%27eponge3.jpg
+Upload status active
+Sending upload command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=imag%2FSpongeBob%2FBob%20l%27eponge3.jpg&upload_id=AEnB2Uoa88ba8DyybE6DiWACiJdmkAiHPrYvFGTdJqJYeASRBYKyQ9A4sSekgH-hoYuIC9GPbGdh_1f3yGp6rH9qch3SeJ6-cA&upload_protocol=resumable
+Upload status final
+Success - #<Google::Apis::StorageV1::Object:0x00007fd0d00e8780
+ @bucket="totem-db-38dee.appspot.com",
+ @content_type="image/jpeg",
+ @crc32c="1YtOdQ==",
+ @etag="CNjjrr2rj+cCEAE=",
+ @generation=1579425764979160,
+ @id=
+  "totem-db-38dee.appspot.com/imag/SpongeBob/Bob l'eponge3.jpg/1579425764979160",
+ @kind="storage#object",
+ @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+ @media_link=
+  "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/imag%2FSpongeBob%2FBob%20l'eponge3.jpg?generation=1579425764979160&alt=media",
+ @metageneration=1,
+ @name="imag/SpongeBob/Bob l'eponge3.jpg",
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/imag%2FSpongeBob%2FBob%20l'eponge3.jpg",
+ @size=204460,
+ @storage_class="STANDARD",
+ @time_created=Sun, 19 Jan 2020 09:22:44 +0000,
+ @time_storage_class_updated=Sun, 19 Jan 2020 09:22:44 +0000,
+ @updated=Sun, 19 Jan 2020 09:22:44 +0000>
+
+Completed 204 No Content in 809ms (ActiveRecord: 0.3ms | Allocations: 8053)
+
+
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:23:18 +0100
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#new_asset as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge3.jpg", "folderDestination"=>"images/SpongeBob", "asset"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge3.jpg", "folderDestination"=>"images/SpongeBob"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0e42942f0 @http_header=#<HTTP::Message::Headers:0x00007fd0e42942c8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe87214a68c URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UqwCBMJ9BD_13IYVcmkO65fmzakniIlhx7hx4nzthDm1wR4uG-gehusg04ALMQ_FwGZwRs6vV9XYzYDSygM5OOC3cE5qaObZa7JcMAu1YnXFn1GMv8"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:23:19 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:23:19 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e432bba0>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e4294250 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0e432b448
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e4329df0
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e43299b8
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e4329238
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending upload start command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge3.jpg
+Upload status active
+Sending upload command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge3.jpg&upload_id=AEnB2UpnP-z2xAKw4k4V4ohsFV6pa-tF9_CTFy0aoHWQw1RWW5cLEmlbCPn0dosdeG5VBlCqfd3vTnKiOUkqsRP4QZO-X70WQvxs0Sb1KeXut_8PsZIMxrI&upload_protocol=resumable
+Upload status final
+Success - #<Google::Apis::StorageV1::Object:0x00007fd0e4388800
+ @bucket="totem-db-38dee.appspot.com",
+ @content_type="image/jpeg",
+ @crc32c="1YtOdQ==",
+ @etag="CMjy682rj+cCEAE=",
+ @generation=1579425799534920,
+ @id=
+  "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge3.jpg/1579425799534920",
+ @kind="storage#object",
+ @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+ @media_link=
+  "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge3.jpg?generation=1579425799534920&alt=media",
+ @metageneration=1,
+ @name="images/SpongeBob/Bob l'eponge3.jpg",
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge3.jpg",
+ @size=204460,
+ @storage_class="STANDARD",
+ @time_created=Sun, 19 Jan 2020 09:23:19 +0000,
+ @time_storage_class_updated=Sun, 19 Jan 2020 09:23:19 +0000,
+ @updated=Sun, 19 Jan 2020 09:23:19 +0000>
+
+Completed 204 No Content in 725ms (ActiveRecord: 0.3ms | Allocations: 7581)
+
+
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:24:22 +0100
+Processing by Api::V1::Requests::Tables::MultimediaManager::AssetsController#new_asset as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge3.jpg", "folderDestination"=>"images/SpongeBob", "asset"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge3.jpg", "folderDestination"=>"images/SpongeBob"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0dc479758 @http_header=#<HTTP::Message::Headers:0x00007fd0dc479730 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe86e23d0c0 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UrQQEdTpg9IZOVoUjWQrTYSrBar-uudJAdPIG-qt0bd5G7vcy2lF68RJub2zTy66nhoZIfNJQj5P00JNpmQWtqDFI5wkmWrzBXAoilwun8OE09_Sf0"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:24:22 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:24:22 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0dc465078>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0dc4796b8 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0dc464920
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0dc5d7280
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0dc5d6e48
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0dc5d66c8
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending upload start command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge3.jpg
+Upload status active
+Sending upload command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge3.jpg&upload_id=AEnB2UqXxqZDgVb5ZX1e-J0yQOrM8RHR8zWyTy39FPgOLcLKldUqfYBC6SrI_VRqYdngdj6CJvOCb5KBbz-UlUFGVTOsEU8oq7SWEXc_70M9PcXLlOSQLSA&upload_protocol=resumable
+Upload status final
+Success - #<Google::Apis::StorageV1::Object:0x00007fd0dc62dc70
+ @bucket="totem-db-38dee.appspot.com",
+ @content_type="image/jpeg",
+ @crc32c="1YtOdQ==",
+ @etag="CIbRleyrj+cCEAE=",
+ @generation=1579425863133318,
+ @id=
+  "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge3.jpg/1579425863133318",
+ @kind="storage#object",
+ @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+ @media_link=
+  "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge3.jpg?generation=1579425863133318&alt=media",
+ @metageneration=1,
+ @name="images/SpongeBob/Bob l'eponge3.jpg",
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge3.jpg",
+ @size=204460,
+ @storage_class="STANDARD",
+ @time_created=Sun, 19 Jan 2020 09:24:23 +0000,
+ @time_storage_class_updated=Sun, 19 Jan 2020 09:24:23 +0000,
+ @updated=Sun, 19 Jan 2020 09:24:23 +0000>
+
+Completed 204 No Content in 924ms (ActiveRecord: 0.5ms | Allocations: 7581)
+
+
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:25:18 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'new_multimedia' could not be found for Api::V1::Requests::Tables::MultimediaManager::AssetsController):
+  
+actionpack (6.0.2.1) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.1.1) lib/rack/etag.rb:27:in `call'
+rack (2.1.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.1) lib/rack/head.rb:14:in `call'
+activerecord (6.0.2.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:25:37 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::MultimediaController#new_multimedia as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge4.jpg", "folderDestination"=>"images/SpongeBob", "multimedium"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge4.jpg", "folderDestination"=>"images/SpongeBob"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0e1aa29e0 @http_header=#<HTTP::Message::Headers:0x00007fd0e1aa29b8 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe870d51d10 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UqD3R3fr3kETLUnwlTHe4v8eOUmt85J4JexYJ5sguOqhhtAVT0B15So-xB2X-5eouk7DP7AgYUHttZMwmUqoPYRn28qJg"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:25:38 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:25:38 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e1aa91a0>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e1aa2940 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0e1aa83e0
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e1b15530
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e1b14f90
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e1b14220
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending upload start command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge4.jpg
+Upload status active
+Sending upload command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge4.jpg&upload_id=AEnB2UqwqrVSx3CKghp0M2nJ-lbhrWqr-4n-59KpSR6LrfMGOrdLAtcKb823YKcpKrYtmRvj6t7ZE2m13V-YePstZydcuPJkHKZZ6hXeYeXbZH9zPQyUI2c&upload_protocol=resumable
+Upload status final
+Success - #<Google::Apis::StorageV1::Object:0x00007fd0e1c42638
+ @bucket="totem-db-38dee.appspot.com",
+ @content_type="image/jpeg",
+ @crc32c="1YtOdQ==",
+ @etag="CMW9nZCsj+cCEAE=",
+ @generation=1579425938759365,
+ @id=
+  "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge4.jpg/1579425938759365",
+ @kind="storage#object",
+ @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+ @media_link=
+  "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge4.jpg?generation=1579425938759365&alt=media",
+ @metageneration=1,
+ @name="images/SpongeBob/Bob l'eponge4.jpg",
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge4.jpg",
+ @size=204460,
+ @storage_class="STANDARD",
+ @time_created=Sun, 19 Jan 2020 09:25:38 +0000,
+ @time_storage_class_updated=Sun, 19 Jan 2020 09:25:38 +0000,
+ @updated=Sun, 19 Jan 2020 09:25:38 +0000>
+
+Completed 204 No Content in 728ms (ActiveRecord: 1.5ms | Allocations: 12629)
+
+
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:26:55 +0100
+Processing by Api::V1::Requests::Tables::MultimediaManager::MultimediaController#new_multimedia as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge5.jpg", "folderDestination"=>"images/SpongeBob", "multimedium"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge5.jpg", "folderDestination"=>"images/SpongeBob"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0d00e1818 @http_header=#<HTTP::Message::Headers:0x00007fd0d00e17f0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe868071120 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2Upmzq-goHTPkU3iBF-KkUWT1ZTZ8jzDUmoL_9zHAO4aDhAh1Fy-Irma7aQpPvx1i31_qE3IO0cG1a79EgKO_9EI8gmkzw"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:26:56 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:26:56 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0d00e8a78>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0d00e1778 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0d00e8320
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0d00eed10
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0d00ee8d8
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0d00ee158
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending upload start command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge5.jpg
+Upload status active
+Sending upload command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge5.jpg&upload_id=AEnB2Ur4SWPJJKOV1Hxw-DlE4XbYulEDDDnLAX9DiylG0kKkiphrE1WMBuNrNe5w-BR_Lu6g3p2PKx3ZPxxoI95Saww5Qw8xuAd7rWuPBvUecEUncwcmx6s&upload_protocol=resumable
+Upload status final
+Success - #<Google::Apis::StorageV1::Object:0x00007fd0e41a0768
+ @bucket="totem-db-38dee.appspot.com",
+ @content_type="image/jpeg",
+ @crc32c="1YtOdQ==",
+ @etag="CN/8vLWsj+cCEAE=",
+ @generation=1579426016869983,
+ @id=
+  "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge5.jpg/1579426016869983",
+ @kind="storage#object",
+ @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+ @media_link=
+  "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge5.jpg?generation=1579426016869983&alt=media",
+ @metageneration=1,
+ @name="images/SpongeBob/Bob l'eponge5.jpg",
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge5.jpg",
+ @size=204460,
+ @storage_class="STANDARD",
+ @time_created=Sun, 19 Jan 2020 09:26:56 +0000,
+ @time_storage_class_updated=Sun, 19 Jan 2020 09:26:56 +0000,
+ @updated=Sun, 19 Jan 2020 09:26:56 +0000>
+
+Completed 204 No Content in 814ms (ActiveRecord: 0.4ms | Allocations: 7564)
+
+
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:27:55 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::MultimediaController#new_multimedia as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge6.jpg", "folderDestination"=>"images/SpongeBob", "multimedium"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge6.jpg", "folderDestination"=>"images/SpongeBob"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0e17422c8 @http_header=#<HTTP::Message::Headers:0x00007fd0e17422a0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe870ba1718 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UpPqs662SDXh0sc5XFn871L9YWNWU_gBInkLJvYkkZ8ITtfr6iK2AYz6r_LRTk3yQJQeH8w3yxTXqRc5yipI2kLmxMswb88KQuYA1ROwAyWwxslOVI"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:27:56 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:27:56 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e1748998>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e1742228 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0e1748240
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e174ebb8
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e174e780
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e174e000
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending upload start command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge6.jpg
+Upload status active
+Sending upload command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge6.jpg&upload_id=AEnB2Uoga8gV695XwCAuhCg1x2HILoffQsahSUue5MQFTZCQHWtUaz5UBYkrXZc8DQ4KOGBIs0mCJ7b4Mla1PucxTYmtIG8xygmARYk0fOqL8tP1fnvPasw&upload_protocol=resumable
+Upload status final
+Success - #<Google::Apis::StorageV1::Object:0x00007fd0e15d43c8
+ @bucket="totem-db-38dee.appspot.com",
+ @content_type="image/jpeg",
+ @crc32c="1YtOdQ==",
+ @etag="CJC5ktKsj+cCEAE=",
+ @generation=1579426076990608,
+ @id=
+  "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge6.jpg/1579426076990608",
+ @kind="storage#object",
+ @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+ @media_link=
+  "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge6.jpg?generation=1579426076990608&alt=media",
+ @metageneration=1,
+ @name="images/SpongeBob/Bob l'eponge6.jpg",
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge6.jpg",
+ @size=204460,
+ @storage_class="STANDARD",
+ @time_created=Sun, 19 Jan 2020 09:27:56 +0000,
+ @time_storage_class_updated=Sun, 19 Jan 2020 09:27:56 +0000,
+ @updated=Sun, 19 Jan 2020 09:27:56 +0000>
+
+Completed 200 OK in 1221ms (Views: 0.7ms | ActiveRecord: 1.4ms | Allocations: 54855)
+
+
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:28:45 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::MultimediaController#new_multimedia as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge7.jpg", "folderDestination"=>"images/SpongeBob", "multimedium"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge7.jpg", "folderDestination"=>"images/SpongeBob"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0e4360ff8 @http_header=#<HTTP::Message::Headers:0x00007fd0e4360fd0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe8721b0d60 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UqX3ArvGk2nfQGgKJom50DqnfmrNTF0mvSJxH1rGpCmu0WP7hfRGTRPyy84YWuMjPgWB-ns47GJ8AxPi09WNxcIm-hcxfA5xaCRrApWajW-cXPjRgI"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:28:46 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:28:46 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e4370020>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e4360f58 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0e437b830
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e4379e68
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e4379a30
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e43791c0
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending upload start command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge7.jpg
+Upload status active
+Sending upload command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge7.jpg&upload_id=AEnB2Up2Ad4m9hUhJDislsUv0De9tM5u3LGNh6O8yKHn4Hf7njavPBIj_JDBK9QNM7LDlt2AMkW826OAcdYYFG2Hjv5TDf5Y9xQODM-EGsr0WTm3plDxxSo&upload_protocol=resumable
+Upload status final
+Success - #<Google::Apis::StorageV1::Object:0x00007fd0dc552440
+ @bucket="totem-db-38dee.appspot.com",
+ @content_type="image/jpeg",
+ @crc32c="1YtOdQ==",
+ @etag="CK6/+emsj+cCEAE=",
+ @generation=1579426126913454,
+ @id=
+  "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge7.jpg/1579426126913454",
+ @kind="storage#object",
+ @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+ @media_link=
+  "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge7.jpg?generation=1579426126913454&alt=media",
+ @metageneration=1,
+ @name="images/SpongeBob/Bob l'eponge7.jpg",
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge7.jpg",
+ @size=204460,
+ @storage_class="STANDARD",
+ @time_created=Sun, 19 Jan 2020 09:28:46 +0000,
+ @time_storage_class_updated=Sun, 19 Jan 2020 09:28:46 +0000,
+ @updated=Sun, 19 Jan 2020 09:28:46 +0000>
+
+Completed 500 Internal Server Error in 1275ms (Views: 0.6ms | ActiveRecord: 2.4ms | Allocations: 54843)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/requests/tables/multimedia_manager/multimedia_controller.rb:48:in `new_multimedia'
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:32:18 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/Documents/Firm/Totem/api/totem-agency-api/apiV1/app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:86: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:86: syntax error, unexpected end-of-input, expecting end
+app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb:86: syntax error, unexpected end-of-input, expecting end
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:7:in `<module:MultimediaManager>'
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:5:in `<module:Tables>'
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:4:in `<module:Requests>'
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb:1:in `<main>'
+app/controllers/api/v1/requests/tables/multimedia_manager/multimedia_controller.rb:7:in `<module:MultimediaManager>'
+app/controllers/api/v1/requests/tables/multimedia_manager/multimedia_controller.rb:5:in `<module:Tables>'
+app/controllers/api/v1/requests/tables/multimedia_manager/multimedia_controller.rb:4:in `<module:Requests>'
+app/controllers/api/v1/requests/tables/multimedia_manager/multimedia_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/requests/tables/multimedia_manager/multimedia_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/requests/tables/multimedia_manager/multimedia_controller.rb:1:in `<main>'
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:32:33 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::MultimediaController#new_multimedia as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge8.jpg", "folderDestination"=>"images/SpongeBob", "multimedium"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge8.jpg", "folderDestination"=>"images/SpongeBob"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0e10107e8 @http_header=#<HTTP::Message::Headers:0x00007fd0e10107c0 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe87080256c URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UqZsH0r7VvbQG-OJ1dKGlSvFhi5zIL6z1YRPqZXFdy7C2pmRf3PlMSwXY3BZCmTKsBi5Kb6gv958seJIcbsRVcSokS-OkRG5YF9wum0nXM--wwY7-g"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:32:34 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:32:34 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e10c9e78>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e10105b8 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0e10c88c0
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e10d61f0
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e10d5bb0
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e10d49b8
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending upload start command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge8.jpg
+Upload status active
+Sending upload command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge8.jpg&upload_id=AEnB2UoWf8E0oJyZNx-AMGq6v4EgUGqlddP06u5LzHK7ukBsGnGuDQpnkV36PHLFA177adVG2P5tsTdU08VI6789LpQPCNAYhY3jzHDWbxkkXyWfSpVWkWA&upload_protocol=resumable
+Upload status final
+Success - #<Google::Apis::StorageV1::Object:0x00007fd0e1206390
+ @bucket="totem-db-38dee.appspot.com",
+ @content_type="image/jpeg",
+ @crc32c="1YtOdQ==",
+ @etag="CLu61Natj+cCEAE=",
+ @generation=1579426354896187,
+ @id=
+  "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge8.jpg/1579426354896187",
+ @kind="storage#object",
+ @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+ @media_link=
+  "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge8.jpg?generation=1579426354896187&alt=media",
+ @metageneration=1,
+ @name="images/SpongeBob/Bob l'eponge8.jpg",
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge8.jpg",
+ @size=204460,
+ @storage_class="STANDARD",
+ @time_created=Sun, 19 Jan 2020 09:32:34 +0000,
+ @time_storage_class_updated=Sun, 19 Jan 2020 09:32:34 +0000,
+ @updated=Sun, 19 Jan 2020 09:32:34 +0000>
+
+Completed 204 No Content in 1105ms (ActiveRecord: 1.4ms | Allocations: 54732)
+
+
+Started POST "/assets/bucket/multimedia/new" for ::1 at 2020-01-19 10:33:39 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::MultimediaManager::MultimediaController#new_multimedia as */*
+  Parameters: {"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge9.jpg", "folderDestination"=>"images/SpongeBob", "multimedium"=>{"bucketName"=>"totem-db-38dee.appspot.com", "folderPath"=>"app/controllers/api/v1/requests/tables/multimedia_manager/", "fileName"=>"Bob2.jpg", "fileNewName"=>"Bob l'eponge9.jpg", "folderDestination"=>"images/SpongeBob"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Sending HTTP get https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?
+200
+#<HTTP::Message:0x00007fd0e15e1780 @http_header=#<HTTP::Message::Headers:0x00007fd0e15e1730 @http_version="1.1", @body_size=0, @chunked=false, @request_method="GET", @request_uri=#<Addressable::URI:0x3fe870af1264 URI:https://storage.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com?>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["X-GUploader-UploadID", "AEnB2UoaXWGbz4liLV836am2OeoBqx6lrqkEeYnf-20WvgrBp6re6lJpVeok_IW9c8InsbdtR9mS4JYcaSq6GSVLq0N295tSiOqUKQUMwSpOG6AEa2A-eK8"], ["ETag", "CAI="], ["Content-Type", "application/json; charset=UTF-8"], ["Date", "Sun, 19 Jan 2020 09:33:39 GMT"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Cache-Control", "private, max-age=0, must-revalidate, no-transform"], ["Expires", "Sun, 19 Jan 2020 09:33:39 GMT"], ["Content-Length", "589"], ["Server", "UploadServer"], ["Alt-Svc", "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=*.storage.googleapis.com,O=Google LLC,L=Mountain View,ST=California,C=US>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1O1,O=Google Trust Services,C=US>, serial=#<OpenSSL::BN:0x00007fd0e15ef308>, not_before=2019-12-20 13:11:36 UTC, not_after=2020-03-13 13:11:36 UTC>, @http_body=#<HTTP::Message::Body:0x00007fd0e15e16b8 @body="{\n  \"kind\": \"storage#bucket\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com\",\n  \"id\": \"totem-db-38dee.appspot.com\",\n  \"name\": \"totem-db-38dee.appspot.com\",\n  \"projectNumber\": \"549444221751\",\n  \"metageneration\": \"2\",\n  \"location\": \"EU\",\n  \"storageClass\": \"STANDARD\",\n  \"etag\": \"CAI=\",\n  \"timeCreated\": \"2019-11-24T09:19:11.293Z\",\n  \"updated\": \"2019-11-24T09:19:18.093Z\",\n  \"iamConfiguration\": {\n    \"bucketPolicyOnly\": {\n      \"enabled\": false\n    },\n    \"uniformBucketLevelAccess\": {\n      \"enabled\": false\n    }\n  },\n  \"locationType\": \"multi-region\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::StorageV1::Bucket:0x00007fd0e15eeb38
+ @etag="CAI=",
+ @iam_configuration=
+  #<Google::Apis::StorageV1::Bucket::IamConfiguration:0x00007fd0e15ece50
+   @bucket_policy_only=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::BucketPolicyOnly:0x00007fd0e15ec7c0
+     @enabled=false>,
+   @uniform_bucket_level_access=
+    #<Google::Apis::StorageV1::Bucket::IamConfiguration::UniformBucketLevelAccess:0x00007fd0e15ec040
+     @enabled=false>>,
+ @id="totem-db-38dee.appspot.com",
+ @kind="storage#bucket",
+ @location="EU",
+ @location_type="multi-region",
+ @metageneration=2,
+ @name="totem-db-38dee.appspot.com",
+ @project_number=549444221751,
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com",
+ @storage_class="STANDARD",
+ @time_created=Sun, 24 Nov 2019 09:19:11 +0000,
+ @updated=Sun, 24 Nov 2019 09:19:18 +0000>
+
+Sending upload start command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge9.jpg
+Upload status active
+Sending upload command to https://storage.googleapis.com/upload/storage/v1/b/totem-db-38dee.appspot.com/o?name=images%2FSpongeBob%2FBob%20l%27eponge9.jpg&upload_id=AEnB2Up1ZtDxWKdYFumEWxIbHuhxsTN6urTJXQzpFctw4C22johhikzO-gP6opiWUQoT5QQ20xlTveZui3QwnM6QH9tAvXkrT6UZzTPpB8aAMAlVSqq3Mjw&upload_protocol=resumable
+Upload status final
+Success - #<Google::Apis::StorageV1::Object:0x00007fd0e1626c90
+ @bucket="totem-db-38dee.appspot.com",
+ @content_type="image/jpeg",
+ @crc32c="1YtOdQ==",
+ @etag="CMi26vWtj+cCEAE=",
+ @generation=1579426420267848,
+ @id=
+  "totem-db-38dee.appspot.com/images/SpongeBob/Bob l'eponge9.jpg/1579426420267848",
+ @kind="storage#object",
+ @md5_hash="M1j1jxEfH94WEXNyGC3B8Q==",
+ @media_link=
+  "https://storage.googleapis.com/download/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge9.jpg?generation=1579426420267848&alt=media",
+ @metageneration=1,
+ @name="images/SpongeBob/Bob l'eponge9.jpg",
+ @self_link=
+  "https://www.googleapis.com/storage/v1/b/totem-db-38dee.appspot.com/o/images%2FSpongeBob%2FBob%20l'eponge9.jpg",
+ @size=204460,
+ @storage_class="STANDARD",
+ @time_created=Sun, 19 Jan 2020 09:33:40 +0000,
+ @time_storage_class_updated=Sun, 19 Jan 2020 09:33:40 +0000,
+ @updated=Sun, 19 Jan 2020 09:33:40 +0000>
+
+Completed 200 OK in 1076ms (Views: 0.6ms | ActiveRecord: 2.1ms | Allocations: 54953)
+
+
+Started GET "/users_multimedia/list" for ::1 at 2020-01-19 10:48:05 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+NoMethodError (undefined method `collection_init' for #<Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController:0x00007fd0e437aac0>):
+  
+app/controllers/api/v1/requests/tables/relations_manager/users_multimedia_controller.rb:11:in `initialize'
+Started GET "/users_multimedia/list" for ::1 at 2020-01-19 10:48:53 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#users_multimedia_list as */*
+  Parameters: {"users_multimedium"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 618ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 17014)
+
+
+Started POST "/users_multimedia/information" for ::1 at 2020-01-19 10:50:35 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#users_multimedia_information as */*
+  Parameters: {"id"=>"YzsAwGFVYCHerCmPxTuR", "users_multimedium"=>{"id"=>"YzsAwGFVYCHerCmPxTuR"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 279ms (Views: 0.9ms | ActiveRecord: 0.7ms | Allocations: 32169)
+
+
+Started POST "/users_multimedia/new" for ::1 at 2020-01-19 10:54:06 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users_multimedia/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users_multimedia/new" for ::1 at 2020-01-19 10:54:54 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#new_users_multimedia as */*
+  Parameters: {"user_id"=>"t9m6CE8b0YZKzJcbPJt6dxECEL12", "multimedia_id"=>"1579366284478415", "users_multimedium"=>{"user_id"=>"t9m6CE8b0YZKzJcbPJt6dxECEL12", "multimedia_id"=>"1579366284478415"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 204 No Content in 365ms (ActiveRecord: 1.4ms | Allocations: 47792)
+
+
+Started POST "/users_multimedia/new" for ::1 at 2020-01-19 10:56:34 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#new_users_multimedia as */*
+  Parameters: {"user_id"=>"t9m6CE8b0YZKzJcbPJt6dxECEL12", "multimedia_id"=>"1579366284478415", "users_multimedium"=>{"user_id"=>"t9m6CE8b0YZKzJcbPJt6dxECEL12", "multimedia_id"=>"1579366284478415"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 451ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 47626)
+
+
+Started POST "/users_multimedia/new" for ::1 at 2020-01-19 10:56:41 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#new_users_multimedia as */*
+  Parameters: {"user_id"=>"t9m6CE8b0YZKzJcbPJt6dxECEL12", "multimedia_id"=>"1579366284478415", "users_multimedium"=>{"user_id"=>"t9m6CE8b0YZKzJcbPJt6dxECEL12", "multimedia_id"=>"1579366284478415"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 409 Conflict in 220ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 12025)
+
+
+Started GET "/users_multimedia/list" for ::1 at 2020-01-19 10:56:59 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#users_multimedia_list as */*
+  Parameters: {"users_multimedium"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 325ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 12051)
+
+
+Started POST "/users_multimedia/list/user" for ::1 at 2020-01-19 11:04:12 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [POST] "/users_multimedia/list/user"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users_multimedia/information/user" for ::1 at 2020-01-19 11:04:30 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#users_multimedia_by_id as */*
+  Parameters: {"user_id"=>"OS5FRrkOv0UT4E1avxUCrSzfKvv2", "users_multimedium"=>{"user_id"=>"OS5FRrkOv0UT4E1avxUCrSzfKvv2"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 241ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 16574)
+
+
+Started POST "/users_multimedia/information/user" for ::1 at 2020-01-19 11:05:47 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#users_multimedia_by_id as */*
+  Parameters: {"user_id"=>"OS5FRrkOv0UT4E1avxUCrSzfKvv2", "users_multimedium"=>{"user_id"=>"OS5FRrkOv0UT4E1avxUCrSzfKvv2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 184ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 12087)
+
+
+Started POST "/users_multimedia/information/user" for ::1 at 2020-01-19 11:06:20 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#users_multimedia_by_id as */*
+  Parameters: {"multimedia"=>"1579366284478415", "users_multimedium"=>{"multimedia"=>"1579366284478415"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 1265)
+
+
+  
+NoMethodError (undefined method `get' for nil:NilClass
+Did you mean?  gem):
+  
+app/controllers/api/v1/requests/tables/relations_manager/users_multimedia_controller.rb:30:in `users_multimedia_by_id'
+Started POST "/users_multimedia/information/user" for ::1 at 2020-01-19 11:06:34 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#users_multimedia_by_id as */*
+  Parameters: {"multimedia_id"=>"1579366284478415", "users_multimedium"=>{"multimedia_id"=>"1579366284478415"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 187ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 12164)
+
+
+Started POST "/users_multimedia/information/user" for ::1 at 2020-01-19 11:08:48 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController#users_multimedia_by_id as */*
+  Parameters: {"ultimedia_id"=>"1579366284478415", "users_multimedium"=>{"ultimedia_id"=>"1579366284478415"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 26ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 5883)
+
+
+Started GET "/products_multimedia/list" for ::1 at 2020-01-19 11:19:02 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#products_multimedia_list as */*
+  Parameters: {"products_multimedium"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 205ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 16553)
+
+
+Started GET "/products_multimedia/list" for ::1 at 2020-01-19 11:21:43 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#products_multimedia_list as */*
+  Parameters: {"products_multimedium"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 182ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 12325)
+
+
+Started POST "/products_multimedia/information" for ::1 at 2020-01-19 11:22:27 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#products_multimedia_information as */*
+  Parameters: {"id"=>"LdvW0oQxa7qM0k5FrhTh", "products_multimedium"=>{"id"=>"LdvW0oQxa7qM0k5FrhTh"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 169ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 32363)
+
+
+Started POST "/products_multimedia/information/product" for ::1 at 2020-01-19 11:23:08 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#products_multimedia_by_id as */*
+  Parameters: {"product_id"=>"mEQcieDEUPDlKqePLEyY", "products_multimedium"=>{"product_id"=>"mEQcieDEUPDlKqePLEyY"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 19ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 5847)
+
+
+Started POST "/products_multimedia/information/product" for ::1 at 2020-01-19 11:25:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#products_multimedia_by_id as */*
+  Parameters: {"product_id"=>"mEQcieDEUPDlKqePLEyY", "products_multimedium"=>{"product_id"=>"mEQcieDEUPDlKqePLEyY"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 18ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 5879)
+
+
+Started POST "/products_multimedia/information/product" for ::1 at 2020-01-19 11:26:27 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#products_multimedia_by_id as */*
+  Parameters: {"product_id"=>"mEQcieDEUPDlKqePLEyY", "products_multimedium"=>{"product_id"=>"mEQcieDEUPDlKqePLEyY"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 837)
+
+
+Started POST "/products_multimedia/information/product" for ::1 at 2020-01-19 11:26:56 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#products_multimedia_by_id as */*
+  Parameters: {"product_id"=>"mEQcieDEUPDlKqePLEyY", "products_multimedium"=>{"product_id"=>"mEQcieDEUPDlKqePLEyY"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 19ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 5841)
+
+
+Started POST "/products_multimedia/information/product" for ::1 at 2020-01-19 11:27:13 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#products_multimedia_by_id as */*
+  Parameters: {"product_id"=>"mEQcieDEUPDlKqePLEyY", "products_multimedium"=>{"product_id"=>"mEQcieDEUPDlKqePLEyY"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.8ms | Allocations: 78939)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController:0x0000000004db7f78>):
+  
+app/controllers/api/v1/requests/tables/relations_manager/products_multimedia_controller.rb:29:in `products_multimedia_by_id'
+Started POST "/products_multimedia/information/product" for ::1 at 2020-01-19 11:27:32 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#products_multimedia_by_id as */*
+  Parameters: {"product_id"=>"mEQcieDEUPDlKqePLEyY", "products_multimedium"=>{"product_id"=>"mEQcieDEUPDlKqePLEyY"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 303ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 17155)
+
+
+Started POST "/products_multimedia/new" for ::1 at 2020-01-19 11:28:47 +0100
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#new_products_multimedia as */*
+  Parameters: {"multimedia_id"=>"1579366197579355", "product_id"=>"dBvoniQHBd9a6HKo4bSq", "products_multimedium"=>{"multimedia_id"=>"1579366197579355", "product_id"=>"dBvoniQHBd9a6HKo4bSq"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 400 Bad Request in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 843)
+
+
+Started POST "/products_multimedia/new" for ::1 at 2020-01-19 11:30:21 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController#new_products_multimedia as */*
+  Parameters: {"multimedia_id"=>"1579366197579355", "product_id"=>"dBvoniQHBd9a6HKo4bSq", "products_multimedium"=>{"multimedia_id"=>"1579366197579355", "product_id"=>"dBvoniQHBd9a6HKo4bSq"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:17:in `user'
+Completed 200 OK in 515ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 47509)
+
+
