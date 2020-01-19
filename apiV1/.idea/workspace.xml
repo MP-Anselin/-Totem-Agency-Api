@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e4def4-221a-4e34-bd7c-d156844337b4" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/relations_manager/products_multimedia_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/api/v1/requests/tables/relations_manager/products_multimedia_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/6d/f5c704d15efc63" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/81/e0828ba42380ff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/multimedia_manager/assets_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/multimedia_manager/multimedia_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/multimedia_manager/multimedia_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/relations_manager/users_multimedia_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/v1/requests/tables/relations_manager/users_multimedia_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+>>>>>>> 9278b0869c2612df5622e479ae63d2e33226e7f8
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/00/349e7142568e9b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/00/349e7142568e9b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/04/29b429ba134d58" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/04/29b429ba134d58" afterDir="false" />
@@ -14,16 +29,32 @@
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/18/0716266b3f0972" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/18/0716266b3f0972" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/1d/df70b92a72d1f8" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/1d/df70b92a72d1f8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2b/c1c10f397722ab" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2b/c1c10f397722ab" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/40/d7bea4a9911d26" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/40/d7bea4a9911d26" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/42/f3c79a6250cf80" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/42/f3c79a6250cf80" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/6e/42ceace3147e9a" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/6e/42ceace3147e9a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7d/233fde97ea9de6" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7d/233fde97ea9de6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/8c/e5dd993e3efd66" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/8c/e5dd993e3efd66" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2b/fdd76973692bf8" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/2b/fdd76973692bf8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/40/d7bea4a9911d26" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/40/d7bea4a9911d26" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/42/f3c79a6250cf80" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/42/f3c79a6250cf80" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/63/8a01b8cf98cbb3" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/63/8a01b8cf98cbb3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/6e/42ceace3147e9a" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/6e/42ceace3147e9a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7c/1bdef3f10b1889" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7c/1bdef3f10b1889" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7d/233fde97ea9de6" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/7d/233fde97ea9de6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/8c/e5dd993e3efd66" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/8c/e5dd993e3efd66" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/90/2f758905927446" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/90/2f758905927446" afterDir="false" />
+>>>>>>> 9278b0869c2612df5622e479ae63d2e33226e7f8
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/90/c2772373ee25cc" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/90/c2772373ee25cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/92/ea8720a8e5c4a4" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/92/ea8720a8e5c4a4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/94/b86f505949f94d" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/94/b86f505949f94d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/9f/a3c5bac1ee7eaf" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/9f/a3c5bac1ee7eaf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/a6/4bc277e0b2f06a" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/a6/4bc277e0b2f06a" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b7/5ec5a80c17ad9d" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b7/5ec5a80c17ad9d" afterDir="false" />
+>>>>>>> 9278b0869c2612df5622e479ae63d2e33226e7f8
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c3/6724899d1a8d43" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c3/6724899d1a8d43" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cc/9193bef85cbe61" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cc/9193bef85cbe61" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cd/5fde2c050d0dd4" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cd/5fde2c050d0dd4" afterDir="false" />

@@ -43,9 +43,13 @@ module Api
           end
         end
 
-        def new_document(fields, id = nil)
+        def new_document(fields, id = nil, rend_info = false)
           id.nil? ? @db_collection.doc.set(fields) : @db_collection.doc(id).set(fields)
-          rendering_answer
+          if rend_info
+            rendering_answer(nil, nil, fields)
+          else
+            rendering_answer
+          end
         end
 
         def id_document(id)

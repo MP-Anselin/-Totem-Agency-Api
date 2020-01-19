@@ -11,17 +11,17 @@ module Api
                 #@multimedia = Api::V1::Requests::Tables::MultimediaManager::MultimediaController.new
             end
 
-            # GET/ /assets/list of list the assets information
+            # GET/ /assets/bucket/list of list the assets information
             def buckets_list
               list = []
               element = @firestorage.storage_variable.buckets
               element.all do |info|
-                list.push(name: info.name, size: info.size)
+                list.push(name: info.name)
               end
               rendering_answer nil, nil, list
             end
 
-            # POST /assets/list of list the assets information
+            # POST /assets/bucket/multimedia/list of list the assets information
             def assets_list
               bucket_name = params[:bucketName]
               if var_empty(bucket_name)
@@ -30,13 +30,15 @@ module Api
                 list = []
                 bucket = @firestorage.storage_variable.bucket bucket_name
                 bucket.files.all do |info|
-                  list.push(name: info.name, size: info.size, path: info.id, bucket: info.bucket, content_type: info.content_type)
+                  file_storage_id = info.id.split('/').last.split('/')[0]
+                  list.push(name: info.name, size: info.size, id_path: info.id, id: file_storage_id,
+                            bucket: info.bucket, content_type: info.content_type)
                 end
                 rendering_answer nil, nil, list
               end
             end
 
-            # POST /assets/asset get one asset information
+            # POST /assets/bucket/multimedia/download get one asset information
             def asset_download
               bucket = params[:bucketName]
               folder_path = params[:folderPath]
@@ -62,7 +64,7 @@ module Api
               end
             end
 
-            # POST /assets/asset/new add new asset
+            # POST /assets/bucket/multimedia/new add new asset
             def new_asset
               bucket = params[:bucketName]
               folder_path = params[:folderPath]
@@ -88,7 +90,7 @@ module Api
               end
             end
 
-            # POST /assets/asset/delete delete asset
+            # POST /assets/bucket/multimedia/delete delete asset
             def delete_asset
               bucket = params[:bucketName]
               folder_path = params[:folderPath]
