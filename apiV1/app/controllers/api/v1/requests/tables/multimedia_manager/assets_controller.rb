@@ -40,20 +40,20 @@ module Api
 
             # POST /assets/bucket/multimedia/download get one asset information
             def asset_download
-              bucket = params[:bucketName]
+              bucket_name = params[:bucketName]
               folder_path = params[:folderPath]
               file_name = params[:fileName]
               folder_destination = params[:folderDestination]
               file_new_name = params[:fileNewName]
-              if var_empty(bucket) || var_empty(folder_path) || var_empty(file_name) || var_empty(folder_destination)
-                inf = var_empty(bucket) ? 'bucket' : var_empty(folder_path) ? 'folder path' : var_empty(file_name) ? 'file name' : 'folder_destination'
+              if var_empty(bucket_name) || var_empty(folder_path) || var_empty(file_name) || var_empty(folder_destination)
+                inf = var_empty(bucket_name) ? 'bucket' : var_empty(folder_path) ? 'folder path' : var_empty(file_name) ? 'file name' : 'folder_destination'
                 rendering_answer('Asset ' + inf + " can't be empty", :bad_request)
               else
                 #bucket = @firestorage.storage_variable.bucket "totem-db-38dee.appspot.com"
-                bucket = @firestorage.storage_variable.bucket bucket
+                bucket = @firestorage.storage_variable.bucket bucket_name
                 #file = bucket.file "IphoneXS.mp4"
                 begin
-                  file = folder_path == '' ? bucket.file(file_name) : bucket.file(folder_path + '/' + file_name)
+                  file = var_empty(folder_path) ? bucket.file(file_name) : bucket.file(folder_path + '/' + file_name)
                   #file.download "app/controllers/api/v1/requests/tables/multimedia_manager/IphoneXS.mp4"
                   file.download folder_destination + '/' + file_new_name
                 rescue StandardError

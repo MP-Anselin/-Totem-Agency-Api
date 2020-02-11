@@ -1,18 +1,30 @@
 TOTEM AGENCY API DOCUMENT
 
+SETUP DOCKER
+
+1) be sure you have docker on your devise
+
+2) sudo usermod -aG docker $USER (current user)
+
+_______________________________________________________
+
 1) install ruby and rails last version advise you to use postman
 
-2) start server run command "rails server"
+2) docker-compose up --build
 
-3) to see the routes available run command "rails routes"
+3) start server run command "rails server"
 
-4) first you need api jwt key use the route "client/authentification" in post and pass email and password as parameter
+4) stop docker docker-compose stop
+
+4) to see the routes available run command "rails routes"
+
+5) first you need api jwt key use the route "client/authentification" in post and pass email and password as parameter
     email: agencytotem59gmail.com
     password: TotO/gen]1.XxZ
 
-5) now you have the jwt key you can execute the other requests
+6) now you have the jwt key you can execute the other requests
 
-6) HEADER
+7) HEADER
 
 change jwt_token by your jxt_token
 parameter {Content-Type: 'application/json', Authorization: jwt_token}

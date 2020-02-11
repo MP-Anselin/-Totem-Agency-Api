@@ -1,0 +1,26 @@
+version: '3'
+services:
+  app: &app_base
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: totem_api
+    links:
+      - redis
+    volumes:
+      - .:/rubyapp
+    depends_on:
+      - redis
+    ports:
+      - "3000:3000"
+    tty: true
+    stdin_open: true
+  redis:
+    image: redis
+    container_name: totem_api_redis
+    volumes:
+      - ./docker/cache:/var/lib/redis/data
+    ports:
+      - "6379:6379"
+    sysctls:
+      - net.core.somaxconn=511
