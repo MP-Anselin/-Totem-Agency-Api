@@ -4,5 +4,5 @@
 
 yarn install --check-files
 
-rails
+rm -f /rubyapp/tmp/pids/server.pid
 rails server -b 0.0.0.0
