@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Api::V1::FirebaseRequests::FireDatabaseStore
+  
+    &mdash; Documentation by YARD 0.9.24
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Api::V1::FirebaseRequests::FireDatabaseStore";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Api.html" title="Api (module)">Api</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../V1.html" title="Api::V1 (module)">V1</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../FirebaseRequests.html" title="Api::V1::FirebaseRequests (module)">FirebaseRequests</a></span></span>
+     &raquo; 
+    <span class="title">FireDatabaseStore</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Api::V1::FirebaseRequests::FireDatabaseStore
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="../../../ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::API</li>
+          
+            <li class="next"><span class='object_link'><a href="../../../ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">Api::V1::FirebaseRequests::FireDatabaseStore</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Class to manage the connection with Firebase</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="../Requests/Tables/MultimediaManager/AssetsController.html" title="Api::V1::Requests::Tables::MultimediaManager::AssetsController (class)">Requests::Tables::MultimediaManager::AssetsController</a></span>, <span class='object_link'><a href="../Requests/Tables/MultimediaManager/MultimediaTypesController.html" title="Api::V1::Requests::Tables::MultimediaManager::MultimediaTypesController (class)">Requests::Tables::MultimediaManager::MultimediaTypesController</a></span>, <span class='object_link'><a href="../Requests/Tables/ProductsManager/ProductsController.html" title="Api::V1::Requests::Tables::ProductsManager::ProductsController (class)">Requests::Tables::ProductsManager::ProductsController</a></span>, <span class='object_link'><a href="../Requests/Tables/RelationsManager/ProductsMultimediaController.html" title="Api::V1::Requests::Tables::RelationsManager::ProductsMultimediaController (class)">Requests::Tables::RelationsManager::ProductsMultimediaController</a></span>, <span class='object_link'><a href="../Requests/Tables/RelationsManager/UsersMultimediaController.html" title="Api::V1::Requests::Tables::RelationsManager::UsersMultimediaController (class)">Requests::Tables::RelationsManager::UsersMultimediaController</a></span>, <span class='object_link'><a href="../Requests/Tables/UsersManager/UserPrivateAccessController.html" title="Api::V1::Requests::Tables::UsersManager::UserPrivateAccessController (class)">Requests::Tables::UsersManager::UserPrivateAccessController</a></span>, <span class='object_link'><a href="../Requests/Tables/UsersManager/UsersController.html" title="Api::V1::Requests::Tables::UsersManager::UsersController (class)">Requests::Tables::UsersManager::UsersController</a></span></p>
+</div>
+
+
+
+
+
+
+  <h2>Instance Attribute Summary</h2>
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="../../../ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../../ApplicationController.html#current_user-instance_method" title="ApplicationController#current_user (method)">#current_user</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#collection_get_document-instance_method" title="#collection_get_document (instance method)">#<strong>collection_get_document</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#collection_init-instance_method" title="#collection_init (instance method)">#<strong>collection_init</strong>(collection_path)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#collection_list_documents-instance_method" title="#collection_list_documents (instance method)">#<strong>collection_list_documents</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_document-instance_method" title="#delete_document (instance method)">#<strong>delete_document</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#id_document-instance_method" title="#id_document (instance method)">#<strong>id_document</strong>(id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>  &#x21d2; FireDatabaseStore </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of FireDatabaseStore.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_document-instance_method" title="#new_document (instance method)">#<strong>new_document</strong>(fields, id = nil, rend_info = false)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_document-instance_method" title="#update_document (instance method)">#<strong>update_document</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="Api::V1::FirebaseRequests::FireDatabaseStore (class)">FireDatabaseStore</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of FireDatabaseStore.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='kw'>super</span>
+  <span class='comment'>#require &#39;google/cloud/firestore&#39;
+</span>  <span class='comment'>#require &#39;google/cloud/storage&#39;
+</span>
+  <span class='comment'># Explicitly use service account credentials by specifying the private key
+</span>  <span class='ivar'>@firestore</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Api.html" title="Api (module)">Api</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../V1.html" title="Api::V1 (module)">V1</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../FirebaseRequests.html" title="Api::V1::FirebaseRequests (module)">FirebaseRequests</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="FireTools.html" title="Api::V1::FirebaseRequests::FireTools (module)">FireTools</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="FireTools/FirestoreManager.html" title="Api::V1::FirebaseRequests::FireTools::FirestoreManager (class)">FirestoreManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="FireTools/FirestoreManager.html#initialize-instance_method" title="Api::V1::FirebaseRequests::FireTools::FirestoreManager#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_firestore_variable'><span class='object_link'><a href="FireTools/FirestoreManager.html#firestore_variable-instance_method" title="Api::V1::FirebaseRequests::FireTools::FirestoreManager#firestore_variable (method)">firestore_variable</a></span></span>
+  <span class='ivar'>@firebase</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Api.html" title="Api (module)">Api</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../V1.html" title="Api::V1 (module)">V1</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../FirebaseRequests.html" title="Api::V1::FirebaseRequests (module)">FirebaseRequests</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="FireTools.html" title="Api::V1::FirebaseRequests::FireTools (module)">FireTools</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="FireTools/FirebaseManager.html" title="Api::V1::FirebaseRequests::FireTools::FirebaseManager (class)">FirebaseManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="FireTools/FirebaseManager.html#initialize-instance_method" title="Api::V1::FirebaseRequests::FireTools::FirebaseManager#initialize (method)">new</a></span></span><span class='period'>.</span><span class='id identifier rubyid_firebase_variable'><span class='object_link'><a href="FireTools/FirebaseManager.html#firebase_variable-instance_method" title="Api::V1::FirebaseRequests::FireTools::FirebaseManager#firebase_variable (method)">firebase_variable</a></span></span>
+  <span class='ivar'>@firestorage</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../../../Api.html" title="Api (module)">Api</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../V1.html" title="Api::V1 (module)">V1</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../FirebaseRequests.html" title="Api::V1::FirebaseRequests (module)">FirebaseRequests</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="FireTools.html" title="Api::V1::FirebaseRequests::FireTools (module)">FireTools</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="FireTools/FirestorageManager.html" title="Api::V1::FirebaseRequests::FireTools::FirestorageManager (class)">FirestorageManager</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="FireTools/FirestorageManager.html#initialize-instance_method" title="Api::V1::FirebaseRequests::FireTools::FirestorageManager#initialize (method)">new</a></span></span>
+
+
+  <span class='ivar'>@collection</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  <span class='ivar'>@collection_name</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="collection_get_document-instance_method">
+  
+    #<strong>collection_get_document</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_collection_get_document'>collection_get_document</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='ivar'>@collection_name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_db_document'>db_document</span> <span class='op'>=</span> <span class='ivar'>@firestore</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span> <span class='id identifier rubyid_path'>path</span>
+  <span class='id identifier rubyid_snapshot'>snapshot</span> <span class='op'>=</span> <span class='id identifier rubyid_db_document'>db_document</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_snapshot'>snapshot</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span>
+    <span class='id identifier rubyid_rendering_answer'>rendering_answer</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_snapshot'>snapshot</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_rendering_answer'>rendering_answer</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Document does not exist</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:not_found</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="collection_init-instance_method">
+  
+    #<strong>collection_init</strong>(collection_path)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_collection_init'>collection_init</span><span class='lparen'>(</span><span class='id identifier rubyid_collection_path'>collection_path</span><span class='rparen'>)</span>
+  <span class='ivar'>@collection_name</span> <span class='op'>=</span> <span class='id identifier rubyid_collection_path'>collection_path</span>
+  <span class='ivar'>@db_collection</span> <span class='op'>=</span> <span class='ivar'>@firestore</span><span class='period'>.</span><span class='id identifier rubyid_col'>col</span> <span class='ivar'>@collection_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="collection_list_documents-instance_method">
+  
+    #<strong>collection_list_documents</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_collection_list_documents'>collection_list_documents</span>
+  <span class='id identifier rubyid_list'>list</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@db_collection</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_doc'>doc</span><span class='op'>|</span>
+    <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='label'>id:</span> <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_document_id'>document_id</span><span class='comma'>,</span> <span class='label'>document_information:</span> <span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_rendering_answer'>rendering_answer</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_list'>list</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete_document-instance_method">
+  
+    #<strong>delete_document</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+81
+82
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb', line 81</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete_document'>delete_document</span>
+  <span class='id identifier rubyid_db_product'>db_product</span> <span class='op'>=</span> <span class='ivar'>@firestore</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span> <span class='ivar'>@collection_name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='id identifier rubyid_db_product'>db_product</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span>
+  <span class='id identifier rubyid_rendering_answer'>rendering_answer</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="id_document-instance_method">
+  
+    #<strong>id_document</strong>(id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_id_document'>id_document</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='ivar'>@collection_name</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_id'>id</span>
+  <span class='id identifier rubyid_db_document'>db_document</span> <span class='op'>=</span> <span class='ivar'>@firestore</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span> <span class='id identifier rubyid_path'>path</span>
+  <span class='id identifier rubyid_snapshot'>snapshot</span> <span class='op'>=</span> <span class='id identifier rubyid_db_document'>db_document</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_snapshot'>snapshot</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span>
+    <span class='kw'>false</span>
+  <span class='kw'>else</span>
+    <span class='kw'>true</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_document-instance_method">
+  
+    #<strong>new_document</strong>(fields, id = nil, rend_info = false)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_document'>new_document</span><span class='lparen'>(</span><span class='id identifier rubyid_fields'>fields</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_rend_info'>rend_info</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_id'>id</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='ivar'>@db_collection</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_fields'>fields</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='ivar'>@db_collection</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_fields'>fields</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_rend_info'>rend_info</span>
+    <span class='id identifier rubyid_rendering_answer'>rendering_answer</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_fields'>fields</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_rendering_answer'>rendering_answer</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="update_document-instance_method">
+  
+    #<strong>update_document</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/api/v1/Firebase_Requests/Fire_database_store.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_update_document'>update_document</span>
+  <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_id_document'>id_document</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_rendering_answer'>rendering_answer</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Document does not exist</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:not_found</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_permit'>permit</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_h'>to_h</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:user</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:controller</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:action</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='symbol'>:id</span><span class='rparen'>)</span>
+    <span class='ivar'>@db_collection</span><span class='period'>.</span><span class='id identifier rubyid_doc'>doc</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_set'>set</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>merge:</span> <span class='kw'>true</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_rendering_answer'>rendering_answer</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Mar 17 20:15:51 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.24 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.24
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<p>TOTEM AGENCY API DOCUMENT</p>
+
+<p>SETUP DOCKER</p>
+
+<p>1) be sure you have docker on your devise</p>
+
+<p>2) sudo usermod -aG docker $USER (current user)</p>
+
+<p><em>_</em></p>
+
+<p>1) install ruby and rails last version advise you to use postman</p>
+
+<p>2) docker-compose up –build</p>
+
+<p>3) start server run command “rails server”</p>
+
+<p>4) stop docker docker-compose stop</p>
+
+<p>4) to see the routes available run command “rails routes”</p>
+
+<p>5) first you need api jwt key use the route “client/authentification” in
+post and pass email and password as parameter</p>
+
+<pre class="code ruby"><code class="ruby">email: agencytotem59gmail.com
+password: TotO/gen]1.XxZ
+</code></pre>
+
+<p>6) now you have the jwt key you can execute the other requests</p>
+
+<p>7) HEADER</p>
+
+<p>change jwt_token by your jxt_token parameter &#39;application/json&#39;, Authorization: jwt_token</p>
+<dl class="rdoc-list label-list"><dt> API KEY JWT 
+<dd>
+<p>POST /client/authentication(.:format) parameter
+“email”:“agencytotem59@gmail.com”,“password”:“Tot0/gen]1“email”:“agencytotem59@gmail.com”,“password”:“Tot0/gen]1.XxZ”</p>
+
+<p><em>__</em></p>
+
+<pre class="code ruby"><code class="ruby">==&gt;&gt; || USER_PRIVATE || &lt;&lt;==
+</code></pre>
+<dl class="rdoc-list label-list"><dt> USER GENERATE TOKEN 
+<dd>
+<p>GET /user/account/generate(.:format) parameter {}</p>
+<dl class="rdoc-list label-list"><dt> USER LOG IN / OUT (registered true if the user is already registered) 
+<dd>
+<p>POST /user/account/signep(.:format) parameter .., password: ..,
+registered: ..</p>
+<dl class="rdoc-list label-list"><dt> USER DELETE ACCOUNT 
+<dd>
+<p>POST /user/account/delete(.:format) parameter ..</p>
+<dl class="rdoc-list label-list"><dt> USER REFRESH TOKEN 
+<dd>
+<p>POST /user/account/id/refresh(.:format) parameter ..,
+refresh_token</p>
+<dl class="rdoc-list label-list"><dt> USER CHANGE PASSWORD OR EMAIL 
+<dd>
+<p>POST /user/account/id/change(.:format) parameter .., password: ..,
+idToken: ..</p>
+<dl class="rdoc-list label-list"><dt> USER SEND MAIL TO RESET PWD 
+<dd>
+<p>POST /user/account/id/pwd/reset/code/mail(.:format) parameter ..,
+requestType: ..</p>
+<dl class="rdoc-list label-list"><dt> USER CHECK PASSWORD WAS CHANGED 
+<dd>
+<p>POST /user/account/id/pwd/reset/code/validation(.:format) parameter
+.., newPassword: ..</p>
+<dl class="rdoc-list label-list"><dt> USER SEND MAIL TO CHECK EMAIL USER 
+<dd>
+<p>POST /user/account/id/email/code/mail(.:format) parameter ..,
+requestType: ..</p>
+<dl class="rdoc-list label-list"><dt> USER CHECK EMAIL WAS VALIDATE 
+<dd>
+<p>POST /user/account/id/email/code/validation(.:format) parameter {oobCode: }</p>
+<dl class="rdoc-list label-list"><dt> USER UPDATE USER INFORMATION 
+<dd>
+<p>POST /user/account/data/manage(.:format) parameter ..,
+displayName: .., photoUrl: ..</p>
+
+<p><em>__</em></p>
+
+<pre class="code ruby"><code class="ruby">==&gt;&gt; || PRODUCTS || &lt;&lt;==
+</code></pre>
+<dl class="rdoc-list label-list"><dt> PRODUCTS LIST DOCUMENT 
+<dd>
+<p>GET /products/list(.:format) parameter {}</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS GET DOCUMENT BY ID
+<dd>
+<p>POST /products/product(.:format) parameter ..</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS ADD DOCUMENT
+<dd>
+<p>POST /products/product/new(.:format) parameter .., name: .., url:
+..</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS UPDATE DOCUMENT BY ID
+<dd>
+<p>POST /products/product/update(.:format) parameter .., brand: .., name:
+..</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS DELETE DOCUMENT BY ID
+<dd>
+<p>POST /products/product/delete(.:format) parameter ..</p>
+
+<p><em>__</em></p>
+
+<pre class="code ruby"><code class="ruby">==&gt;&gt; || USERS || &lt;&lt;==
+</code></pre>
+<dl class="rdoc-list label-list"><dt> USER LIST USERS 
+<dd>
+<p>GET /users/list(.:format) parameter {}</p>
+<dl class="rdoc-list label-list"><dt> USER LIST USER INFORMATION BY ID 
+<dd>
+<p>POST /users/user(.:format) parameter {}</p>
+<dl class="rdoc-list label-list"><dt> USER ADD USER BY ID 
+<dd>
+<p>POST /users/user/new(.:format) parameter .., firstName: .., lastName:
+..</p>
+<dl class="rdoc-list label-list"><dt> USER UPDATE USER BY ID 
+<dd>
+<p>POST /users/user/update(.:format) parameter .., firstName: ..,
+lastName: ..</p>
+<dl class="rdoc-list label-list"><dt> USER DELETE USER BY ID 
+<dd>
+<p>POST /users/user/delete(.:format) parameter ..</p>
+
+<p><em>__</em></p>
+
+<pre class="code ruby"><code class="ruby">==&gt;&gt; || ASSET_BUCKET || &lt;&lt;==
+</code></pre>
+<dl class="rdoc-list label-list"><dt> BUCKET LIST BUCKET 
+<dd>
+<p>GET /assets/bucket/list(.:format) parameter {}</p>
+<dl class="rdoc-list label-list"><dt> BUCKET LIST BUCKET FILE 
+<dd>
+<p>POST /assets/bucket/multimedia/list(.:format) parameter ..</p>
+<dl class="rdoc-list label-list"><dt> BUCKET DOWNLOAD FILE 
+<dd>
+<p>POST /assets/bucket/multimedia/download(.:format) parameter .., folderPath: .., fileName: .., folderDestination: .., fileNewName: ..</p>
+<dl class="rdoc-list label-list"><dt> BUCKET ADD FILE 
+<dd>
+<p>POST /assets/bucket/multimedia/new(.:format) parameter ..,
+folderPath: .., fileName: .., folderDestination: .., fileNewName: ..</p>
+
+<p>/assets/bucket/multimedia/delete(.:format) parameter ..,
+folderPath: .., fileName: ..</p>
+
+<p><em>__</em></p>
+
+<pre class="code ruby"><code class="ruby">==&gt;&gt; || MULTIMEDIA || &lt;&lt;==
+</code></pre>
+<dl class="rdoc-list label-list"><dt> MULTIMEDIA LIST DOCUMENTS 
+<dd>
+<p>GET /multimedia/list(.:format) parameter {}</p>
+<dl class="rdoc-list label-list"><dt> MULTIMEDIA GET DOCUMENT BY ID 
+<dd>
+<p>POST /multimedia/media(.:format) parameter ..</p>
+<dl class="rdoc-list label-list"><dt> MULTIMEDIA UPDATE DOCUMENTS BY ID 
+<dd>
+<p>POST /multimedia/media/update(.:format) parameter .., name: ..,
+storage_id: .., storage_path: .., type: ..</p>
+<dl class="rdoc-list label-list"><dt> MULTIMEDIA DELETE DOCUMENTS BY ID 
+<dd>
+<p>POST /multimedia/media/delete(.:format) parameter ..</p>
+
+<p><em>__</em></p>
+
+<pre class="code ruby"><code class="ruby">==&gt;&gt; || USERS_MULTIMEDIA || &lt;&lt;==
+</code></pre>
+<dl class="rdoc-list label-list"><dt> USERS_MULTIMEDIA LIST DOCUMENTS 
+<dd>
+<p>GET /users_multimedia/list(.:format) parameter {}</p>
+<dl class="rdoc-list label-list"><dt> USERS_MULTIMEDIA GET DOCUMENT BY ID
+<dd>
+<p>POST /users_multimedia/information(.:format) parameter ..</p>
+<dl class="rdoc-list label-list"><dt> USERS_MULTIMEDIA GET DOCUMENT BY USER ID
+<dd>
+<p>POST /users_multimedia/information/user(.:format) parameter ..</p>
+<dl class="rdoc-list label-list"><dt> USERS_MULTIMEDIA GET DOCUMENT BY MULTIMEDIA ID
+<dd>
+<p>POST /users_multimedia/information/multimedia(.:format) parameter
+..</p>
+<dl class="rdoc-list label-list"><dt> USERS_MULTIMEDIA ADD DOCUMENT 
+<dd>
+<p>POST /users_multimedia/new(.:format) parameter .., multimedia_id
+..</p>
+<dl class="rdoc-list label-list"><dt> USERS_MULTIMEDIA UPDATE DOCUMENT BY ID 
+<dd>
+<p>POST /users_multimedia/update(.:format) parameter .., user_id: ..,
+multimedia_id ..</p>
+<dl class="rdoc-list label-list"><dt> USERS_MULTIMEDIA DELETE DOCUMENT BY ID 
+<dd>
+<p>POST /users_multimedia/delete(.:format) parameter ..</p>
+
+<p><em>__</em></p>
+
+<pre class="code ruby"><code class="ruby">==&gt;&gt; || PRODUCTS_MULTIMEDIA || &lt;&lt;==
+</code></pre>
+<dl class="rdoc-list label-list"><dt> PRODUCTS_MULTIMEDIA LIST DOCUMENTS 
+<dd>
+<p>GET /products_multimedia/list(.:format) parameter {}</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS_MULTIMEDIA GET DOCUMENT INFORMATION BY ID 
+<dd>
+<p>POST /products_multimedia/information(.:format) parameter ..</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS_MULTIMEDIA GET DOCUMENT BY PRODUCT ID 
+<dd>
+<p>/products_multimedia/information/product(.:format) parameter ..</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS_MULTIMEDIA GET DOCUMENT BY MULTIMEDIA ID 
+<dd>
+<p>POST /products_multimedia/information/multimedia(.:format) parameter
+..</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS_MULTIMEDIA ADD DOCUMENT 
+<dd>
+<p>POST /products_multimedia/new(.:format) parameter ..,
+product_id: ..</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS_MULTIMEDIA UPDATE DOCUMENT BY ID
+<dd>
+<p>POST /products_multimedia/update(.:format) parameter ..,
+multimedia_id: .., product_id: ..</p>
+<dl class="rdoc-list label-list"><dt> PRODUCTS_MULTIMEDIA DELETE DOCUMENT BY ID 
+<dd>
+<p>POST /products_multimedia/delete(.:format) parameter ..</p>
+
+<p>..coming soon</p>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</div></div>
+
+      <div id="footer">
+  Generated on Tue Mar 17 20:15:51 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.24 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>
