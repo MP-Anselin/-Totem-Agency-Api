@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.24
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-TOTEM+AGENCY+API+DOCUMENT">TOTEM AGENCY API DOCUMENT</h1>
+
+<p>SETUP DOCKER</p>
+
+<p>1) be sure you have docker on your devise</p>
+
+<p>2) sudo usermod -aG docker $USER (current user)</p>
+
+<p>3) docker-compose up –build</p>
+
+<p>4) stop docker docker-compose stop</p>
+
+<p>5) to see the routes available run command “rails routes”</p>
+
+<p>6) first you need api jwt key use the route “client/authentification” in
+post and pass email and password as parameter  email:
+agencytotem59gmail.com  password: TotO/gen]1.XxZ</p>
+
+<p>7) now you have the jwt key you can execute the other requests</p>
+
+<p>HEADER</p>
+
+<p>change jwt_token by your jxt_token parameter &#39;application/json&#39;, Authorization: jwt_token</p>
+
+<p>[ API KEY JWT ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /client/authentication(.:format)
+&gt; parameter {&quot;email&quot;:&quot;agencytotem59@gmail.com&quot;,&quot;password&quot;:&quot;Tot0/gen]1.XxZ&quot;}
+</code></pre>
+
+<pre class="code ruby"><code class="ruby">                                 <span class='const'>USER_PRIVATE</span>
+</code></pre>
+
+<p>[ USER GENERATE TOKEN ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; GET /user/account/generate(.:format)
+&gt; parameter {}
+</code></pre>
+
+<p>[ USER LOG IN / OUT (registered true if the user is already registered) ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /user/account/signep(.:format)
+&gt; parameter {email: .., password: .., registered: ..}
+</code></pre>
+
+<p>[ USER DELETE ACCOUNT ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /user/account/delete(.:format)
+&gt; parameter {idToken: ..}
+</code></pre>
+
+<p>[ USER REFRESH TOKEN ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /user/account/id/refresh(.:format)
+&gt; parameter {grant_type: .., refresh_token}
+</code></pre>
+
+<p>[ USER CHANGE PASSWORD OR EMAIL ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /user/account/id/change(.:format)
+&gt; parameter {email: .., password: .., idToken: ..}
+</code></pre>
+
+<p>[ USER SEND MAIL TO RESET PWD ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /user/account/id/pwd/reset/code/mail(.:format)
+&gt; parameter {email: .., requestType: ..}
+</code></pre>
+
+<p>[ USER CHECK PASSWORD WAS CHANGED ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /user/account/id/pwd/reset/code/validation(.:format)
+&gt; parameter {oobCode: .., newPassword: ..}
+</code></pre>
+
+<p>[ USER SEND MAIL TO CHECK EMAIL USER ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /user/account/id/email/code/mail(.:format)
+&gt; parameter {idToken: .., requestType: ..}
+</code></pre>
+
+<p>[ USER CHECK EMAIL WAS VALIDATE ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /user/account/id/email/code/validation(.:format)
+&gt; parameter {oobCode: }
+</code></pre>
+
+<p>[ USER UPDATE USER INFORMATION ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /user/account/data/manage(.:format)
+&gt; parameter {idToken: .., displayName: .., photoUrl: ..}
+</code></pre>
+
+<pre class="code ruby"><code class="ruby">                                <span class='const'>PRODUCTS</span>
+</code></pre>
+
+<p>[ PRODUCTS LIST DOCUMENT ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; GET /products/list(.:format)
+&gt; parameter {}
+</code></pre>
+
+<p>[ PRODUCTS GET DOCUMENT BY ID]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /products/product(.:format)
+&gt; parameter {id: ..}
+</code></pre>
+
+<p>[ PRODUCTS ADD DOCUMENT]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /products/product/new(.:format)
+&gt; parameter {brand: .., name: .., url: ..}
+</code></pre>
+
+<p>[ PRODUCTS UPDATE DOCUMENT BY ID]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /products/product/update(.:format)
+&gt; parameter {id: .., brand: .., name: ..}
+</code></pre>
+
+<p>[ PRODUCTS DELETE DOCUMENT BY ID]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /products/product/delete(.:format)
+&gt; parameter {id: ..}
+</code></pre>
+
+<pre class="code ruby"><code class="ruby">                                <span class='const'>USERS</span>
+</code></pre>
+
+<p>[ USER LIST USERS ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; GET /users/list(.:format)
+&gt; parameter {}
+</code></pre>
+
+<p>[ USER LIST USER INFORMATION BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users/user(.:format)
+&gt; parameter {}
+</code></pre>
+
+<p>[ USER ADD USER BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users/user/new(.:format)
+&gt; parameter {id: .., firstName: .., lastName: ..}
+</code></pre>
+
+<p>[ USER UPDATE USER BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users/user/update(.:format)
+&gt; parameter {id: .., firstName: .., lastName: ..}
+</code></pre>
+
+<p>[ USER DELETE USER BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users/user/delete(.:format)
+&gt; parameter {id: ..}
+</code></pre>
+
+<pre class="code ruby"><code class="ruby">                                <span class='const'>ASSET_BUCKET</span>
+</code></pre>
+
+<p>[ BUCKET LIST BUCKET ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; GET /assets/bucket/list(.:format)
+&gt; parameter {}
+</code></pre>
+
+<p>[ BUCKET LIST BUCKET FILE ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /assets/bucket/multimedia/list(.:format)
+&gt; parameter {bucketName: ..}
+</code></pre>
+
+<p>[ BUCKET DOWNLOAD FILE ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /assets/bucket/multimedia/download(.:format)
+&gt; parameter {bucketName: .., folderPath: .., fileName: .., folderDestination: .., fileNewName: ..}
+</code></pre>
+
+<p>[ BUCKET ADD FILE ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /assets/bucket/multimedia/new(.:format)
+&gt; parameter {bucketName: .., folderPath: .., fileName: .., folderDestination: .., fileNewName: ..}
+
+&gt; /assets/bucket/multimedia/delete(.:format)
+&gt; parameter {bucketName: .., folderPath: .., fileName: ..}
+</code></pre>
+
+<pre class="code ruby"><code class="ruby">                                <span class='const'>MULTIMEDIA</span>
+</code></pre>
+
+<p>[ MULTIMEDIA LIST DOCUMENTS ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; GET /multimedia/list(.:format)
+&gt; parameter {}
+</code></pre>
+
+<p>[ MULTIMEDIA GET DOCUMENT BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /multimedia/media(.:format)
+&gt; parameter {id: ..}
+</code></pre>
+
+<p>[ MULTIMEDIA UPDATE DOCUMENTS BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /multimedia/media/update(.:format)
+&gt; parameter {id: .., name: .., storage_id: .., storage_path: .., type: ..}
+</code></pre>
+
+<p>[ MULTIMEDIA DELETE DOCUMENTS BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /multimedia/media/delete(.:format)
+&gt; parameter {id: ..}
+</code></pre>
+
+<pre class="code ruby"><code class="ruby">                                <span class='const'>USERS_MULTIMEDIA</span>
+</code></pre>
+
+<p>[ USERS_MULTIMEDIA LIST DOCUMENTS ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; GET /users_multimedia/list(.:format)
+&gt; parameter {}
+</code></pre>
+
+<p>[ USERS_MULTIMEDIA GET DOCUMENT BY ID]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users_multimedia/information(.:format)
+&gt; parameter {id: ..}
+</code></pre>
+
+<p>[ USERS_MULTIMEDIA GET DOCUMENT BY USER ID]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users_multimedia/information/user(.:format)
+&gt; parameter {user_id: ..}
+</code></pre>
+
+<p>[ USERS_MULTIMEDIA GET DOCUMENT BY MULTIMEDIA ID]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users_multimedia/information/multimedia(.:format)
+&gt; parameter {multimedia_id: ..}
+</code></pre>
+
+<p>[ USERS_MULTIMEDIA ADD DOCUMENT ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users_multimedia/new(.:format)
+&gt; parameter {user_id: .., multimedia_id ..}
+</code></pre>
+
+<p>[ USERS_MULTIMEDIA UPDATE DOCUMENT BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users_multimedia/update(.:format)
+&gt; parameter {id: .., user_id: .., multimedia_id ..}
+</code></pre>
+
+<p>[ USERS_MULTIMEDIA DELETE DOCUMENT BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /users_multimedia/delete(.:format)
+&gt; parameter {id: ..}
+</code></pre>
+
+<pre class="code ruby"><code class="ruby">                                <span class='const'>PRODUCTS_MULTIMEDIA</span>
+</code></pre>
+
+<p>[ PRODUCTS_MULTIMEDIA LIST DOCUMENTS ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; GET /products_multimedia/list(.:format)
+&gt; parameter {}
+</code></pre>
+
+<p>[ PRODUCTS_MULTIMEDIA GET DOCUMENT INFORMATION BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /products_multimedia/information(.:format)
+&gt; parameter {id: ..}
+</code></pre>
+
+<p>[ PRODUCTS_MULTIMEDIA GET DOCUMENT BY PRODUCT ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; /products_multimedia/information/product(.:format)
+&gt; parameter {product_id: ..}
+</code></pre>
+
+<p>[ PRODUCTS_MULTIMEDIA GET DOCUMENT BY MULTIMEDIA ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /products_multimedia/information/multimedia(.:format)
+&gt; parameter {multimedia_id: ..}
+</code></pre>
+
+<p>[ PRODUCTS_MULTIMEDIA ADD DOCUMENT ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /products_multimedia/new(.:format)
+&gt; parameter {multimedia_id: .., product_id: ..}
+</code></pre>
+
+<p>[ PRODUCTS_MULTIMEDIA UPDATE DOCUMENT BY ID]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /products_multimedia/update(.:format)
+&gt; parameter {id: .., multimedia_id: .., product_id: ..}
+</code></pre>
+
+<p>[ PRODUCTS_MULTIMEDIA DELETE DOCUMENT BY ID ]</p>
+
+<pre class="code ruby"><code class="ruby">&gt; |POST| /products_multimedia/delete(.:format)
+&gt; parameter {id: ..}
+</code></pre>
+
+<p>..coming soon</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Tue Mar 17 21:33:50 2020 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.24 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>

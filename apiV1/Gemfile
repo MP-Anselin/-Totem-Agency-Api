@@ -56,3 +56,5 @@ gem 'google-cloud-storage'
 gem 'google-cloud'
 
 gem 'google-api-client'
+
+gem 'yard'

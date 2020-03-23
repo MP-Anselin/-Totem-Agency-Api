@@ -55,5 +55,10 @@ Rails.application.routes.draw do
   post '/products_multimedia/update', to: 'api/v1/requests/tables/relations_manager/products_multimedia#update_products_multimedia'
   post '/products_multimedia/delete', to: 'api/v1/requests/tables/relations_manager/products_multimedia#delete_products_multimedia'
 
+  get '/beatcon/paths/list', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#beatcon_paths_list'
+  post '/beatcon/path', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#beacon_path_information'
+  post '/beatcon/path/new', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#new_beacon_path'
+  post '/beatcon/path/update', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#update_beacon_path'
+  post 'beatcon/paths/delete', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#delete_beacon_path'
 
 end

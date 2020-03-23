@@ -387,4 +387,46 @@ parameter {Content-Type: 'application/json', Authorization: jwt_token}
 ```
 
 
+                                    BEACON_PATHS
+
+
+[ BEACON_PATHS LIST DOCUMENT ]
+
+```
+> GET /beacon/paths/list(.:format)
+> parameter {}
+```
+
+
+[ BEACON_PATHS GET DOCUMENT BY ID]
+
+```
+> |POST| /beacon/path(.:format)
+> parameter {id: ..}
+```
+
+
+[ BEACON_PATHS ADD DOCUMENT]
+
+```
+> |POST| /beacon/path/new(.:format)
+> parameter {y_axe: .., x_axe: .., z_axe: ..}
+```
+
+
+[ BEACON_PATHS UPDATE DOCUMENT BY ID]
+
+```
+> |POST| /beacon/path/update(.:format)
+> parameter {id: .., y_axe: .., x_axe: .., y_axe: ..}
+```
+
+
+[ BEACON_PATHS DELETE DOCUMENT BY ID]
+
+```
+> |POST| /beacon/path/delete(.:format)
+> parameter {id: ..}
+```
+
 ..coming soon
