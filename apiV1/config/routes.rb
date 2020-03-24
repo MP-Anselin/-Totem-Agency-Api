@@ -58,7 +58,13 @@ Rails.application.routes.draw do
   get '/beatcon/paths/list', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#beatcon_paths_list'
   post '/beatcon/path', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#beacon_path_information'
   post '/beatcon/path/new', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#new_beacon_path'
-  post '/beatcon/path/update', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#update_beacon_path'
-  post 'beatcon/paths/delete', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#delete_beacon_path'
+  post '/beatcon/paths/delete', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_paths#delete_beacon_path'
+
+  post '/beatcon/path/coordinates/list', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_path_coordinates#beatcon_path_coordinates_list'
+  post '/beatcon/path/coordinates', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_path_coordinates#beacon_path_coordinates_information'
+  post '/beatcon/path/coordinates/new', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_path_coordinates#new_beacon_path_coordinates'
+  post '/beatcon/path/coordinates/update', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_path_coordinates#update_beacon_path_coordinates'
+  post '/beatcon/path/coordinates/delete', to: 'api/v1/requests/tables/beatcon/paths_manager/beacon_path_coordinates#delete_beacon_path_coordinates'
+
 
 end

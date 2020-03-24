@@ -9,7 +9,7 @@ SETUP DOCKER
 
 3) docker-compose up --build
 
-4) stop docker docker-compose stop
+4) stop docker "docker-compose stop"
 
 5) to see the routes available run command "rails routes"
 
@@ -413,20 +413,54 @@ parameter {Content-Type: 'application/json', Authorization: jwt_token}
 > parameter {y_axe: .., x_axe: .., z_axe: ..}
 ```
 
-
-[ BEACON_PATHS UPDATE DOCUMENT BY ID]
-
-```
-> |POST| /beacon/path/update(.:format)
-> parameter {id: .., y_axe: .., x_axe: .., y_axe: ..}
-```
-
-
 [ BEACON_PATHS DELETE DOCUMENT BY ID]
 
 ```
 > |POST| /beacon/path/delete(.:format)
 > parameter {id: ..}
+```
+
+
+                                    BEACON_PATH_COORDINATES
+
+
+[ BEACON_PATH_COORDINATES LIST DOCUMENT ]
+
+```
+> GET /beacon/path/coordinates/list(.:format)
+> parameter {path_id: ..}
+```
+
+
+[ BEACON_PATH_COORDINATES GET DOCUMENT BY ID]
+
+```
+> |POST| /beacon/path(.:format)
+> parameter {path_id: .., id: ..}
+```
+
+
+[ BEACON_PATH_COORDINATES ADD DOCUMENT]
+
+```
+> |POST| /beacon/path/new(.:format)
+> parameter {path_id: .., y_axe: .., x_axe: .., z_axe: ..}
+```
+
+
+[ BEACON_PATH_COORDINATES UPDATE DOCUMENT BY ID]
+
+```
+> |POST| /beacon/path/update(.:format)
+> parameter {path_id: .., id: .., y_axe: .., x_axe: .., z_axe: ..}
+```
+
+
+[ BEACON_PATH_COORDINATES DELETE DOCUMENT BY ID]
+
+```
+> |POST| /beacon/path/delete(.:format)
+> parameter {path_di: .., id: ..}
 ```
 
 ..coming soon

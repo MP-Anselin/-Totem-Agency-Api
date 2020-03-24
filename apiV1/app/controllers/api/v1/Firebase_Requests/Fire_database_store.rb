@@ -6,8 +6,6 @@ module Api
 
         def initialize
           super
-          #require 'google/cloud/firestore'
-          #require 'google/cloud/storage'
 
           # Explicitly use service account credentials by specifying the private key
           @firestore = Api::V1::FirebaseRequests::FireTools::FirestoreManager.new.firestore_variable
@@ -24,16 +22,18 @@ module Api
           @db_collection = @firestore.col @collection_name
         end
 
-        def collection_list_documents
+        def collection_list_documents(collection = nil)
+          the_collection = collection ? collection : @db_collection
           list = []
-          @db_collection.get do |doc|
+          the_collection.get do |doc|
             list.push(id: doc.document_id, document_information: doc.data)
           end
           rendering_answer nil, nil, list
         end
 
-        def collection_get_document
-          path = @collection_name + '/' + params[:id].to_s
+        def collection_get_document(collection = nil)
+          the_collection = collection ? collection : @db_collection
+          path = the_collection + '/' + params[:id].to_s
           db_document = @firestore.doc path
           snapshot = db_document.get
           if snapshot.exists?
@@ -69,6 +69,7 @@ module Api
             rendering_answer('Document does not exist', :not_found)
           else
             data = params.permit(params.keys).to_h || {}
+            data.delete(:path_id)
             data.delete(:user)
             data.delete(:controller)
             data.delete(:action)
